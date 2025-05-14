@@ -1,0 +1,7 @@
+# ninja log v6
+4	341	1747069916992950149	CMakeFiles/server.dir/main.cpp.o	7bd4a6a862bc48f5
+419	446	1747180938044800185	omniserver	5e433e9d504afaa9
+341	363	1747069917329475641	server	bfb16043f8e7a542
+4	342	1747069669268781032	CMakeFiles/server.dir/src/server.cpp.o	980326de3ef71938
+1	395	1747180719424132075	CMakeFiles/omniserver.dir/src/command_handler.cpp.o	f3239e9a2bab8abd
+8	419	1747180937634380229	CMakeFiles/omniserver.dir/src/main.cpp.o	47ee0c0335d1cd3e

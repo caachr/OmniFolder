@@ -1,0 +1,3 @@
+/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles/omniserver.dir
+/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles/edit_cache.dir
+/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles/rebuild_cache.dir
