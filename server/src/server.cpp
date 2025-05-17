@@ -4,62 +4,101 @@
 
 #include "../include/server.h"
 
-/* --- Singleton logic --- */
+OmniServer* OmniServer::instance = nullptr;
 
-OServer* OServer::instance = nullptr;
-
-void OServer::createInstance(std::string networkName, std::string username, std::string password)
+void OmniServer::createInstance(std::string& omniNetworkName, std::string& username, std::string& password)
 {
     if (!instance)
     {
-        instance = new OServer(networkName, username, password);
+        instance = new OmniServer(omniNetworkName, username, password);
     }
     else {
         std::cout << "Server already exists.\n";
     }
 }
 
-OServer& OServer::getInstance()
+void OmniServer::deleteInstance()
 {
-    return *instance;
+    delete instance;
 }
 
-bool OServer::exists()
+OmniServer* OmniServer::getInstance()
 {
-    return !(instance == nullptr);
+    if (instance == nullptr) throw std::runtime_error("Attempted to call getInstance on a null OmniServer.");
+    return instance;
 }
 
-OServer::OServer(std::string networkName, std::string username, std::string password)
-    : networkName(networkName)
-    , username(username)
+bool OmniServer::exists()
+{
+    return instance != nullptr;
+}
+
+void OmniServer::saveNetworkConfig()
+{
+    // Local config save
+    json j = omniNetwork->toJSON();
+    std::ofstream o("config.json");
+    if (o.is_open()) {
+        o << j.dump(4);
+        o.close();
+    } else {
+        std::cout << "Error opening local config file.\n";
+    }
+
+    // Update config on all the drives (TODO)
+
+}
+
+OmniServer::OmniServer(std::string& omniNetworkName, std::string& username, std::string& password)
+    : username(username)
     , password(password)
 {
-    std::cout << "OServer created!\n";
+    // Create blank OmniNetwork object and get its pointer
+    OmniNetwork::createInstance(omniNetworkName);
+    omniNetwork = OmniNetwork::getInstance();
 }
 
-OServer::~OServer()
+OmniServer::~OmniServer()
 {
-    std::cout << "OServer destroyed.\n";
+    std::cout << "OmniServer destroyed.\n";
 }
 
-/* --- Business logic --- */
-
-std::string& OServer::getNetworkName()
-{
-    return networkName;
-}
-
-bool OServer::validateCredentials(std::string username, std::string password)
+bool OmniServer::validateCredentials(std::string& username, std::string& password) const
 {
     if (username != this->username || password != this->password) return false;
     return true;
 }
 
-void OServer::start()
+OmniNetwork* OmniServer::getOmniNetwork()
+{
+    return omniNetwork;
+}
+
+void OmniServer::start() const
 {
     std::cout << "Starting server...\n";
     // start server shit
     std::cout << "Server started. Type 'stop' to end session and quit the application.\n"
                  "Note: The OmniFolder server is meant to run continuously on an 'always-on' machine. "
                  "It is recommended to only stop the session if absolutely necessary, as an OmniFolder cannot be edited while the server is offline.\n";
+}
+
+void OmniServer::printInfo() const
+{
+    std::cout << "nothing to see here yet...\n";
+}
+
+void OmniServer::printInfoVerbose() const
+{
+    std::cout << "nothing to see here yet...\n";
+}
+
+void OmniServer::printStatus() const
+{
+    std::cout << "nothing to see here yet...\n";
+}
+
+void OmniServer::printStatusAdvanced() const
+{
+    std::cout << "nothing to see here yet...\n";
 }

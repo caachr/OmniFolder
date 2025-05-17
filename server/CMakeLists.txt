@@ -11,6 +11,10 @@ set(SRC
         src/main.cpp
         src/command_handler.cpp
         src/server.cpp
-        src/wizards.cpp)
+        src/wizards.cpp
+        src/omnifolder.cpp
+        src/drive.cpp
+        src/networking_handler.cpp
+        src/omninetwork.cpp)
 
 add_executable(omniserver ${SRC})

@@ -9,7 +9,6 @@ int main(int argc, char* argv[]) {
 
     std::string command = argv[1];
     std::vector<std::string_view> params;
-
     for (int i = 2; i < argc; ++i) {
         params.emplace_back(argv[i]);
     }

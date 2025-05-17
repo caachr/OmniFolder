@@ -7,11 +7,14 @@
 
 #include "../include/server.h"
 
+/**
+ * Wizards: A helpful encapsulation of server/network setup functions.
+ */
 class Wizards {
 public:
-    static void new_network_wizard();
+    static void newNetworkWizard();
 
-    static void recover_network_wizard();
+    static void recoverNetworkWizard();
 };
 
 #endif //WIZARDS_H
