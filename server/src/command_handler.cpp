@@ -63,6 +63,8 @@ int CommandHandler::command_info(const std::vector<std::string_view>& params) {
         return EXIT_FAILURE;
     }
 
+    // TODO Startup: load config file into server
+
     // Print info or exit if invalid flag
     if (params.empty()) {
         OmniServer::getInstance()->printInfo();
@@ -76,6 +78,8 @@ int CommandHandler::command_info(const std::vector<std::string_view>& params) {
 }
 
 int CommandHandler::command_status(const std::vector<std::string_view>& params) {
+    // TODO Startup: load config file into server
+
     // Print status or exit if invalid flag
     if (params.empty()) {
         OmniServer::getInstance()->printStatus();
@@ -114,10 +118,13 @@ int CommandHandler::command_init(const std::vector<std::string_view>& params) {
 }
 
 int CommandHandler::command_reload(const std::vector<std::string_view>& params) {
-    // TODO reload cmd
+    OmniServer::wipeAndReload();
+    return EXIT_SUCCESS;
 }
 
 int CommandHandler::command_start() {
+    OmniServer::boot();
+
     // Start the server loop
     OmniServer::getInstance()->start();
     return EXIT_SUCCESS;

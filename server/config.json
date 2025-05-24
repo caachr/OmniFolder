@@ -1,0 +1,198 @@
+{
+  "network": {
+    "id": "omni-net-01",
+    "name": "Christian's Personal OmniNetwork",
+    "server" : {
+      "host": "192.168.1.1",
+      "port": 8080,
+      "online": true
+    }
+  },
+  "folders": [
+    {
+      "id": "omni-folder-01",
+      "name": "Work",
+      "lock_holder_id": "drive_04",
+      "drives": [
+        {
+          "id": "drive-01",
+          "name": "nash house home backup 1TB",
+          "type": "F",
+          "curr_host": "32.125.60.1",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 1073741824000,
+          "used_bytes": 536875728694,
+          "path": "/Volumes/NASH_BACKUP/Work"
+        },
+        {
+          "id": "drive-02",
+          "name": "FL house home backup 10TB",
+          "type": "F",
+          "curr_host": "56.122.28.8",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 10737418240000,
+          "used_bytes": 1049583055448,
+          "path": "/Volumes/FL_BACKUP/Work"
+        },
+        {
+          "id": "drive-03",
+          "name": "portable 1TB",
+          "type": "F",
+          "curr_host": "128.2.155.2",
+          "port": 8080,
+          "online": false,
+          "capacity_bytes": 1073741824000,
+          "used_bytes": 536875728694,
+          "path": "/Volumes/MOBILE/Work"
+        },
+        {
+          "id": "drive-04",
+          "name": "Christian's Macbook Pro 500GB",
+          "type": "F",
+          "curr_host": "128.2.155.2",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 536870912000,
+          "used_bytes": 250571868174,
+          "path": "/Users/christian/Desktop/Work"
+        },
+        {
+          "id": "drive-05",
+          "name": "quickslice thumbdrive 16GB",
+          "type": "P",
+          "curr_host": "128.2.155.2",
+          "port": 8080,
+          "online": false,
+          "capacity_bytes": 17179869184,
+          "used_bytes": 5820582572,
+          "path": "/Volumes/QUICKSLICE/Work",
+          "mirror_dirs": [
+            "/Presentations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "omni-folder-02",
+      "name": "Personal",
+      "lock_holder_id": "drive_04",
+      "drives": [
+        {
+          "id": "drive-01",
+          "name": "nash house home backup 1TB",
+          "type": "F",
+          "curr_host": "32.125.60.1",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 1073741824000,
+          "used_bytes": 536875728694,
+          "path": "/Volumes/NASH_BACKUP/Personal"
+        },
+        {
+          "id": "drive-02",
+          "name": "FL house home backup 10TB",
+          "type": "F",
+          "curr_host": "56.122.28.8",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 10737418240000,
+          "used_bytes": 1049583055448,
+          "path": "/Volumes/FL_BACKUP/Personal"
+        },
+        {
+          "id": "drive-03",
+          "name": "portable 1TB",
+          "type": "F",
+          "curr_host": "128.2.155.2",
+          "port": 8080,
+          "online": false,
+          "capacity_bytes": 1073741824000,
+          "used_bytes": 536875728694,
+          "path": "/Volumes/MOBILE/Personal"
+        },
+        {
+          "id": "drive-04",
+          "name": "Christian's Macbook Pro 500GB",
+          "type": "F",
+          "curr_host": "128.2.155.2",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 536870912000,
+          "used_bytes": 250571868174,
+          "path": "/Users/christian/Desktop/Personal"
+        },
+        {
+          "id": "drive-05",
+          "name": "quickslice thumbdrive 16GB",
+          "type": "P",
+          "curr_host": "128.2.155.2",
+          "port": 8080,
+          "online": false,
+          "capacity_bytes": 17179869184,
+          "used_bytes": 5820582572,
+          "path": "/Volumes/QUICKSLICE/Personal",
+          "mirror_dirs": [
+            "/Music/Exports"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "omni-folder-03",
+      "name": "Library",
+      "lock_holder_id": "drive_04",
+      "drives": [
+        {
+          "id": "drive-01",
+          "name": "nash house home backup 1TB",
+          "type": "F",
+          "curr_host": "32.125.60.1",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 1073741824000,
+          "used_bytes": 536875728694,
+          "path": "/Volumes/NASH_BACKUP/Library"
+        },
+        {
+          "id": "drive-02",
+          "name": "FL house home backup 10TB",
+          "type": "F",
+          "curr_host": "56.122.28.8",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 10737418240000,
+          "used_bytes": 1049583055448,
+          "path": "/Volumes/FL_BACKUP/Library"
+        },
+        {
+          "id": "drive-03",
+          "name": "portable 1TB",
+          "type": "F",
+          "curr_host": "128.2.155.2",
+          "port": 8080,
+          "online": false,
+          "capacity_bytes": 1073741824000,
+          "used_bytes": 536875728694,
+          "path": "/Volumes/MOBILE/Library"
+        },
+        {
+          "id": "drive-04",
+          "name": "Christian's Macbook Pro 500GB",
+          "type": "P",
+          "curr_host": "128.2.155.2",
+          "port": 8080,
+          "online": true,
+          "capacity_bytes": 536870912000,
+          "used_bytes": 250571868174,
+          "path": "/Users/christian/Desktop/Library",
+          "mirror_dirs": [
+            "/Music/Samples",
+            "/College/Classes"
+          ]
+        }
+      ]
+    }
+  ]
+}

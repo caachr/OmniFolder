@@ -13,7 +13,12 @@ int main(int argc, char* argv[]) {
         params.emplace_back(argv[i]);
     }
 
-    CommandHandler::execute_command(command, params);
+    try {
+        CommandHandler::execute_command(command, params);
+    }
+    catch (const std::runtime_error& err) {
+        std::cout << err.what();
+    }
 
     return 0;
 }

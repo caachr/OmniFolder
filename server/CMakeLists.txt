@@ -10,11 +10,12 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 set(SRC
         src/main.cpp
         src/command_handler.cpp
-        src/server.cpp
         src/wizards.cpp
-        src/omnifolder.cpp
-        src/drive.cpp
-        src/networking_handler.cpp
-        src/omninetwork.cpp)
+        src/server.cpp
+        src/omni_network.cpp
+        src/omni_folder.cpp
+        src/omni_drive.cpp
+        src/socket_master.cpp
+        src/message.cpp)
 
 add_executable(omniserver ${SRC})

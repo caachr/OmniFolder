@@ -25,6 +25,7 @@ void Wizards::newNetworkWizard()
     std::cout << "\n";
 
     OmniServer::createInstance(networkName, username, password);
+    OmniServer::getInstance()->saveConfig();
 }
 
 void Wizards::recoverNetworkWizard()
@@ -58,14 +59,15 @@ void Wizards::recoverNetworkWizard()
 
     OmniServer::createInstance(networkName, username, password);
 
-    std::ifstream i("config.json");
-    json jsonObj;
-    i >> jsonObj;
+    std::ifstream i(CONFIG_FILE_RELATIVE_PATH);
+    configformat_t configObj;
+    i >> configObj;
 
-    OmniServer::getInstance()->getOmniNetwork()->fromJSON(jsonObj);
+    OmniServer::getInstance()->getOmniNetwork()->fromConfigObj(configObj);
+    OmniServer::getInstance()->saveConfig();
 
     std::cout << "[Automatic recovery complete]."
-                 "Please verify the following information about your network to ensure recovery was successful."
+                 "Please verify the following information below about your network to ensure recovery was successful."
                  "The application will now exit.\n";
-    // TODO show info
+    OmniServer::getInstance()->printInfoVerbose();
 }
