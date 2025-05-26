@@ -1,0 +1,26 @@
+{
+  "senderIp": "10.7.141.1",
+  "senderPort": 8080,
+  "receiverIp": "121.5.72.2",
+  "receiverPort": 8080,
+  "network_uuid": "omni-net-3ca0e0c5-f3b8-406e-9674-ee52a7a1271c",
+  "type": "request_add_folder",
+  "payload": {
+    "id": "omni-folder-XX",
+    "name": "Work",
+    "lock_holder_id": "",
+    "drives": [
+      {
+        "id": "drive-01",
+        "name": "nash house home backup 1TB",
+        "type": "F",
+        "curr_host": "32.125.60.1",
+        "port": 8080,
+        "online": true,
+        "capacity_bytes": 1073741824000,
+        "used_bytes": 536875728694,
+        "path": "/Volumes/NASH_BACKUP/Work"
+      }
+    ]
+  }
+}

@@ -16,6 +16,8 @@ set(SRC
         src/omni_folder.cpp
         src/omni_drive.cpp
         src/socket_master.cpp
-        src/message.cpp)
+        src/message.cpp
+        src/message_factory.cpp
+        src/fedex.cpp)
 
 add_executable(omniserver ${SRC})

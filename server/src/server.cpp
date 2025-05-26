@@ -3,7 +3,6 @@
 //
 
 #include "../include/server.h"
-#include "../include/socket_master.h"
 
 OmniServer* OmniServer::instance = nullptr;
 
@@ -63,32 +62,32 @@ void OmniServer::boot()
     }
 }
 
-void OmniServer::wipeAndReload()
-{
-    std::ifstream i(CONFIG_FILE_RELATIVE_PATH);
-    configformat_t configObj;
-    if (i.is_open()) {
-        delete instance;
-
-        std::string networkName;
-        std::string username;
-        std::string password;
-
-        // Load config file into config object
-        i >> configObj;
-
-        // Extract the network name
-        networkName = configObj.find("networkName").key();
-
-        // Create server singleton & network
-        createInstance(networkName, username, password);
-
-        // TODO populate with config file ???
-    }
-    else {
-        throw std::runtime_error("Error: failed to open config file during wipeAndReplace. No changes made.\n");
-    }
-}
+//void OmniServer::wipeAndReload()
+//{
+//    std::ifstream i(CONFIG_FILE_RELATIVE_PATH);
+//    configformat_t configObj;
+//    if (i.is_open()) {
+//        delete instance;
+//
+//        std::string networkName;
+//        std::string username;
+//        std::string password;
+//
+//        // Load config file into config object
+//        i >> configObj;
+//
+//        // Extract the network name
+//        networkName = configObj.find("networkName").key();
+//
+//        // Create server singleton & network
+//        createInstance(networkName, username, password);
+//
+//        // TODO populate with config file ???
+//    }
+//    else {
+//        throw std::runtime_error("Error: failed to open config file during wipeAndReplace. No changes made.\n");
+//    }
+//}
 
 void OmniServer::saveConfig()
 {
@@ -96,7 +95,7 @@ void OmniServer::saveConfig()
     configformat_t configObj = omniNetwork->serialize();
     std::ofstream o(CONFIG_FILE_RELATIVE_PATH);
     if (o.is_open()) {
-        o << configObj.dump(4);
+        o << configObj.dump(2);
         o.close();
     } else {
         std::cout << "Error opening local config file when attempting save.\n";
@@ -161,7 +160,38 @@ void OmniServer::printStatusAdvanced() const
 
 void OmniServer::handleMessage(const Message& message)
 {
-    if (message.getType() == "areyouthere") {
+    if (message.getType() == "login_request") {
+        messageformat_t payloadReceived = message.getPayload();
+        std::string usernameArg = payloadReceived["username"];
+        std::string passwordArg = payloadReceived["password"];
+
+        std::unique_ptr<Message> reply;
+
+        // Gather the necessary ingredients for the reply
+        messageformat_t ingredients;
+        ingredients["original_header"] = message.getHeader();
+
+        if (!validateCredentials(usernameArg, passwordArg)) {
+            reply = std::move(MessageFactory::makeMessage("login_denied", ingredients));
+        } else {
+            loggedInClients.push_back(message.getHeader()["sender_application_uuid"]);
+            reply = std::move(MessageFactory::makeMessage("login_granted", ingredients));
+        }
+        FedEx::shipMessage(std::move(reply));
+        return;
+    }
+
+    // Don't go any further unless client is logged in
+    if (std::find(loggedInClients.begin(), loggedInClients.end(), message.getHeader()["sender_application_uuid"]) == loggedInClients.end()) {
+        std::unique_ptr<Message> reply;
+        messageformat_t ingredients;
+        ingredients["original_header"] = message.getHeader();
+        reply = std::move(MessageFactory::makeMessage("unauthorized", ingredients));
+        FedEx::shipMessage(std::move(reply));
+        return;
+    }
+
+    if (message.getType() == "heartbeat") {
         // Send response to client: "I'm online!"
     }
     if (message.getType() == "acquireLockRequest") {
@@ -169,7 +199,7 @@ void OmniServer::handleMessage(const Message& message)
         std::string driveID;
 
         OmniFolder* folder = OmniNetwork::getInstance()->getFolderByID(folderID);
-        if (folder->getLockHolder() != "0") {
+        if (folder->getLockHolder() != "") {
             // Lock isn't free; send response to client: "DENY, msg: Failed to request lock, as it is already held by an existing drive."
         } else {
             // Lock is free, grant it
@@ -178,20 +208,20 @@ void OmniServer::handleMessage(const Message& message)
             saveConfig();
         }
     }
-    if (message.getType() == "releaseLockRequest") {
-        std::string folderID;
-
-        OmniFolder* folder = OmniNetwork::getInstance()->getFolderByID(folderID);
-        if (folder->getLockHolder() == "0") {
-            // Send response to client: "DENY, msg: Release request failed, as no drive currently holds a lock."
-        } else {
-            // Lock is held, release it
-            folder->releaseLock();
-            // Send response to client: "GRNT, msg: Release request granted."
-            saveConfig();
-        }
-    }
-    if (message.getType() == "pushRequest") {
+//    if (message.getType() == "releaseLockRequest") {
+//        std::string folderID;
+//
+//        OmniFolder* folder = OmniNetwork::getInstance()->getFolderByID(folderID);
+//        if (folder->getLockHolder() == "0") {
+//            // Send response to client: "DENY, msg: Release request failed, as no drive currently holds a lock."
+//        } else {
+//            // Lock is held, release it
+//            folder->releaseLock();
+//            // Send response to client: "GRNT, msg: Release request granted."
+//            saveConfig();
+//        }
+//    }
+    if (message.getType() == "pushAndReleaseRequest") {
         std::string folderID;
         std::string callingDriveID;
 
@@ -206,20 +236,13 @@ void OmniServer::handleMessage(const Message& message)
         const configformat_t& driveConfig(message.getPayload());
         addDrive(folderID, driveConfig);
     }
-    if (message.getType() == "loginRequest") {
-        std::string usernameArg;
-        std::string passwordArg;
-
-        if (!validateCredentials(usernameArg, passwordArg)) {
-            // Send response to client: "DENY, msg: Incorrect username or password."
-        } else {
-            // Send response to client: "GRNT, msg: Login request granted."
-        }
-    }
 }
 
 bool OmniServer::validateCredentials(std::string& usernameArg, std::string& passwordArg) const
 {
+    // std::string credentialArgHash = Hasher::hash(usernameArg, passwordArg);
+    // if (credentialArgHash != credentialHash) return false;
+    // return true;
     if (usernameArg != username || passwordArg != password) return false;
     return true;
 }

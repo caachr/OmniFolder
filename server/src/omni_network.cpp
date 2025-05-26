@@ -4,34 +4,32 @@
 
 #include "../include/omni_network.h"
 
-configformat_t OmniFolder::serialize() const
+configformat_t OmniNetwork::serialize() const
 {
     configformat_t configObj;
 
-    configObj["id"] = id;
+    configObj["uuid"] = uuid;
     configObj["name"] = name;
-    configObj["lock_holder_id"] = lockHolderId;
 
-    configformat_t drivesConfigObj;
-    for (const auto& drive : drives) {
-        drivesConfigObj.push_back(drive->serialize());
+    configformat_t foldersConfigObj;
+    for (const auto& folder : folders) {
+        foldersConfigObj.push_back(folder->serialize());
     }
-    configObj["drives"] = drivesConfigObj;
+    configObj["folders"] = foldersConfigObj;
 
     return configObj;
 }
 
-void OmniFolder::deserialize(const configformat_t& configObj)
+void OmniNetwork::deserialize(const configformat_t& configObj)
 {
-    id = configObj["id"];
+    uuid = configObj["uuid"];
     name = configObj["name"];
-    lockHolderId = configObj["lock_holder_id"];
 
-    drives.clear();
-    for (const auto& driveConfig : configObj["drives"]) {
-        auto drive = std::make_unique<OmniDrive>();
-        drive->deserialize(driveConfig);
-        drives.push_back(std::move(drive));
+    folders.clear();
+    for (const auto& folderConfig : configObj["folders"]) {
+        auto folder = std::make_unique<OmniFolder>();
+        folder->deserialize(folderConfig);
+        folders.push_back(std::move(folder));
     }
 }
 
@@ -57,7 +55,7 @@ OmniNetwork* OmniNetwork::getInstance()
 }
 
 OmniNetwork::OmniNetwork(std::string& networkName)
-    : id()
+    : uuid()
     , name(networkName)
     , folders()
 {}

@@ -1,6 +1,6 @@
 {
   "network": {
-    "id": "omni-net-01",
+    "uuid": "omni-net-3ca0e0c5-f3b8-406e-9674-ee52a7a1271c",
     "name": "Christian's Personal OmniNetwork",
     "server" : {
       "host": "192.168.1.1",

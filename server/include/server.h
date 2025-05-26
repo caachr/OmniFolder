@@ -8,7 +8,10 @@
 #include <iostream>
 #include "omni_network.h"
 #include "defines.h"
-#include "message.h"
+#include "message_factory.h"
+#include "fedex.h"
+
+class Message;
 
 /**
  * OmniServer: Singleton; manages the state of the one and only OmniNetwork, manages access to it,
@@ -58,10 +61,10 @@ public:
 //     * @param pathToFile The path to the config file used to initialize the OmniNetwork.
 //     */
     // Static because it loads shit for the server too, not just the network; needs to create everything from scratch upon boot
-    /**
-     * Completely destroys the server and network and constructs brand new ones using the config file.
-     */
-    static void wipeAndReload();
+//    /**
+//     * Completely destroys the server and network and constructs brand new ones using the config file.
+//     */
+//    static void wipeAndReload();
 
     /**
      * Saves the state of the OmniNetwork associated with this server to the local config file and those of all the
@@ -159,11 +162,16 @@ private:
      */
     OmniNetwork* omniNetwork;
 
-    // Username for server login (no current use yet)
+    // Username for server login
     std::string username;
 
-    // Password for server login (no current use yet)
+    // Password for server login
     std::string password;
+
+    /**
+     * Stores the UUIDs of all the clients that are currently logged in to the server.
+     */
+    std::vector<std::string> loggedInClients;
 };
 
 #endif //SERVER_H

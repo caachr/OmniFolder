@@ -71,7 +71,7 @@ void SocketMaster::open()
 Message& SocketMaster::parseMessage(char msgBuffer[1024])
 {
     // Convert buffer to intermediate object
-    i_messageformat_t iObj = i_messageformat_t::parse(msgBuffer);
+    messageformat_t iObj = messageformat_t::parse(msgBuffer);
 
     // Convert intermediate object to Message
     auto* message = new Message(iObj);

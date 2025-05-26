@@ -86,12 +86,16 @@ private:
     /**
      * Unique identifier for this OmniNetwork.
      */
-    std::string id;
+    std::string uuid;
 
     /**
      * Name for this OmniNetwork.
      */
     std::string name;
+
+//    std::string serverHost;
+//
+//    std::string serverPort;
 
     /**
      * Stores references to the OmniFolders that are a part of this OmniNetwork.

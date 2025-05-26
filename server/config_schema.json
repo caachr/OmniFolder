@@ -7,9 +7,9 @@
   "properties": {
     "network": {
       "type": "object",
-      "required": ["id", "name", "server"],
+      "required": ["uuid", "name", "server"],
       "properties": {
-        "id": {
+        "uuid": {
           "type": "string",
           "pattern": "^omni-net-[0-9]$"
         },

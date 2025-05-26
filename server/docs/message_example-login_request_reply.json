@@ -1,0 +1,14 @@
+{
+  "sender": "server",
+  "receiver": "client",
+  "sender_ip": "121.5.72.2",
+  "sender_port": 8080,
+  "receiver_ip": "10.7.141.1",
+  "receiver_port": 8080,
+  "network_uuid": "omni-net-3ca0e0c5-f3b8-406e-9674-ee52a7a1271c",
+  "type": "login_request_reply",
+  "payload": {
+    "reply": "DENY",
+    "details": "Incorrect username or password."
+  }
+}

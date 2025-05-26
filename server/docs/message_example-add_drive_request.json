@@ -1,0 +1,22 @@
+{
+  "senderIp": "10.7.141.1",
+  "senderPort": 8080,
+  "receiverIp": "121.5.72.2",
+  "receiverPort": 8080,
+  "network_uuid": "omni-net-3ca0e0c5-f3b8-406e-9674-ee52a7a1271c",
+  "type": "add_drive_request",
+  "payload": {
+    "folder_id": "omni-folder-01",
+    "drive": {
+      "id": "omni-drive-XX",
+      "name": "portable disaster-proof 1TB",
+      "type": "F",
+      "curr_host": "128.2.155.2",
+      "port": 8080,
+      "online": true,
+      "capacity_bytes": 1073741824000,
+      "used_bytes": 536875728694,
+      "path": "/Volumes/MOBILE_RUGGED/Work"
+    }
+  }
+}
