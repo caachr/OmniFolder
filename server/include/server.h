@@ -10,6 +10,13 @@
 #include "defines.h"
 #include "message_factory.h"
 #include "fedex.h"
+#include "port_authority.h"
+#include "schema_validators/config_validator.h"
+#include "hasher.h"
+#include "github_portal.h"
+
+#define UUID_SYSTEM_GENERATOR
+#include "uuid.h"
 
 class Message;
 
@@ -24,13 +31,37 @@ public:
     OmniServer& operator=(const OmniServer&) = delete;
 
     /**
-     * Creates the server singleton. Creates the OmniNetwork singleton and links it to this server
-     * (creates just a blank network with a name at this point, no OmniFolders).
-     * @param omniNetworkName The name of the OmniNetwork being created.
-     * @param username Username used to log in to the server and gain access to do things.
-     * @param password Password used to log in to the server and gain access to do things.
+     * Initialize a new network and server with the given name, username, and password.
+     * Create config and auth files and save the info there.
+     * Intended to be called by the setup wizard when bringing a new network into existence.
+     * NOTE: This is a lightweight method that only deals with files; it does not create instances of anything
+     * within the program.
+     * @param name The name of the network to create.
+     * @param ipaddress The public IP address of the new server.
+     * @param port The port number used for port forwarding.
+     * @param username The username that will be used to log in to the server.
+     * @param password The password that will be used to log in to the server.
+     * @param ghubUsername The user's GitHub username.
+     * @param ghubPrivatePAT The user's GitHub personal access token scoped to the recovery repos.
      */
-    static void createInstance(std::string& omniNetworkName, std::string& username, std::string& password);
+    static void initNewNetwork(std::string& name, std::string& ipaddress, uint32_t port,
+                               std::string& username, std::string& password,
+                               std::string& ghubUsername, std::string& ghubPrivatePAT);
+
+    /**
+     * Recover an old network after a server has gone down by configuring a new server with the given public ip & port,
+     * and old username & password.
+     * Starts the server once set up.
+     * @param ipaddress The public IP address of the new server.
+     * @param port The port number used for port forwarding.
+     * @param username The old username.
+     * @param password The old password.
+     * @param ghUsername The user's GitHub username.
+     * @param ghPrivatePAT The user's private personal access token scoped to the loggedInClients list recovery repo.
+     */
+    static void replaceDestroyedServerAndStart(std::string& ipaddress, uint32_t port,
+                                               std::string& username, std::string& password,
+                                               std::string& ghUsername, std::string& ghServerPAT, std::string& ghClientPAT);
 
     /**
      * Returns a const pointer to the server singleton.
@@ -40,13 +71,23 @@ public:
     static OmniServer* getInstance();
 
     /**
-     * Checks whether or not the unique server instance has been created.
+     * Singleton method: Checks whether or not the unique server instance has been created.
      * @return True if the server singleton instance exists, false if not.
      */
     static bool exists();
 
     /**
-     * Create a server and network from the config file upon program startup.
+     * Indicates whether or not a server/network exists in the system.
+     * Specifically: checks for the existence of config/auth files at their relative paths designated in defines.h;
+     * if either file is found, returns false.
+     * @return True if a config file or auth file exists, false otherwise.
+     */
+    static bool networkExists();
+
+    /**
+     * Loads everything (server, server info, network & structure) into program memory from config and auth files.
+     * Assumes no instances of anything exist yet.
+     * Intended to be called just before starting the server loop.
      */
     static void boot();
 
@@ -67,12 +108,6 @@ public:
 //    static void wipeAndReload();
 
     /**
-     * Saves the state of the OmniNetwork associated with this server to the local config file and those of all the
-     * drives in the network.
-     */
-    void saveConfig();
-
-    /**
      * Obtains a pointer to the OmniNetwork singleton.
      * @return A pointer to the OmniNetwork singleton.
      */
@@ -84,24 +119,14 @@ public:
     void start() const;
 
     /**
-     * TBD
+     * Print a brief summary about the network.
      */
     void printInfo() const;
 
     /**
-     * TBD
+     * Print comprehensive information about the server and its network.
      */
     void printInfoVerbose() const;
-
-    /**
-     * TBD
-     */
-    void printStatus() const;
-
-    /**
-     * TBD
-     */
-    void printStatusAdvanced() const;
 
     /**
      *
@@ -111,13 +136,22 @@ public:
 
 private:
     /**
-     * Private constructor: creates the OmniServer object and the blank OmniNetwork object
+     * (Singleton helper method) \n
+     * Creates the server singleton. Creates the OmniNetwork singleton and links it to the server singleton.
+     * NOTE: creates just an empty network with basic fields (name and auth hash) this point.
+     * @param omniNetworkName The name of the OmniNetwork being created.
+     * @param authHash Encrypted credentials hash used to compare login attempts against.
+     */
+    static void createInstance(std::string& omniNetworkName, std::string& authHash);
+
+    /**
+     * (Singleton helper method) \n
+     * Creates the OmniServer object and the blank OmniNetwork object
      * and assigns the network to the omniNetwork pointer in this class.
      * @param omniNetworkName The name of the OmniNetwork being created.
-     * @param username Username used to log in to the server and gain access to do things.
-     * @param password Password used to log in to the server and gain access to do things.
+     * @param authHash Username + password hash to compare login attempts against.
      */
-    OmniServer(std::string& omniNetworkName, std::string& username, std::string& password);
+    OmniServer(std::string& omniNetworkName, std::string& authHash);
 
     // Private destructor; just contains a debug message for now
     ~OmniServer();
@@ -146,6 +180,18 @@ private:
     void addDrive(std::string& folderID, const configformat_t& driveConfig);
 
     /**
+     * Saves the state of the OmniNetwork associated with this server to the local config file and those of all the
+     * drives in the network.
+     */
+    void saveConfig();
+
+    /**
+     * Populates the entire local server/network program structure with the information from the local config file.
+     * Assumes server/network instances exist.
+     */
+    void loadConfig();
+
+    /**
      * Push changes made to a particular drive to the rest of the drives in the network.
      * @param callerNetInfo The network information (IP address, port number) of the calling drive's host machine.
      * @param callingDriveID The ID of the drive pushing its changes.
@@ -158,20 +204,34 @@ private:
     static OmniServer* instance;
 
     /**
+     * UUID of this server (used for server identity verification client-side).
+     */
+    std::string uuid;
+
+    /**
      * Pointer to the one and only OmniNetwork associated with this server.
      */
     OmniNetwork* omniNetwork;
 
-    // Username for server login
-    std::string username;
-
-    // Password for server login
-    std::string password;
+    /**
+     * Encrypted credentials hash to compare login attempts against.
+     */
+    std::string authHash;
 
     /**
-     * Stores the UUIDs of all the clients that are currently logged in to the server.
+     * The IP address of the server's host machine.
      */
-    std::vector<std::string> loggedInClients;
+    std::string ipaddress;
+
+    /**
+     * The port number used for port forwarding.
+     */
+    uint32_t port;
+
+    /**
+     * Stores the UUIDs and mailing addresses of all the clients that are currently logged in to the server.
+     */
+    std::unordered_map<std::string, nlohmann::json> loggedInClients;
 };
 
 #endif //SERVER_H

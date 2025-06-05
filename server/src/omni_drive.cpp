@@ -11,6 +11,7 @@ configformat_t OmniDrive::serialize() const
     configObj["id"] = id;
     configObj["name"] = name;
     configObj["type"] = type;
+    configObj["status"] = status;
     configObj["curr_host"] = currHost;
     configObj["port"] = port;
     configObj["capacity_bytes"] = capacity;
@@ -25,6 +26,7 @@ void OmniDrive::deserialize(const configformat_t& configObj)
     id = configObj["id"];
     name = configObj["name"];
     type = configObj["type"];
+    status = configObj["status"];
     currHost = configObj["curr_host"];
     port = configObj["port"];
     capacity = configObj["capacity_bytes"];
@@ -40,6 +42,7 @@ OmniDrive::OmniDrive()
     : id()
     , name()
     , type()
+    , status()
     , currHost()
     , port(0)
     , online(false)
@@ -49,7 +52,22 @@ OmniDrive::OmniDrive()
     , mirrorDirs()
 {}
 
-std::string OmniDrive::getId() const
+std::string OmniDrive::getID() const
 {
     return id;
+}
+
+std::string OmniDrive::getHost() const
+{
+    return currHost;
+}
+
+uint32_t OmniDrive::getPort() const
+{
+    return port;
+}
+
+void OmniDrive::setStatus(const std::string& newStatus)
+{
+    status = newStatus;
 }

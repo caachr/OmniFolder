@@ -2,14 +2,14 @@
 // Created by Christian Caamano on 5/16/25.
 //
 
-#include "../include/socket_master.h"
+#include "../include/port_authority.h"
 #include "server.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <iostream>
 #include <unistd.h>
 
-void SocketMaster::open()
+void PortAuthority::open()
 {
     // Create socket
     int serverFd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -38,43 +38,51 @@ void SocketMaster::open()
         return;
     }
 
+    // Set received data buffer size limit & data structure
+    const size_t MAX_BUFFER_SIZE = 8192;
+    std::vector<char> byteBuffer(MAX_BUFFER_SIZE);
+
     // Start accepting incoming connections
-    char msgBuffer[1024];
     while (true) {
+
         // Store client's identifying information for later use
         struct sockaddr_in clientAddr;
         socklen_t clientAddrLen = sizeof(clientAddr);
+
         // Accept the next client connection request in the queue
         int clientFd = accept(serverFd, (struct sockaddr*) &clientAddr, &clientAddrLen);
         if (clientFd < 0) {
             std::cout << "Accept failed.\n";
             continue;
         }
-        // Get the raw bytes received from the client
-        ssize_t bytes = recv(clientFd, msgBuffer, sizeof (msgBuffer), 0);
+
+        // Read data with proper bounds checking
+        ssize_t bytes = recv(clientFd, byteBuffer.data(), MAX_BUFFER_SIZE - 1, 0);
         if (bytes > 0) {
-            msgBuffer[bytes] = '\0';
-            std::cout << "Received buffer: " << msgBuffer << "\n";
+            byteBuffer[bytes] = '\0';
 
-            // Parse the bytes into common Message object
-            Message& message = parseMessage(msgBuffer);
-            std::cout << "Received message: " << message << "\n";
-
-            // Analyze the message and perform any appropriate actions
-            OmniServer::getInstance()->handleMessage(message);
+            // Validate data before processing
+            if (validateShipment(byteBuffer.data(), bytes)) {
+                FedEx::processReceivedParcel(byteBuffer.data());
+            }
         }
         close(clientFd);
     }
     close(serverFd);
 }
 
-Message& SocketMaster::parseMessage(char msgBuffer[1024])
+bool PortAuthority::validateShipment(const char *data, size_t length)
 {
-    // Convert buffer to intermediate object
-    messageformat_t iObj = messageformat_t::parse(msgBuffer);
 
-    // Convert intermediate object to Message
-    auto* message = new Message(iObj);
-
-    return *message;
 }
+
+//Message& SocketMaster::parseMessage(char msgBuffer[1024])
+//{
+//    // Convert buffer to intermediate object
+//    messageformat_t iObj = messageformat_t::parse(msgBuffer);
+//
+//    // Convert intermediate object to Message
+//    auto* message = new Message(iObj);
+//
+//    return *message;
+//}

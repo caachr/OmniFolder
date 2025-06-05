@@ -67,7 +67,17 @@ void OmniFolder::addDrive(std::unique_ptr<OmniDrive> drive)
     drives.push_back(std::move(drive));
 }
 
-std::string OmniFolder::getId() const
+std::string OmniFolder::getID() const
 {
     return id;
+}
+
+std::vector<OmniDrive *> OmniFolder::getDrivesConst() const
+{
+    std::vector<OmniDrive*> returnObj;
+    returnObj.reserve(drives.size());
+    for (const auto& drive : drives) {
+        returnObj.push_back(drive.get());
+    }
+    return returnObj;
 }

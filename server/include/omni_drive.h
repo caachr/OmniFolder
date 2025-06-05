@@ -46,7 +46,25 @@ public:
      * Get the ID of this OmniDrive.
      * @return The ID of this drive.
      */
-    std::string getId() const;
+    std::string getID() const;
+
+    /**
+     * Get the host IP of this OmniDrive.
+     * @return The host IP address of this drive.
+     */
+    std::string getHost() const;
+
+    /**
+     * Get the port of this OmniDrive.
+     * @return The port of this drive.
+     */
+    uint32_t getPort() const;
+
+    /**
+     * Set the status of this drive.
+     * @param newStatus The new status of this drive.
+     */
+    void setStatus(const std::string& newStatus);
 
 private:
 
@@ -65,6 +83,12 @@ private:
      * Full mirrors mirror the entire OmniFolder, while partial mirrors mirror only user-specified subdirectories.
      */
     unsigned char type;
+
+    /**
+     * The status of this drive: up-to-date or stale.
+     * Drives are marked stale when they're offline during a push and do not receive the updated data.
+     */
+    std::string status;
 
     /**
      * The IP address of the host machine on which the drive is currently running.

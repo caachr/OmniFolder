@@ -2,12 +2,17 @@
   "header": {
     "network_uuid": "omni-net-3ca0e0c5-f3b8-406e-9674-ee52a7a1271c",
     "sender_class": "client",
-    "sender_application_uuid": "omni-client-5292d387-d02a-47c7-a5dc-69df5380df45",
-    "sender_ip": "10.7.141.1",
-    "sender_port": 8080,
+    "sender_app_uuid": "omni-client-5292d387-d02a-47c7-a5dc-69df5380df45",
+    "sender_mailing_address": {
+      "ip": "10.7.141.1",
+      "port": 8080
+    },
     "receiver_class": "server",
-    "receiver_ip": "121.5.72.2",
-    "receiver_port": 8080
+    "receiver_app_uuid": "omni-server-ad70d175-723c-454f-8244-58cbef9e6939",
+    "receiver_mailing_address": {
+      "ip": "121.5.72.2",
+      "port": 8080
+    }
   },
   "type": "login_request",
   "payload": {

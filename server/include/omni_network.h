@@ -64,12 +64,24 @@ public:
      */
     void addFolder(std::unique_ptr<OmniFolder> folder);
 
-//    /**
-//     * Get the OmniFolder object in this network by its ID.
-//     * @param folderID The ID of the OmniFolder to get.
-//     * @return A pointer to the OmniFolder.
-//     */
-//    OmniFolder* getFolderByID(const std::string& folderID);
+    /**
+     * Get the UUID of this OmniNetwork.
+     * @return The UUID of this OmniNetwork.
+     */
+    std::string getUUID() const;
+
+    /**
+     * Get the OmniFolder object in this network by its ID.
+     * @param folderID The ID of the OmniFolder to get.
+     * @return A pointer to the OmniFolder.
+     */
+    OmniFolder* getFolderByID(const std::string& folderID);
+
+    /**
+     * Gets the list of folders (read only).
+     * @return The list of OmniFolder objects in this network (read only).
+     */
+    std::vector<OmniFolder*> getFoldersConst() const;
 
 private:
     /**

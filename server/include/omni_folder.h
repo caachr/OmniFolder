@@ -70,7 +70,13 @@ public:
      * Get the ID of this OmniFolder.
      * @return
      */
-    std::string getId() const;
+    std::string getID() const;
+
+    /**
+     * Gets the list of drives (read only).
+     * @return The list of OmniDrive objects in this folder (read only).
+     */
+    std::vector<OmniDrive*> getDrivesConst() const;
 
 private:
 

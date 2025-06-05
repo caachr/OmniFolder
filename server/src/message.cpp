@@ -22,13 +22,13 @@ void Message::deserialize(const messageformat_t& messageFormatObj)
     payload = messageFormatObj["payload"];
 }
 
-Message::Message(messageformat_t header, std::string type, messageformat_t payload)
+Message::Message(nlohmann::json header, std::string type, nlohmann::json payload)
     : header(header)
     , type(type)
     , payload(payload)
 {}
 
-messageformat_t Message::getHeader() const
+nlohmann::json Message::getHeader() const
 {
     return header;
 }
@@ -38,7 +38,7 @@ std::string Message::getType() const
     return type;
 }
 
-messageformat_t Message::getPayload() const
+nlohmann::json Message::getPayload() const
 {
     return payload;
 }

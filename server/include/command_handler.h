@@ -19,9 +19,7 @@
  * @p help
  * @p version
  * @p info
- * @p status
  * @p init
- * @p reload
  * @p start
  */
 class CommandHandler {
@@ -39,7 +37,7 @@ public:
      * @param input The raw user input.
      * @return Status code indicating success or failure of command execution attempt.
      */
-    static int execute_command(const std::string& command, const std::vector<std::string_view>& params);
+    static void execute_command(const std::string& command, const std::vector<std::string_view>& params);
 
 private:
     /**
@@ -47,13 +45,13 @@ private:
      * Informs the user that command-specific help can be provided by typing "<command> --help".
      * @return Status code indicating success or failure of command execution attempt.
      */
-    static int command_help();
+    static void command_help();
 
     /**
      * @p version : Prints the version of this OmniFolder Server application.
      * @return Status code indicating success or failure of command execution attempt.
      */
-    static int command_version();
+    static void command_version();
 
     /**
      * @p info : Displays information about this OmniFolder server.
@@ -61,15 +59,7 @@ private:
      * @param args The additional arguments and flags specified by the user.
      * @return Status code indicating success or failure of command execution attempt.
      */
-    static int command_info(const std::vector<std::string_view>& params);
-
-    /**
-     * @p status : Reports the current status of this OmniFolder server and the OmniFolder network it is a part of.
-     * \n "--advanced": provides comprehensive status information for advanced users.
-     * @param args The additional arguments and flags specified by the user.
-     * @return Status code indicating success or failure of command execution attempt.
-     */
-    static int command_status(const std::vector<std::string_view>& params);
+    static void command_info(const std::vector<std::string_view>& params);
 
     /**
      * @p init : Enters a setup wizard to initialize an OmniServer along with an OmniNetwork. Options:
@@ -79,22 +69,13 @@ private:
      * @param args The additional arguments and flags specified by the user.
      * @return Status code indicating success or failure of command execution attempt.
      */
-    static int command_init(const std::vector<std::string_view>& params);
-
-    /**
-     * @p reload : Reloads an OmniNetwork into an existing server using a specified config file.
-     * More specifically, deletes the current OmniNetwork from the system and replaces it with a new one
-     * according to the config specifications. Leaves the server otherwise unchanged.
-     * @param params Single parameter: the config file path specified by the user.
-     * @return Status code indicating success or failure of command execution attempt.
-     */
-    static int command_reload(const std::vector<std::string_view>& params);
+    static void command_init(const std::vector<std::string_view>& params);
 
     /**
      * @p start : Starts the OmniFolder server. Note: Ctrl+C stops the server.
      * @return Status code indicating success or failure of command execution attempt.
      */
-    static int command_start();
+    static void command_start();
 };
 
 #endif //COMMAND_HANDLER_H

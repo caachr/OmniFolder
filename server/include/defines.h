@@ -17,12 +17,12 @@
 /* --------- AUTHENTICATION CREDENTIALS --------- */
 
 /**
- * Path to the stored authentication credentials relative to the server's root directory (server).
+ * Path to the stored encrypted authentication hash relative to the server's root directory (server).
  */
-#define AUTH_CREDS_RELATIVE_PATH "auth.json"
+#define AUTH_FILE_RELATIVE_PATH "auth.json"
 
 
-/* --------- CONFIG FORMAT --------- */
+/* --------- CONFIGURATION DATA --------- */
 
 /**
  * Defines the serialization format for networks, folders, and drives, as well as config files.
@@ -41,8 +41,9 @@ using configformat_t = nlohmann::json;
  */
 #define CONFIG_FILE_RELATIVE_PATH "config.json"
 
+#define CONFIG_SCHEMA_RELATIVE_PATH "config_schema.json"
 
-/* --------- NETWORK MESSAGE FORMAT --------- */
+/* --------- NETWORK MESSAGE SERIALIZATION FORMAT --------- */
 /**
  * Defines the serialization format for messages sent between server-client / client-client.
  */
@@ -51,9 +52,12 @@ using configformat_t = nlohmann::json;
 /**
  * Message serialization format object type.
  * Example of where it fits: byte buffer -> nlohmann::json (message format object) -> Message
+ *
+ * REQUIREMENTS (for the type this alias refers to):
+ * 1. Static parse method for char[1024]
  */
 using messageformat_t = nlohmann::json;
 
-
+#define MESSAGE_SCHEMA_RELATIVE_PATH "message_schema.json"
 
 #endif //DEFINES_H

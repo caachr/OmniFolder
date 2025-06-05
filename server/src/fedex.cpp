@@ -8,3 +8,8 @@ void FedEx::shipMessage(std::unique_ptr<Message> message)
 {
 
 }
+
+void FedEx::processReceivedParcel(char byteBuffer[1024])
+{
+    messageformat_t bufferContents = messageformat_t::parse(byteBuffer);
+}

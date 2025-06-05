@@ -54,18 +54,38 @@ OmniNetwork* OmniNetwork::getInstance()
     return instance;
 }
 
-OmniNetwork::OmniNetwork(std::string& networkName)
-    : uuid()
-    , name(networkName)
-    , folders()
-{}
-
 void OmniNetwork::addFolder(std::unique_ptr<OmniFolder> folder)
 {
     folders.push_back(std::move(folder));
 }
 
-//OmniFolder* OmniNetwork::getFolderByID(const std::string& folderID)
-//{
-//    return (omniFolders.find(folderID))->second.get();
-//}
+std::string OmniNetwork::getUUID() const
+{
+    return uuid;
+}
+
+OmniFolder* OmniNetwork::getFolderByID(const std::string& folderID)
+{
+    for (const auto& folder : folders) {
+        if (folder->getID() == folderID) {
+            return folder.get();
+        }
+    }
+    return nullptr;
+}
+
+std::vector<OmniFolder *> OmniNetwork::getFoldersConst() const
+{
+    std::vector<OmniFolder*> returnObj;
+    returnObj.reserve(folders.size());
+    for (const auto& folder : folders) {
+        returnObj.push_back(folder.get());
+    }
+    return returnObj;
+}
+
+OmniNetwork::OmniNetwork(std::string& networkName)
+        : uuid()
+        , name(networkName)
+        , folders()
+{}

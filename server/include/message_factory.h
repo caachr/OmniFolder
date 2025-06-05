@@ -15,22 +15,13 @@ public:
      * @param ingredients The ingredients necessary to be able to construct the Message. Contents vary for each message type.
      * @return The Message.
      */
-    static std::unique_ptr<Message> makeMessage(std::string type, messageformat_t ingredients);
+    static std::unique_ptr<Message> makeMessage(std::string type, nlohmann::json ingredients);
 
 private:
-    static std::unique_ptr<Message> makeLoginDenied(messageformat_t ingredients);
-    static std::unique_ptr<Message> makeLoginGranted(messageformat_t ingredients);
-    static std::unique_ptr<Message> makeUnauthorized(messageformat_t ingredients);
-    static std::unique_ptr<Message> make
-    static std::unique_ptr<Message> make
-    static std::unique_ptr<Message> make
-    static std::unique_ptr<Message> make
-    static std::unique_ptr<Message> make
-    static std::unique_ptr<Message> make
-    static std::unique_ptr<Message> make
-    static std::unique_ptr<Message> make
-    static std::unique_ptr<Message> make
-
+    static std::unique_ptr<Message> makeLoginDenied(nlohmann::json ingredients);
+    static std::unique_ptr<Message> makeLoginGranted(nlohmann::json ingredients);
+    static std::unique_ptr<Message> makeUnauthorized(nlohmann::json ingredients);
+    static std::unique_ptr<Message> makeConfigUpdate(nlohmann::json ingredients);
 };
 
 #endif //MESSAGE_FACTORY_H

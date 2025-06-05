@@ -6,12 +6,15 @@
 #define FEDEX_H
 
 #include <memory>
+#include "defines.h"
 
 class Message;
 
 class FedEx {
 public:
     static void shipMessage(std::unique_ptr<Message> message);
+
+    static void processReceivedParcel(char byteBuffer[1024]);
 };
 
 #endif //FEDEX_H

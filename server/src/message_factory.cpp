@@ -4,7 +4,7 @@
 
 #include "../include/message_factory.h"
 
-std::unique_ptr<Message> MessageFactory::makeMessage(std::string type, messageformat_t ingredients)
+std::unique_ptr<Message> MessageFactory::makeMessage(std::string type, nlohmann::json ingredients)
 {
     if (type == "login_denied") {
         return makeLoginDenied(ingredients);
@@ -12,14 +12,16 @@ std::unique_ptr<Message> MessageFactory::makeMessage(std::string type, messagefo
         return makeLoginGranted(ingredients);
     } else if (type == "unauthorized") {
         return makeUnauthorized(ingredients);
+    } else if (type == "config_update") {
+        return makeConfigUpdate(ingredients);
     }
 }
 
-std::unique_ptr<Message> MessageFactory::makeLoginDenied(messageformat_t ingredients)
+std::unique_ptr<Message> MessageFactory::makeLoginDenied(nlohmann::json ingredients)
 {
-    messageformat_t header;
+    nlohmann::json header;
     std::string type;
-    messageformat_t payload;
+    nlohmann::json payload;
 
     header["network_uuid"] = ingredients["original_header"]["network_uuid"];
 
@@ -39,11 +41,11 @@ std::unique_ptr<Message> MessageFactory::makeLoginDenied(messageformat_t ingredi
     return std::unique_ptr<Message>(new Message(header, type, payload));
 }
 
-std::unique_ptr<Message> MessageFactory::makeLoginGranted(messageformat_t ingredients)
+std::unique_ptr<Message> MessageFactory::makeLoginGranted(nlohmann::json ingredients)
 {
-    messageformat_t header;
+    nlohmann::json header;
     std::string type;
-    messageformat_t payload;
+    nlohmann::json payload;
 
     header["network_uuid"] = ingredients["original_header"]["network_uuid"];
 
@@ -64,11 +66,11 @@ std::unique_ptr<Message> MessageFactory::makeLoginGranted(messageformat_t ingred
     return std::unique_ptr<Message>(new Message(header, type, payload));
 }
 
-std::unique_ptr<Message> MessageFactory::makeUnauthorized(messageformat_t ingredients)
+std::unique_ptr<Message> MessageFactory::makeUnauthorized(nlohmann::json ingredients)
 {
-    messageformat_t header;
+    nlohmann::json header;
     std::string type;
-    messageformat_t payload;
+    nlohmann::json payload;
 
     header["network_uuid"] = ingredients["original_header"]["network_uuid"];
 
@@ -85,6 +87,30 @@ std::unique_ptr<Message> MessageFactory::makeUnauthorized(messageformat_t ingred
     type = "unauthorized";
 
     payload["details"] = "Error: client is not logged in and is therefore unauthorized to interact with the network. Please log in using the correct username and password.";
+
+    return std::unique_ptr<Message>(new Message(header, type, payload));
+}
+
+std::unique_ptr<Message> MessageFactory::makeConfigUpdate(nlohmann::json ingredients)
+{
+    nlohmann::json header;
+    std::string type;
+    nlohmann::json payload;
+
+    header["network_uuid"] = ingredients["network_uuid"];
+
+    header["sender_class"] = "server";
+    header["sender_app_uuid"] = ingredients["server_uuid"];
+    header["sender_ip"] = ingredients["server_ip"];
+    header["sender_port"] = ingredients["server_port"];
+
+    header["receiver_class"] = "client";
+    header["receiver_ip"] = ingredients["drive_ip"];
+    header["receiver_port"] = ingredients["drive_port"];
+
+    type = "config_update";
+
+    payload["config"] = ingredients["config"];
 
     return std::unique_ptr<Message>(new Message(header, type, payload));
 }

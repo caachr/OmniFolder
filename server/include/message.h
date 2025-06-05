@@ -35,7 +35,7 @@ public:
      * Get this Message's header.
      * @return The header of this Message (containing sender/receiver info + network uuid)
      */
-    messageformat_t getHeader() const;
+    nlohmann::json getHeader() const;
 
     /**
      * Get this Message's type.
@@ -47,7 +47,7 @@ public:
      * Get this Message's payload.
      * @return The payload of this Message.
      */
-    messageformat_t getPayload() const;
+    nlohmann::json getPayload() const;
 
 //    /**
 //     * Construct a new Message from an intermediate message format object.
@@ -78,7 +78,7 @@ private:
      * sender ip & port, receiver ip & port
      * omninetwork uuid
      */
-    messageformat_t header;
+    nlohmann::json header;
 
 //    /**
 //     * IP address of the host sending the message.
@@ -109,7 +109,7 @@ private:
     /**
      * Meaningful contents of the message.
      */
-    messageformat_t payload;
+    nlohmann::json payload;
 };
 
 #endif //MESSAGE_H
