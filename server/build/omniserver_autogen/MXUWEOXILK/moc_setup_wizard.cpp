@@ -784,10 +784,22 @@ template <> constexpr inline auto PortPage_R::qt_create_metaobjectdata<qt_meta_t
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "PortPage_R"
+        "PortPage_R",
+        "startPortTest",
+        "",
+        "port",
+        "startForwardTest"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'startPortTest'
+        QtMocHelpers::SignalData<void(const qint32 &)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 3 },
+        }}),
+        // Signal 'startForwardTest'
+        QtMocHelpers::SignalData<void(const qint32 &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 3 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -809,10 +821,19 @@ Q_CONSTINIT const QMetaObject PortPage_R::staticMetaObject = { {
 void PortPage_R::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<PortPage_R *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->startPortTest((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1]))); break;
+        case 1: _t->startForwardTest((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1]))); break;
+        default: ;
+        }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (PortPage_R::*)(const qint32 & )>(_a, &PortPage_R::startPortTest, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (PortPage_R::*)(const qint32 & )>(_a, &PortPage_R::startForwardTest, 1))
+            return;
+    }
 }
 
 const QMetaObject *PortPage_R::metaObject() const
@@ -831,7 +852,31 @@ void *PortPage_R::qt_metacast(const char *_clname)
 int PortPage_R::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWizardPage::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 2)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 2;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 2)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 2;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void PortPage_R::startPortTest(const qint32 & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
+}
+
+// SIGNAL 1
+void PortPage_R::startForwardTest(const qint32 & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 namespace {
 struct qt_meta_tag_ZN13ConfirmPage_RE_t {};

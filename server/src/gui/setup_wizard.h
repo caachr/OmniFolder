@@ -357,13 +357,39 @@ public:
 
     int nextId() const override;
 
+    bool isComplete() const override;
+
+    void onPortSuccess();
+    void onPortFailure();
+
+    void onForwardSuccess();
+    void onForwardFailure();
+
+signals:
+    void startPortTest(const qint32 &port);
+    void startForwardTest(const qint32 &port);
+
 private:
     QLabel *topLabel;
     QLabel *portLabel;
     QLabel *statusLabel;
     QLineEdit *portLine;
-    QPushButton *testButton;
+    QPushButton *testPortButton;
+    QPushButton *testForwardButton;
     QPushButton *helpButton;
+
+    PortAuthority *portAuthority;
+
+    // Status of port test
+    enum class Status { None,
+                        AwaitingPort, TestingPort, PortSuccess, PortFailure,
+                        AwaitingForward, TestingForward, ForwardSuccess, ForwardFailure };
+    Status currentStatus = Status::AwaitingPort;
+
+    void updateStatus(Status newStatus);
+
+    void enableFields();
+    void disableFields();
 };
 
 

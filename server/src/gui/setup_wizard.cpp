@@ -1047,32 +1047,90 @@ int ConfigConfirmPage_R::nextId() const
 PortPage_R::PortPage_R(QWidget *parent)
     : QWizardPage(parent)
 {
+    // Objects from internal directories
+
+    portAuthority = new PortAuthority();
+
+
+    // Title
+
     setTitle(tr("Network Restoration - Configure Port Forwarding for Server (3/4)"));
+
+
+    // Set elements and properties
 
     topLabel = new QLabel(tr("Please choose a port on your computer to receive connections."
                              "\n\nIf you are using the same router as before,"
                              " simply enter the port you originally forwarded below."
-                             " Otherwise, please choose a port and forward it on your router."
+                             " Otherwise, please choose a port, test it, and then forward it on your router."
                              "\n\nOnce port forwarding has been configured, test the connection with the provided button to continue."));
     topLabel->setWordWrap(true);
 
     portLabel = new QLabel(tr("Port:"));
     portLine = new QLineEdit();
+    testPortButton = new QPushButton(tr("Test Port Availability"));
 
-    testButton = new QPushButton(tr("Test Connection"));
-    statusLabel = new QLabel(tr("Waiting to test..."));
+    testForwardButton = new QPushButton(tr("Test Forwarded Connection"));
+
+    statusLabel = new QLabel(tr("Waiting for user input..."));
 
     helpButton = new QPushButton(tr("I need help"));
 
 
+    // Set connections and registrations
+
+    testPortButton->setEnabled(false);
+    testForwardButton->setEnabled(false);
+
+    connect(portLine, &QLineEdit::textChanged, this, [this]() {
+        if (portLine->text().isEmpty()) {
+            updateStatus(Status::None);
+        } else {
+            updateStatus(Status::AwaitingPort);
+        }
+    });
+
+    connect(testPortButton, &QPushButton::clicked, this, [this]() {
+        updateStatus(Status::TestingPort);
+
+        // Trigger async port test
+        emit startPortTest(portLine->text().toInt());
+    });
+
+    connect(testForwardButton, &QPushButton::clicked, this, [this]() {
+        updateStatus(Status::TestingForward);
+
+        // Trigger async forward test
+        emit startForwardTest(portLine->text().toInt());
+    });
+
+    connect(this, &PortPage_R::startPortTest, portAuthority, &PortAuthority::testPort);
+    connect(this, &PortPage_R::startForwardTest, portAuthority, &PortAuthority::testForward);
+
+    connect(portAuthority, &PortAuthority::portTestSuccess, this, &PortPage_R::onPortSuccess);
+    connect(portAuthority, &PortAuthority::portTestFailure, this, &PortPage_R::onPortFailure);
+
+    connect(portAuthority, &PortAuthority::forwardTestSuccess, this, &PortPage_R::onForwardSuccess);
+    connect(portAuthority, &PortAuthority::forwardTestFailure, this, &PortPage_R::onForwardFailure);
+
+    connect(helpButton, &QPushButton::clicked, [](){
+        QDesktopServices::openUrl(QUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+    });
+
+    registerField("port_r", portLine);
+
+
+    // Set layouts
+
     QHBoxLayout *portLayout = new QHBoxLayout;
     portLayout->addWidget(portLabel);
     portLayout->addWidget(portLine);
+    portLayout->addWidget(testPortButton);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addWidget(topLabel);
     mainLayout->addLayout(portLayout);
-    mainLayout->addWidget(testButton);
+    mainLayout->addWidget(testForwardButton);
     mainLayout->addWidget(statusLabel);
     mainLayout->addStretch();
     mainLayout->addWidget(helpButton);
@@ -1082,6 +1140,109 @@ PortPage_R::PortPage_R(QWidget *parent)
 int PortPage_R::nextId() const
 {
     return SetupWizard::Page_Confirm_R;
+}
+
+bool PortPage_R::isComplete() const
+{
+    return currentStatus == Status::ForwardSuccess;
+}
+
+void PortPage_R::updateStatus(Status newStatus)
+{
+    currentStatus = newStatus;
+
+    switch (newStatus) {
+    case Status::None:
+        statusLabel->setText("Waiting for user input...");
+        statusLabel->setStyleSheet("color: gray");
+        portLine->setEnabled(true);
+        testPortButton->setEnabled(false);
+        testForwardButton->setEnabled(false);
+        break;
+    case Status::AwaitingPort:
+        statusLabel->setText("Waiting for available port selection...");
+        statusLabel->setStyleSheet("color: gray");
+        enableFields();
+        testForwardButton->setEnabled(false);
+        break;
+    case Status::TestingPort:
+        statusLabel->setText("Checking port availability...");
+        statusLabel->setStyleSheet("color: gray");
+        disableFields();
+        helpButton->setEnabled(true);
+        break;
+    case Status::PortSuccess:
+        statusLabel->setText("Port available. Waiting to test port forward connection...");
+        statusLabel->setStyleSheet("color: gray");
+        enableFields();
+        break;
+    case Status::PortFailure:
+        statusLabel->setText("Port unavailable. Please choose a different port.");
+        statusLabel->setStyleSheet("color: red");
+        enableFields();
+        break;
+    case Status::AwaitingForward:
+        statusLabel->setText("Waiting to test port forward connection...");
+        statusLabel->setStyleSheet("color: gray");
+        enableFields();
+        break;
+    case Status::TestingForward:
+        statusLabel->setText("Testing forwarded port connection...");
+        statusLabel->setStyleSheet("color: gray");
+        disableFields();
+        helpButton->setEnabled(true);
+        break;
+    case Status::ForwardSuccess:
+        statusLabel->setText("Connection succeeded, okay to proceed.");
+        statusLabel->setStyleSheet("color: green");
+        disableFields();
+        break;
+    case Status::ForwardFailure:
+        statusLabel->setText("Connection failed. Please ensure you are connected to the Internet,"
+                             " double-check the port-forwarding configuration on your router, and try again."
+                             " If the connection still fails, you may want to choose a different port above, forward it, and try again.");
+        statusLabel->setStyleSheet("color: red");
+        enableFields();
+        break;
+    }
+
+    emit completeChanged();
+}
+
+void PortPage_R::onPortSuccess()
+{
+    updateStatus(Status::PortSuccess);
+}
+
+void PortPage_R::onPortFailure()
+{
+    updateStatus(Status::PortFailure);
+}
+
+void PortPage_R::onForwardSuccess()
+{
+    updateStatus(Status::ForwardSuccess);
+}
+
+void PortPage_R::onForwardFailure()
+{
+    updateStatus(Status::ForwardFailure);
+}
+
+void PortPage_R::enableFields()
+{
+    portLine->setEnabled(true);
+    testPortButton->setEnabled(true);
+    testForwardButton->setEnabled(true);
+    helpButton->setEnabled(true);
+}
+
+void PortPage_R::disableFields()
+{
+    portLine->setEnabled(false);
+    testPortButton->setEnabled(false);
+    testForwardButton->setEnabled(false);
+    helpButton->setEnabled(false);
 }
 
 
