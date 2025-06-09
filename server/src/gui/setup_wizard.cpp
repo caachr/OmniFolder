@@ -290,6 +290,7 @@ BeaconPage::BeaconPage(QWidget *parent)
     testButton = new QPushButton(tr("Test Login"));
 
     statusLabel = new QLabel;
+    statusLabel->setWordWrap(true);
     statusLabel->setStyleSheet("color: gray");
     statusLabel->setText("Waiting for credentials input...");
 

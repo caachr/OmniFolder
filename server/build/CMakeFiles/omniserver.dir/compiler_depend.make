@@ -1039,8 +1039,17 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/config_manager.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/port_authority.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QFlags \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QIODevice \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonDocument \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonValue \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QList \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QMetaType \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QObject \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QSharedDataPointer \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QString \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QUrl \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QVariant \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q17memory.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20algorithm.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20functional.h \
@@ -1050,6 +1059,7 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20utility.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q23type_traits.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q23utility.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q26numeric.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qalgorithms.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qanystringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qarraydata.h \
@@ -1065,6 +1075,8 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearraylist.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearrayview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcalendar.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborcommon.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborvalue.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qchar.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcompare.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcompare_impl.h \
@@ -1076,6 +1088,7 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainerinfo.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainertools_impl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcryptographichash.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdarwinhelpers.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
@@ -1101,6 +1114,9 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiodevicebase.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterable.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsondocument.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonparseerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonvalue.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlatin1stringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qline.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlist.h \
@@ -1125,6 +1141,7 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qprocessordetection.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qrect.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qrefcount.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qregularexpression.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qscopedpointer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qscopeguard.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qset.h \
@@ -1176,6 +1193,7 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtypes.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qurl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qutf8stringview.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/quuid.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qvariant.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qversiontagging.h \
@@ -1214,6 +1232,28 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qtransform.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkAccessManager \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkReply \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkRequest \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslConfiguration \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslError \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslPreSharedKeyAuthenticator \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhttpheaders.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qssl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QLabel \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
@@ -3412,8 +3452,17 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/A
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/setup_wizard.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/port_authority.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QFlags \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QIODevice \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonDocument \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonValue \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QList \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QMetaType \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QObject \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QSharedDataPointer \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QString \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QUrl \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QVariant \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q17memory.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20functional.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20iterator.h \
@@ -3421,6 +3470,7 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/A
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20type_traits.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20utility.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q23utility.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q26numeric.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qalgorithms.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qanystringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qarraydata.h \
@@ -3436,6 +3486,8 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/A
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearraylist.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearrayview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcalendar.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborcommon.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborvalue.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qchar.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcompare.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcompare_impl.h \
@@ -3447,6 +3499,7 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/A
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainerinfo.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainertools_impl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcryptographichash.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdarwinhelpers.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
@@ -3472,6 +3525,9 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/A
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiodevicebase.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterable.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsondocument.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonparseerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonvalue.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlatin1stringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qline.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlist.h \
@@ -3496,6 +3552,7 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/A
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qprocessordetection.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qrect.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qrefcount.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qregularexpression.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qscopedpointer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qscopeguard.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qset.h \
@@ -3545,6 +3602,7 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/A
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtypes.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qurl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qutf8stringview.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/quuid.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qvariant.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qversiontagging.h \
@@ -3583,6 +3641,27 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/A
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qtransform.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkAccessManager \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkReply \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkRequest \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslConfiguration \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslPreSharedKeyAuthenticator \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhttpheaders.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qssl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QLabel \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QLineEdit \
@@ -4708,8 +4787,17 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/setup_wizard.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/port_authority.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QFlags \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QIODevice \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonDocument \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonValue \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QList \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QMetaType \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QObject \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QSharedDataPointer \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QString \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QUrl \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QVariant \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q17memory.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20functional.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20iterator.h \
@@ -4717,6 +4805,7 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20type_traits.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20utility.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q23utility.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q26numeric.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qalgorithms.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qanystringview.h \
@@ -4734,6 +4823,8 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearraylist.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearrayview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcalendar.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborcommon.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborvalue.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qchar.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcompare.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcompare_impl.h \
@@ -4748,6 +4839,7 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcoreevent.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcryptographichash.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdarwinhelpers.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
@@ -4776,6 +4868,9 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiodevicebase.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterable.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsondocument.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonparseerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonvalue.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlatin1stringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qline.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlist.h \
@@ -4801,6 +4896,7 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qprocessordetection.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qrect.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qrefcount.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qregularexpression.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qscopedpointer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qscopeguard.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qset.h \
@@ -4850,6 +4946,7 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtypes.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qurl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qutf8stringview.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/quuid.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qvariant.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qversiontagging.h \
@@ -4891,6 +4988,27 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qtransform.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkAccessManager \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkReply \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkRequest \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslConfiguration \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslPreSharedKeyAuthenticator \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhttpheaders.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qssl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QApplication \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QFileDialog \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QLabel \
@@ -6497,6 +6615,7 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__fwd/memory_resource.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__fwd/ostream.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__fwd/pair.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__fwd/span.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__fwd/sstream.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__fwd/streambuf.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__fwd/string.h \
@@ -6829,6 +6948,7 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/atomic \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/bit \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/cassert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/cctype \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/cerrno \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/charconv \
@@ -6875,6 +6995,8 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/ratio \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/set \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/span \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/sstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/stack \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/stdbool.h \
@@ -6892,6 +7014,7 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/unordered_map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/variant \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/vector \
@@ -7047,13 +7170,25 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QFlags \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QIODevice \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonDocument \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonValue \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QList \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QMetaType \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QObject \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QTimer \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QSharedDataPointer \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QString \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QUrl \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QVariant \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q17memory.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20functional.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20iterator.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20memory.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20type_traits.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20utility.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q23utility.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q26numeric.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qalgorithms.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qanystringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qarraydata.h \
@@ -7063,12 +7198,14 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qatomic.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qatomic_cxx11.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbasicatomic.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbasictimer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbindingstorage.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearray.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearrayalgorithms.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearraylist.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearrayview.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcalendar.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborcommon.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborvalue.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qchar.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcompare.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcompare_impl.h \
@@ -7079,11 +7216,13 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainerfwd.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainerinfo.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainertools_impl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcryptographichash.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdarwinhelpers.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdeadlinetimer.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qelapsedtimer.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qeventloop.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qendian.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qexceptionhandling.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qflags.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qfloat16.h \
@@ -7093,14 +7232,21 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qgenericatomic.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qglobal.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qglobalstatic.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qhash.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qhashfunctions.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiodevice.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiodevicebase.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterable.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsondocument.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonparseerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonvalue.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlatin1stringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlist.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlocale.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlogging.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qmalloc.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qmap.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qmath.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qmetacontainer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qmetatype.h \
@@ -7115,8 +7261,15 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qpair.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qprocessordetection.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qrefcount.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qregularexpression.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qscopedpointer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qscopeguard.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qset.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qshareddata.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qshareddata_impl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qsharedpointer.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qspan.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qstdlibdetection.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qstring.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qstringalgorithms.h \
@@ -7142,8 +7295,8 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtdeprecationdefinitions.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtdeprecationmarkers.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtenvironmentvariables.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtformat_impl.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtimer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtmetamacros.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtnoop.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtpreprocessorsupport.h \
@@ -7154,10 +7307,35 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/De
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtversionchecks.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtypeinfo.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtypes.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qurl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qutf8stringview.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/quuid.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qvariant.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qversiontagging.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qxptype_traits.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qyieldcpu.h
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qyieldcpu.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkAccessManager \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkReply \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkRequest \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslConfiguration \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslPreSharedKeyAuthenticator \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhttpheaders.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qssl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h
 
 CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/util/logging.cpp \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/util/logging.h
@@ -7205,8 +7383,6 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 
 /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_scalarmult_ed25519.h:
 
-/Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_scalarmult.h:
-
 /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_pwhash_scryptsalsa208sha256.h:
 
 /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_onetimeauth.h:
@@ -7216,8 +7392,6 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kdf_hkdf_sha256.h:
 
 /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kdf_blake2b.h:
-
-/Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kdf.h:
 
 /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_hash_sha512.h:
 
@@ -7281,8 +7455,6 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 
 /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/qwidget.h:
 
-/Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/qtwidgetsexports.h:
-
 /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/qtwidgets-config.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/qpushbutton.h:
@@ -7307,6 +7479,20 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 
 /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QLabel:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslsocket.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslerror.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhostaddress.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkRequest:
+
 /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qtransform.h:
 
 /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_secretbox_xchacha20poly1305.h:
@@ -7322,8 +7508,6 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qpicture.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qpen.h:
-
-/Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qpalette.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qpaintdevice.h:
 
@@ -7358,8 +7542,6 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtversionchecks.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qttranslation.h:
-
-/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtnoop.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qinputmethod.h:
 
@@ -7425,11 +7607,17 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qmath.h:
 
-/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qmargins.h:
-
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlogging.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qlist.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/qtwidgetsexports.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonvalue.h:
+
+/Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_scalarmult.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonparseerror.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qiterator.h:
 
@@ -7459,6 +7647,8 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdarwinhelpers.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcryptographichash.h:
+
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainertools_impl.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcontainerinfo.h:
@@ -7473,6 +7663,12 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qchar.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborvalue.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qpalette.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborcommon.h:
+
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcalendar.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbytearrayview.h:
@@ -7481,8 +7677,6 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbindingstorage.h:
 
-/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbasicatomic.h:
-
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qassert.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qarraydataops.h:
@@ -7490,6 +7684,10 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qconstructormacros.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qalgorithms.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qmargins.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q26numeric.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20utility.h:
 
@@ -7500,6 +7698,24 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIV
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qgenericatomic.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20algorithm.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QVariant:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbasicatomic.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QSharedDataPointer:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QList:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonValue:
+
+/Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kdf.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonDocument:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtnoop.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QIODevice:
 
 omniserver_autogen/SWA5KW6C4E/moc_beacon_manager.cpp:
 
@@ -7631,6 +7847,10 @@ omniserver_autogen/PRMOGMWJPH/moc_config_manager.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_types/_fd_copy.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhttpheaders.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_types/_fd_clr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_types/_errno_t.h:
@@ -7656,6 +7876,8 @@ omniserver_autogen/PRMOGMWJPH/moc_config_manager.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_pthread/_pthread_types.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_pthread/_pthread_t.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/quuid.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
 
@@ -7690,6 +7912,8 @@ omniserver_autogen/PRMOGMWJPH/moc_config_manager.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/pthread/sched.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/pthread/qos.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QFlags:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/malloc/_ptrcheck.h:
 
@@ -7891,6 +8115,8 @@ omniserver_autogen/PRMOGMWJPH/moc_config_manager.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__utility/as_lvalue.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qregularexpression.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__undef_macros:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__concepts/movable.h:
@@ -7983,6 +8209,8 @@ omniserver_autogen/PRMOGMWJPH/moc_config_manager.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/is_object.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__iterator/back_insert_iterator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/is_null_pointer.h:
@@ -8020,6 +8248,8 @@ omniserver_autogen/PRMOGMWJPH/moc_config_manager.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/in_out_result.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/is_enum.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsondocument.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/stdint.h:
 
@@ -8086,6 +8316,8 @@ omniserver_autogen/PRMOGMWJPH/moc_config_manager.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/is_nothrow_copy_constructible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/apply_cv.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtenvironmentvariables.h:
 
@@ -8344,6 +8576,8 @@ omniserver_autogen/PRMOGMWJPH/moc_config_manager.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__math/trigonometric_functions.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__math/traits.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslError:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/is_member_pointer.h:
 
@@ -8615,6 +8849,8 @@ omniserver_autogen/7OIUYE7PDQ/moc_port_authority.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__format/formatter_tuple.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QUrl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__format/formatter_string.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__format/formatter_output.h:
@@ -8723,6 +8959,8 @@ omniserver_autogen/7OIUYE7PDQ/moc_port_authority.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__exception/nested_exception.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkAccessManager:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__chrono/file_clock.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__concepts/predicate.h:
@@ -8742,6 +8980,8 @@ omniserver_autogen/7OIUYE7PDQ/moc_port_authority.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__filesystem/file_time_type.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__concepts/common_reference_with.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/generate.h:
 
@@ -8834,6 +9074,8 @@ omniserver_autogen/mocs_compilation.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__iterator/move_sentinel.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__charconv/to_chars_integral.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__iterator/empty.h:
 
@@ -8943,6 +9185,8 @@ omniserver_autogen/mocs_compilation.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__assertion_handler:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QMetaType:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__assert:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qglobalstatic.h:
@@ -8950,6 +9194,8 @@ omniserver_autogen/mocs_compilation.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__fwd/fstream.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/partial_sort.h:
 
@@ -8977,11 +9223,15 @@ omniserver_autogen/mocs_compilation.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/is_scoped_enum.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qssl.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/aligned_union.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/for_each.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__filesystem/operations.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qarraydata.h:
 
@@ -9367,6 +9617,8 @@ omniserver_autogen/MXUWEOXILK/moc_setup_wizard.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/lazy.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslPreSharedKeyAuthenticator:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/ranges_adjacent_find.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qcolor.h:
@@ -9411,6 +9663,8 @@ omniserver_autogen/MXUWEOXILK/moc_setup_wizard.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__type_traits/is_arithmetic.h:
 
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkReply:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__bit/popcount.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/_types/_nl_item.h:
@@ -9426,6 +9680,8 @@ omniserver_autogen/MXUWEOXILK/moc_setup_wizard.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/map:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/pstl_copy.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslConfiguration:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/merge.h:
 
@@ -9858,6 +10114,8 @@ omniserver_autogen/MXUWEOXILK/moc_setup_wizard.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__algorithm/ranges_reverse.h:
 
 /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h:
+
+/Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/_printf.h:
 

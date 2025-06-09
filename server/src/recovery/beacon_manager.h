@@ -6,6 +6,12 @@
 #define OMNISERVER_BEACON_MANAGER_H
 
 #include <QObject>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QUrl>
+#include <QJsonDocument>
+#include <QJsonValue>
 
 class BeaconManager : public QObject {
     Q_OBJECT
@@ -19,6 +25,9 @@ signals:
 
 public slots:
     void testLogin(const QString &ghUsername, const QString &ghToken);
+
+private:
+    QNetworkAccessManager *m_networkManager;
 };
 
 #endif //OMNISERVER_BEACON_MANAGER_H
