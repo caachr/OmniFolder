@@ -1,0 +1,13 @@
+INFO | fixing executable '/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/cmake-build-debug/omniserver.app/Contents/MacOS/omniserver'
+INFO | fixing plugins
+INFO | fixing plugin libqcocoa.dylib
+INFO | fixing plugin libqmacstyle.dylib
+INFO | fixing plugin libqsecuretransportbackend.dylib
+INFO | fixing plugin libqopensslbackend.dylib
+INFO | fixing plugin libqcertonlybackend.dylib
+INFO | fixing plugin libqsvgicon.dylib
+INFO | fixing plugin libqgif.dylib
+INFO | fixing plugin libqico.dylib
+INFO | fixing plugin libqjpeg.dylib
+INFO | fixing plugin libqscnetworkreachability.dylib
+INFO | macdeployqtfix terminated with success
