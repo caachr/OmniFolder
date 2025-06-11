@@ -9,6 +9,11 @@
 #include <QFileDialog>
 #include <QProgressBar>
 #include <QDesktopServices>
+#include <QTimer>
+#include <QRegularExpression>
+#include <QRegularExpressionValidator>
+
+#include <nlohmann/json.hpp>
 
 #include "core/config_manager.h"
 #include "recovery/beacon_manager.h"
@@ -32,7 +37,6 @@ public:
         Page_Port,
         Page_Confirm,
         Page_Progress,
-        Page_Done,
 
         Page_Config_R,
         Page_Config_Confirm_R,
@@ -137,6 +141,7 @@ public:
 
     void onLoginSuccess();
     void onLoginFailure();
+    void onLoginTimeout();
 
 signals:
     void startLoginTest(const QString &ghUsername, const QString &ghToken);
@@ -149,14 +154,17 @@ private:
     QLineEdit *usernameLine;
     QLineEdit *tokenLine;
     QPushButton *testButton;
+    QPushButton *showTokenButton;
 
     BeaconManager *beaconManager;
 
     // Status of beacon login test
-    enum class Status { None, Waiting, Testing, Success, Failure };
+    enum class Status { None, Waiting, Testing, Timeout, Success, Failure };
     Status currentStatus = Status::None;
 
     void updateStatus(Status newStatus);
+
+    void toggleTokenVisibility(bool show);
 
     void enableFields();
     void disableFields();
@@ -181,6 +189,7 @@ public:
 
     void onForwardSuccess();
     void onForwardFailure();
+    void onForwardUnavailable();
 
 signals:
     void startPortTest(const qint32 &port);
@@ -191,6 +200,7 @@ private:
     QLabel *portLabel;
     QLabel *instructionLabel;
     QLabel *statusLabel;
+    QLabel *manualLinksLabel;
     QLineEdit *portLine;
     QPushButton *testPortButton;
     QPushButton *testForwardButton;
@@ -200,8 +210,8 @@ private:
 
     // Status of port test
     enum class Status { None,
-                        AwaitingPort, TestingPort, PortSuccess, PortFailure,
-                        AwaitingForward, TestingForward, ForwardSuccess, ForwardFailure };
+                        AwaitingPort, InvalidInput, TestingPort, PortSuccess, PortFailure,
+                        AwaitingForward, TestingForward, ForwardSuccess, ForwardFailure, AutomatedForwardUnavailable };
     Status currentStatus = Status::AwaitingPort;
 
     void updateStatus(Status newStatus);
@@ -251,27 +261,29 @@ public:
 
     void initializePage() override;
 
+    bool isComplete() const override;
+
+    void onBeginningSetup();
+    void onCreatingAuth();
+    void onCreatingConfig();
+    void onOpeningFile();
+    void onWritingConfig();
+    void onComplete();
+
 private:
     QLabel *topLabel;
     QProgressBar *progressBar;
-};
 
+    ConfigManager *configManager;
+    PortAuthority *portAuthority;
+    BeaconManager *beaconManager;
 
-// __________________________________________DONE PAGE
+    // Progress status
+    enum class Status { None,
+                        BeginningSetup, CreatingAuth, CreatingConfig, OpeningFile, WritingConfig, Complete };
+    Status currentStatus = Status::None;
 
-class DonePage : public QWizardPage
-{
-    Q_OBJECT
-
-public:
-    DonePage(QWidget *parent = nullptr);
-
-    int nextId() const override;
-
-    void initializePage() override;
-
-private:
-    QLabel *topLabel;
+    void updateStatus(Status newStatus);
 };
 
 
@@ -364,6 +376,7 @@ public:
 
     void onForwardSuccess();
     void onForwardFailure();
+    void onForwardUnavailable();
 
 signals:
     void startPortTest(const qint32 &port);
@@ -373,6 +386,7 @@ private:
     QLabel *topLabel;
     QLabel *portLabel;
     QLabel *statusLabel;
+    QLabel *manualLinksLabel;
     QLineEdit *portLine;
     QPushButton *testPortButton;
     QPushButton *testForwardButton;
@@ -382,8 +396,8 @@ private:
 
     // Status of port test
     enum class Status { None,
-                        AwaitingPort, TestingPort, PortSuccess, PortFailure,
-                        AwaitingForward, TestingForward, ForwardSuccess, ForwardFailure };
+                        AwaitingPort, InvalidInput, TestingPort, PortSuccess, PortFailure,
+                        AwaitingForward, TestingForward, ForwardSuccess, ForwardFailure, AutomatedForwardUnavailable };
     Status currentStatus = Status::AwaitingPort;
 
     void updateStatus(Status newStatus);
@@ -391,7 +405,6 @@ private:
     void enableFields();
     void disableFields();
 };
-
 
 // ______________________________________CONFIRM PAGE (R)
 

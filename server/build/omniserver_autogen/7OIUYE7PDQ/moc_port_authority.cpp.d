@@ -429,6 +429,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/memory_resource.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/ostream.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/pair.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/span.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/sstream.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/streambuf.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/string.h \
@@ -761,6 +762,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/atomic \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/bit \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cctype \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cerrno \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/charconv \
@@ -807,6 +809,8 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ratio \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/span \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h \
@@ -824,6 +828,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/variant \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
@@ -922,11 +927,22 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_list.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QFlags \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QList \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QMetaType \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QSharedDataPointer \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QString \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QUrl \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QVariant \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q26numeric.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qarraydata.h \
@@ -941,6 +957,7 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qbytearraylist.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayview.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qcalendar.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qchar.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qcompare.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qcompare_impl.h \
@@ -951,8 +968,12 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qcontainerfwd.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qcontainerinfo.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qcryptographichash.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdatetime.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdebug.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qflags.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qfloat16.h \
@@ -962,14 +983,18 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qgenericatomic.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qglobal.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qglobalstatic.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qiodevice.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qlist.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qmap.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qmath.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qmetacontainer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qmetatype.h \
@@ -986,6 +1011,12 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qset.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qshareddata.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qshareddata_impl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qspan.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qstdlibdetection.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qstring.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qstringalgorithms.h \
@@ -1011,6 +1042,7 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtdeprecationdefinitions.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
@@ -1022,7 +1054,28 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtversionchecks.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtypeinfo.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qurl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qyieldcpu.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/QNetworkAccessManager \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/QSslConfiguration \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/QSslPreSharedKeyAuthenticator \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qabstractsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qhostaddress.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qhttpheaders.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qnetworkaccessmanager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qnetworkrequest.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qssl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qsslcertificate.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qsslconfiguration.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qsslerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qsslpresharedkeyauthenticator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qsslsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qtcpsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetwork-config.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkexports.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkglobal.h

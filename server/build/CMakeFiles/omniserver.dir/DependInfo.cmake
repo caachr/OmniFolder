@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/omniserver_autogen/mocs_compilation.cpp" "CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o.d"
+  "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/qrc_resources.cpp" "CMakeFiles/omniserver.dir/qrc_resources.cpp.o" "gcc" "CMakeFiles/omniserver.dir/qrc_resources.cpp.o.d"
   "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/app_core.cpp" "CMakeFiles/omniserver.dir/src/core/app_core.cpp.o" "gcc" "CMakeFiles/omniserver.dir/src/core/app_core.cpp.o.d"
   "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/config_manager.cpp" "CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o" "gcc" "CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o.d"
   "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/crypto_manager.cpp" "CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o" "gcc" "CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o.d"

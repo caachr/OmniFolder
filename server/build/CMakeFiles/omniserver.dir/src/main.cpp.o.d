@@ -1218,51 +1218,104 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/qprogressbar.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/QDesktopServices \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qdesktopservices.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QTimer \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtimer.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbasictimer.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qeventloop.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qelapsedtimer.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/json.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/adl_serializer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/abi_macros.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/conversions/from_json.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/valarray \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/exceptions.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/value_t.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/macro_scope.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/detected.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/void_t.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/string_escape.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/position_t.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/cpp_future.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/type_traits.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/call_std/end.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/json_fwd.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/string_concat.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/identity_tag.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/std_fs.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/conversions/to_json.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/ranges \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/all.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/owning_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/range_adaptor.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/as_rvalue_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/chunk_by_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/non_propagating_cache.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/reverse_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/common_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/counted.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/drop_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/empty_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/iota_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/repeat_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/drop_while_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/elements_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/filter_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/join_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__iterator/iterator_with_data.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/lazy_split_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/single_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/rbegin.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/rend.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/split_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/take_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/take_while_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/to.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/transform_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/views.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/zip_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/__ranges/istream_view.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/string_utils.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/byte_container_with_subtype.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/hash.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/binary_reader.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/input_adapters.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/json_sax.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/lexer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/is_sax.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/parser.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/json_custom_base_class.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/json_pointer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/json_ref.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/output/binary_writer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/output/output_adapters.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/output/serializer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/conversions/to_chars.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/ordered_map.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/any \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/macro_unscope.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/config_manager.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QObject \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QString \
-  /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkAccessManager \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhttpheaders.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QSharedDataPointer \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QUrl \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QVariant \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q26numeric.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QList \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslConfiguration \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcryptographichash.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qssl.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QFlags \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslPreSharedKeyAuthenticator \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QMetaType \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkRequest \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkReply \
-  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QIODevice \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonDocument \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsondocument.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonparseerror.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonValue \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonvalue.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborvalue.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborcommon.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qregularexpression.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QFile \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QUuid \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/quuid.h \
-  /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/port_authority.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/iostream \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QStandardPaths \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qstandardpaths.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QDir \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/fstream \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/json-schema.hpp \
+  /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/crypto_manager.h \
   /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium.h \
   /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/version.h \
   /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/export.h \
@@ -1329,15 +1382,51 @@ CMakeFiles/omniserver.dir/src/main.cpp.o: \
   /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_secretbox_xchacha20poly1305.h \
   /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream_salsa2012.h \
   /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream_salsa208.h \
+  /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkAccessManager \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhttpheaders.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QSharedDataPointer \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QUrl \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QVariant \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q26numeric.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QList \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslConfiguration \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcryptographichash.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qssl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QFlags \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QSslPreSharedKeyAuthenticator \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QMetaType \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkRequest \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkReply \
+  /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QIODevice \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonDocument \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsondocument.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonparseerror.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QJsonValue \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qjsonvalue.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborvalue.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcborcommon.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qregularexpression.h \
+  /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/port_authority.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/c++/v1/iostream \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/QApplication \
   /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Headers/qapplication.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcoreevent.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qbasictimer.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qeventloop.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qdeadlinetimer.h \
-  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qelapsedtimer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qnativeinterface.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Headers/qguiapplication.h \

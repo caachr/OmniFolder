@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 16.0.2, 2025-06-09T03:06:34. -->
+<!-- Written by QtCreator 16.0.2, 2025-06-11T03:00:54. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -104,15 +104,15 @@
     <value type="int" key="CMake.Configure.BaseEnvironment">2</value>
     <value type="bool" key="CMake.Configure.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="CMake.Configure.UserEnvironmentChanges"/>
-    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_GENERATOR:STRING=Unix Makefiles
+    <value type="QString" key="CMake.Initial.Parameters">-DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
 -DCMAKE_CXX_COMPILER:FILEPATH=%{Compiler:Executable:Cxx}
--DCMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=%{BuildConfig:BuildDirectory:NativeFilePath}/.qtc/package-manager/auto-setup.cmake
--DCMAKE_PREFIX_PATH:PATH=/Users/christian/Qt/6.9.1/macos
--DCMAKE_BUILD_TYPE:STRING=Build
--DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
--DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
 -DCMAKE_C_COMPILER:FILEPATH=%{Compiler:Executable:C}
+-DCMAKE_GENERATOR:STRING=Unix Makefiles
 -DCMAKE_TOOLCHAIN_FILE:STRING=/Users/christian/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake
+-DCMAKE_COLOR_DIAGNOSTICS:BOOL=ON
+-DCMAKE_BUILD_TYPE:STRING=Build
+-DCMAKE_PREFIX_PATH:PATH=/Users/christian/Qt/6.9.1/macos
+-DQT_QMAKE_EXECUTABLE:FILEPATH=%{Qt:qmakeExecutable}
 CMAKE_TOOLCHAIN_FILE</value>
     <value type="QString" key="CMake.Source.Directory">/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server</value>
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build</value>
@@ -216,14 +216,14 @@ CMAKE_TOOLCHAIN_FILE</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
     <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph dwarf,4096 -F 250</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">omniserver</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">omnifolder-server</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">omniserver</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">omnifolder-server</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/omniserver.app/Contents/MacOS</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/omnifolder-server.app/Contents/MacOS</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

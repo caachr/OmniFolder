@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OmniFolder Application Configuration File Schema",
+  "description": "Schema that defines the format of the 'config.json' file that describes a specific OmniNetwork.",
+  "type": "object",
+  "required": ["network"],
+  "properties": {
+    "network": {
+      "type": "object",
+      "required": ["uuid", "name", "server", "beacon", "folders"],
+      "properties": {
+        "uuid": {
+          "type": "string",
+          "pattern": "^omni-net-[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "server": {
+          "type": "object",
+          "required": ["uuid", "host", "port"],
+          "properties": {
+            "uuid" : {
+              "type": "string",
+              "pattern": "^omni-server-[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+            },
+            "host": {
+              "type": "string"
+            },
+            "port": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 65535
+            }
+          }
+        },
+        "beacon": {
+          "type": "object",
+          "required": ["url", "pat"],
+          "properties": {
+            "url": {
+              "type": "string",
+              "pattern": "^https://gist\\.github\\.com/[a-zA-Z0-9_-]+/[a-f0-9]{32}$"
+            },
+            "pat": {
+              "type": "string",
+              "pattern": "^ghp_[A-Za-z0-9]{36}$"
+            }
+          }
+        },
+        "folders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "lock_holder_id", "drives"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^omni-folder-[0-9]{2}$"
+              },
+              "name": {
+                "type": "string"
+              },
+              "lock_holder_id": {
+                "type": ["string", "null"],
+                "pattern": "^drive-[0-9]{2}$"
+              },
+              "drives": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": ["id", "name", "type", "status", "curr_host", "port", "capacity_bytes", "used_bytes", "local_path"],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^drive-[0-9]{2}$"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": ["F", "P"]
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": ["up-to-date", "stale"]
+                    },
+                    "curr_host": {
+                      "type": "string"
+                    },
+                    "port": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 65535
+                    },
+                    "capacity_bytes": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "used_bytes": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "local_path": {
+                      "type": "string"
+                    },
+                    "mirror_dirs": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "For partial mirrors only: specific directories to mirror"
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": { "type": { "const": "P" } }
+                      },
+                      "then": {
+                        "required": ["mirror_dirs"]
+                      },
+                      "else": {
+                          "not": {
+                              "required": ["mirror_dirs"]
+                          }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

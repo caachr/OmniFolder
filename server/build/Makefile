@@ -117,74 +117,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named omniserver
+# Target rules for targets named omnifolder-server
 
 # Build rule for target.
-omniserver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 omniserver
-.PHONY : omniserver
+omnifolder-server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 omnifolder-server
+.PHONY : omnifolder-server
 
 # fast build rule for target.
-omniserver/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/build
-.PHONY : omniserver/fast
+omnifolder-server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/build
+.PHONY : omnifolder-server/fast
 
 #=============================================================================
-# Target rules for targets named omniserver_autogen_timestamp_deps
+# Target rules for targets named omnifolder-server_autogen_timestamp_deps
 
 # Build rule for target.
-omniserver_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 omniserver_autogen_timestamp_deps
-.PHONY : omniserver_autogen_timestamp_deps
+omnifolder-server_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 omnifolder-server_autogen_timestamp_deps
+.PHONY : omnifolder-server_autogen_timestamp_deps
 
 # fast build rule for target.
-omniserver_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver_autogen_timestamp_deps.dir/build.make CMakeFiles/omniserver_autogen_timestamp_deps.dir/build
-.PHONY : omniserver_autogen_timestamp_deps/fast
+omnifolder-server_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server_autogen_timestamp_deps.dir/build.make CMakeFiles/omnifolder-server_autogen_timestamp_deps.dir/build
+.PHONY : omnifolder-server_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named omniserver_autogen
+# Target rules for targets named omnifolder-server_autogen
 
 # Build rule for target.
-omniserver_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 omniserver_autogen
-.PHONY : omniserver_autogen
+omnifolder-server_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 omnifolder-server_autogen
+.PHONY : omnifolder-server_autogen
 
 # fast build rule for target.
-omniserver_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver_autogen.dir/build.make CMakeFiles/omniserver_autogen.dir/build
-.PHONY : omniserver_autogen/fast
+omnifolder-server_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server_autogen.dir/build.make CMakeFiles/omnifolder-server_autogen.dir/build
+.PHONY : omnifolder-server_autogen/fast
 
-omniserver_autogen/mocs_compilation.o: omniserver_autogen/mocs_compilation.cpp.o
-.PHONY : omniserver_autogen/mocs_compilation.o
+omnifolder-server_autogen/mocs_compilation.o: omnifolder-server_autogen/mocs_compilation.cpp.o
+.PHONY : omnifolder-server_autogen/mocs_compilation.o
 
 # target to build an object file
-omniserver_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o
-.PHONY : omniserver_autogen/mocs_compilation.cpp.o
+omnifolder-server_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/omnifolder-server_autogen/mocs_compilation.cpp.o
+.PHONY : omnifolder-server_autogen/mocs_compilation.cpp.o
 
-omniserver_autogen/mocs_compilation.i: omniserver_autogen/mocs_compilation.cpp.i
-.PHONY : omniserver_autogen/mocs_compilation.i
+omnifolder-server_autogen/mocs_compilation.i: omnifolder-server_autogen/mocs_compilation.cpp.i
+.PHONY : omnifolder-server_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-omniserver_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.i
-.PHONY : omniserver_autogen/mocs_compilation.cpp.i
+omnifolder-server_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/omnifolder-server_autogen/mocs_compilation.cpp.i
+.PHONY : omnifolder-server_autogen/mocs_compilation.cpp.i
 
-omniserver_autogen/mocs_compilation.s: omniserver_autogen/mocs_compilation.cpp.s
-.PHONY : omniserver_autogen/mocs_compilation.s
+omnifolder-server_autogen/mocs_compilation.s: omnifolder-server_autogen/mocs_compilation.cpp.s
+.PHONY : omnifolder-server_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-omniserver_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.s
-.PHONY : omniserver_autogen/mocs_compilation.cpp.s
+omnifolder-server_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/omnifolder-server_autogen/mocs_compilation.cpp.s
+.PHONY : omnifolder-server_autogen/mocs_compilation.cpp.s
+
+qrc_resources.o: qrc_resources.cpp.o
+.PHONY : qrc_resources.o
+
+# target to build an object file
+qrc_resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/qrc_resources.cpp.o
+.PHONY : qrc_resources.cpp.o
+
+qrc_resources.i: qrc_resources.cpp.i
+.PHONY : qrc_resources.i
+
+# target to preprocess a source file
+qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/qrc_resources.cpp.i
+.PHONY : qrc_resources.cpp.i
+
+qrc_resources.s: qrc_resources.cpp.s
+.PHONY : qrc_resources.s
+
+# target to generate assembly for a file
+qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/qrc_resources.cpp.s
+.PHONY : qrc_resources.cpp.s
 
 src/core/app_core.o: src/core/app_core.cpp.o
 .PHONY : src/core/app_core.o
 
 # target to build an object file
 src/core/app_core.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/app_core.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/app_core.cpp.o
 .PHONY : src/core/app_core.cpp.o
 
 src/core/app_core.i: src/core/app_core.cpp.i
@@ -192,7 +216,7 @@ src/core/app_core.i: src/core/app_core.cpp.i
 
 # target to preprocess a source file
 src/core/app_core.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/app_core.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/app_core.cpp.i
 .PHONY : src/core/app_core.cpp.i
 
 src/core/app_core.s: src/core/app_core.cpp.s
@@ -200,7 +224,7 @@ src/core/app_core.s: src/core/app_core.cpp.s
 
 # target to generate assembly for a file
 src/core/app_core.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/app_core.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/app_core.cpp.s
 .PHONY : src/core/app_core.cpp.s
 
 src/core/config_manager.o: src/core/config_manager.cpp.o
@@ -208,7 +232,7 @@ src/core/config_manager.o: src/core/config_manager.cpp.o
 
 # target to build an object file
 src/core/config_manager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/config_manager.cpp.o
 .PHONY : src/core/config_manager.cpp.o
 
 src/core/config_manager.i: src/core/config_manager.cpp.i
@@ -216,7 +240,7 @@ src/core/config_manager.i: src/core/config_manager.cpp.i
 
 # target to preprocess a source file
 src/core/config_manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/config_manager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/config_manager.cpp.i
 .PHONY : src/core/config_manager.cpp.i
 
 src/core/config_manager.s: src/core/config_manager.cpp.s
@@ -224,7 +248,7 @@ src/core/config_manager.s: src/core/config_manager.cpp.s
 
 # target to generate assembly for a file
 src/core/config_manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/config_manager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/config_manager.cpp.s
 .PHONY : src/core/config_manager.cpp.s
 
 src/core/crypto_manager.o: src/core/crypto_manager.cpp.o
@@ -232,7 +256,7 @@ src/core/crypto_manager.o: src/core/crypto_manager.cpp.o
 
 # target to build an object file
 src/core/crypto_manager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/crypto_manager.cpp.o
 .PHONY : src/core/crypto_manager.cpp.o
 
 src/core/crypto_manager.i: src/core/crypto_manager.cpp.i
@@ -240,7 +264,7 @@ src/core/crypto_manager.i: src/core/crypto_manager.cpp.i
 
 # target to preprocess a source file
 src/core/crypto_manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/crypto_manager.cpp.i
 .PHONY : src/core/crypto_manager.cpp.i
 
 src/core/crypto_manager.s: src/core/crypto_manager.cpp.s
@@ -248,7 +272,7 @@ src/core/crypto_manager.s: src/core/crypto_manager.cpp.s
 
 # target to generate assembly for a file
 src/core/crypto_manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/crypto_manager.cpp.s
 .PHONY : src/core/crypto_manager.cpp.s
 
 src/core/mailbox.o: src/core/mailbox.cpp.o
@@ -256,7 +280,7 @@ src/core/mailbox.o: src/core/mailbox.cpp.o
 
 # target to build an object file
 src/core/mailbox.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/mailbox.cpp.o
 .PHONY : src/core/mailbox.cpp.o
 
 src/core/mailbox.i: src/core/mailbox.cpp.i
@@ -264,7 +288,7 @@ src/core/mailbox.i: src/core/mailbox.cpp.i
 
 # target to preprocess a source file
 src/core/mailbox.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/mailbox.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/mailbox.cpp.i
 .PHONY : src/core/mailbox.cpp.i
 
 src/core/mailbox.s: src/core/mailbox.cpp.s
@@ -272,7 +296,7 @@ src/core/mailbox.s: src/core/mailbox.cpp.s
 
 # target to generate assembly for a file
 src/core/mailbox.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/mailbox.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/mailbox.cpp.s
 .PHONY : src/core/mailbox.cpp.s
 
 src/core/server_core.o: src/core/server_core.cpp.o
@@ -280,7 +304,7 @@ src/core/server_core.o: src/core/server_core.cpp.o
 
 # target to build an object file
 src/core/server_core.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/server_core.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/server_core.cpp.o
 .PHONY : src/core/server_core.cpp.o
 
 src/core/server_core.i: src/core/server_core.cpp.i
@@ -288,7 +312,7 @@ src/core/server_core.i: src/core/server_core.cpp.i
 
 # target to preprocess a source file
 src/core/server_core.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/server_core.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/server_core.cpp.i
 .PHONY : src/core/server_core.cpp.i
 
 src/core/server_core.s: src/core/server_core.cpp.s
@@ -296,7 +320,7 @@ src/core/server_core.s: src/core/server_core.cpp.s
 
 # target to generate assembly for a file
 src/core/server_core.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/server_core.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/server_core.cpp.s
 .PHONY : src/core/server_core.cpp.s
 
 src/core/state_machine.o: src/core/state_machine.cpp.o
@@ -304,7 +328,7 @@ src/core/state_machine.o: src/core/state_machine.cpp.o
 
 # target to build an object file
 src/core/state_machine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/state_machine.cpp.o
 .PHONY : src/core/state_machine.cpp.o
 
 src/core/state_machine.i: src/core/state_machine.cpp.i
@@ -312,7 +336,7 @@ src/core/state_machine.i: src/core/state_machine.cpp.i
 
 # target to preprocess a source file
 src/core/state_machine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/state_machine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/state_machine.cpp.i
 .PHONY : src/core/state_machine.cpp.i
 
 src/core/state_machine.s: src/core/state_machine.cpp.s
@@ -320,7 +344,7 @@ src/core/state_machine.s: src/core/state_machine.cpp.s
 
 # target to generate assembly for a file
 src/core/state_machine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/core/state_machine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/core/state_machine.cpp.s
 .PHONY : src/core/state_machine.cpp.s
 
 src/db/omni_drive.o: src/db/omni_drive.cpp.o
@@ -328,7 +352,7 @@ src/db/omni_drive.o: src/db/omni_drive.cpp.o
 
 # target to build an object file
 src/db/omni_drive.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_drive.cpp.o
 .PHONY : src/db/omni_drive.cpp.o
 
 src/db/omni_drive.i: src/db/omni_drive.cpp.i
@@ -336,7 +360,7 @@ src/db/omni_drive.i: src/db/omni_drive.cpp.i
 
 # target to preprocess a source file
 src/db/omni_drive.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_drive.cpp.i
 .PHONY : src/db/omni_drive.cpp.i
 
 src/db/omni_drive.s: src/db/omni_drive.cpp.s
@@ -344,7 +368,7 @@ src/db/omni_drive.s: src/db/omni_drive.cpp.s
 
 # target to generate assembly for a file
 src/db/omni_drive.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_drive.cpp.s
 .PHONY : src/db/omni_drive.cpp.s
 
 src/db/omni_folder.o: src/db/omni_folder.cpp.o
@@ -352,7 +376,7 @@ src/db/omni_folder.o: src/db/omni_folder.cpp.o
 
 # target to build an object file
 src/db/omni_folder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_folder.cpp.o
 .PHONY : src/db/omni_folder.cpp.o
 
 src/db/omni_folder.i: src/db/omni_folder.cpp.i
@@ -360,7 +384,7 @@ src/db/omni_folder.i: src/db/omni_folder.cpp.i
 
 # target to preprocess a source file
 src/db/omni_folder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_folder.cpp.i
 .PHONY : src/db/omni_folder.cpp.i
 
 src/db/omni_folder.s: src/db/omni_folder.cpp.s
@@ -368,7 +392,7 @@ src/db/omni_folder.s: src/db/omni_folder.cpp.s
 
 # target to generate assembly for a file
 src/db/omni_folder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_folder.cpp.s
 .PHONY : src/db/omni_folder.cpp.s
 
 src/db/omni_network.o: src/db/omni_network.cpp.o
@@ -376,7 +400,7 @@ src/db/omni_network.o: src/db/omni_network.cpp.o
 
 # target to build an object file
 src/db/omni_network.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_network.cpp.o
 .PHONY : src/db/omni_network.cpp.o
 
 src/db/omni_network.i: src/db/omni_network.cpp.i
@@ -384,7 +408,7 @@ src/db/omni_network.i: src/db/omni_network.cpp.i
 
 # target to preprocess a source file
 src/db/omni_network.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_network.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_network.cpp.i
 .PHONY : src/db/omni_network.cpp.i
 
 src/db/omni_network.s: src/db/omni_network.cpp.s
@@ -392,7 +416,7 @@ src/db/omni_network.s: src/db/omni_network.cpp.s
 
 # target to generate assembly for a file
 src/db/omni_network.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/db/omni_network.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/db/omni_network.cpp.s
 .PHONY : src/db/omni_network.cpp.s
 
 src/gui/client_table_model.o: src/gui/client_table_model.cpp.o
@@ -400,7 +424,7 @@ src/gui/client_table_model.o: src/gui/client_table_model.cpp.o
 
 # target to build an object file
 src/gui/client_table_model.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/client_table_model.cpp.o
 .PHONY : src/gui/client_table_model.cpp.o
 
 src/gui/client_table_model.i: src/gui/client_table_model.cpp.i
@@ -408,7 +432,7 @@ src/gui/client_table_model.i: src/gui/client_table_model.cpp.i
 
 # target to preprocess a source file
 src/gui/client_table_model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/client_table_model.cpp.i
 .PHONY : src/gui/client_table_model.cpp.i
 
 src/gui/client_table_model.s: src/gui/client_table_model.cpp.s
@@ -416,7 +440,7 @@ src/gui/client_table_model.s: src/gui/client_table_model.cpp.s
 
 # target to generate assembly for a file
 src/gui/client_table_model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/client_table_model.cpp.s
 .PHONY : src/gui/client_table_model.cpp.s
 
 src/gui/main_window.o: src/gui/main_window.cpp.o
@@ -424,7 +448,7 @@ src/gui/main_window.o: src/gui/main_window.cpp.o
 
 # target to build an object file
 src/gui/main_window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/main_window.cpp.o
 .PHONY : src/gui/main_window.cpp.o
 
 src/gui/main_window.i: src/gui/main_window.cpp.i
@@ -432,7 +456,7 @@ src/gui/main_window.i: src/gui/main_window.cpp.i
 
 # target to preprocess a source file
 src/gui/main_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/main_window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/main_window.cpp.i
 .PHONY : src/gui/main_window.cpp.i
 
 src/gui/main_window.s: src/gui/main_window.cpp.s
@@ -440,7 +464,7 @@ src/gui/main_window.s: src/gui/main_window.cpp.s
 
 # target to generate assembly for a file
 src/gui/main_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/main_window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/main_window.cpp.s
 .PHONY : src/gui/main_window.cpp.s
 
 src/gui/recovery_wizard.o: src/gui/recovery_wizard.cpp.o
@@ -448,7 +472,7 @@ src/gui/recovery_wizard.o: src/gui/recovery_wizard.cpp.o
 
 # target to build an object file
 src/gui/recovery_wizard.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/recovery_wizard.cpp.o
 .PHONY : src/gui/recovery_wizard.cpp.o
 
 src/gui/recovery_wizard.i: src/gui/recovery_wizard.cpp.i
@@ -456,7 +480,7 @@ src/gui/recovery_wizard.i: src/gui/recovery_wizard.cpp.i
 
 # target to preprocess a source file
 src/gui/recovery_wizard.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/recovery_wizard.cpp.i
 .PHONY : src/gui/recovery_wizard.cpp.i
 
 src/gui/recovery_wizard.s: src/gui/recovery_wizard.cpp.s
@@ -464,7 +488,7 @@ src/gui/recovery_wizard.s: src/gui/recovery_wizard.cpp.s
 
 # target to generate assembly for a file
 src/gui/recovery_wizard.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/recovery_wizard.cpp.s
 .PHONY : src/gui/recovery_wizard.cpp.s
 
 src/gui/setup_wizard.o: src/gui/setup_wizard.cpp.o
@@ -472,7 +496,7 @@ src/gui/setup_wizard.o: src/gui/setup_wizard.cpp.o
 
 # target to build an object file
 src/gui/setup_wizard.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/setup_wizard.cpp.o
 .PHONY : src/gui/setup_wizard.cpp.o
 
 src/gui/setup_wizard.i: src/gui/setup_wizard.cpp.i
@@ -480,7 +504,7 @@ src/gui/setup_wizard.i: src/gui/setup_wizard.cpp.i
 
 # target to preprocess a source file
 src/gui/setup_wizard.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/setup_wizard.cpp.i
 .PHONY : src/gui/setup_wizard.cpp.i
 
 src/gui/setup_wizard.s: src/gui/setup_wizard.cpp.s
@@ -488,7 +512,7 @@ src/gui/setup_wizard.s: src/gui/setup_wizard.cpp.s
 
 # target to generate assembly for a file
 src/gui/setup_wizard.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/gui/setup_wizard.cpp.s
 .PHONY : src/gui/setup_wizard.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -496,7 +520,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -504,7 +528,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -512,7 +536,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/net/fedex.o: src/net/fedex.cpp.o
@@ -520,7 +544,7 @@ src/net/fedex.o: src/net/fedex.cpp.o
 
 # target to build an object file
 src/net/fedex.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/fedex.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/fedex.cpp.o
 .PHONY : src/net/fedex.cpp.o
 
 src/net/fedex.i: src/net/fedex.cpp.i
@@ -528,7 +552,7 @@ src/net/fedex.i: src/net/fedex.cpp.i
 
 # target to preprocess a source file
 src/net/fedex.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/fedex.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/fedex.cpp.i
 .PHONY : src/net/fedex.cpp.i
 
 src/net/fedex.s: src/net/fedex.cpp.s
@@ -536,7 +560,7 @@ src/net/fedex.s: src/net/fedex.cpp.s
 
 # target to generate assembly for a file
 src/net/fedex.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/fedex.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/fedex.cpp.s
 .PHONY : src/net/fedex.cpp.s
 
 src/net/message.o: src/net/message.cpp.o
@@ -544,7 +568,7 @@ src/net/message.o: src/net/message.cpp.o
 
 # target to build an object file
 src/net/message.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/message.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/message.cpp.o
 .PHONY : src/net/message.cpp.o
 
 src/net/message.i: src/net/message.cpp.i
@@ -552,7 +576,7 @@ src/net/message.i: src/net/message.cpp.i
 
 # target to preprocess a source file
 src/net/message.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/message.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/message.cpp.i
 .PHONY : src/net/message.cpp.i
 
 src/net/message.s: src/net/message.cpp.s
@@ -560,7 +584,7 @@ src/net/message.s: src/net/message.cpp.s
 
 # target to generate assembly for a file
 src/net/message.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/message.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/message.cpp.s
 .PHONY : src/net/message.cpp.s
 
 src/net/message_builder.o: src/net/message_builder.cpp.o
@@ -568,7 +592,7 @@ src/net/message_builder.o: src/net/message_builder.cpp.o
 
 # target to build an object file
 src/net/message_builder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/message_builder.cpp.o
 .PHONY : src/net/message_builder.cpp.o
 
 src/net/message_builder.i: src/net/message_builder.cpp.i
@@ -576,7 +600,7 @@ src/net/message_builder.i: src/net/message_builder.cpp.i
 
 # target to preprocess a source file
 src/net/message_builder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/message_builder.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/message_builder.cpp.i
 .PHONY : src/net/message_builder.cpp.i
 
 src/net/message_builder.s: src/net/message_builder.cpp.s
@@ -584,7 +608,7 @@ src/net/message_builder.s: src/net/message_builder.cpp.s
 
 # target to generate assembly for a file
 src/net/message_builder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/message_builder.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/message_builder.cpp.s
 .PHONY : src/net/message_builder.cpp.s
 
 src/net/port_authority.o: src/net/port_authority.cpp.o
@@ -592,7 +616,7 @@ src/net/port_authority.o: src/net/port_authority.cpp.o
 
 # target to build an object file
 src/net/port_authority.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/port_authority.cpp.o
 .PHONY : src/net/port_authority.cpp.o
 
 src/net/port_authority.i: src/net/port_authority.cpp.i
@@ -600,7 +624,7 @@ src/net/port_authority.i: src/net/port_authority.cpp.i
 
 # target to preprocess a source file
 src/net/port_authority.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/port_authority.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/port_authority.cpp.i
 .PHONY : src/net/port_authority.cpp.i
 
 src/net/port_authority.s: src/net/port_authority.cpp.s
@@ -608,7 +632,7 @@ src/net/port_authority.s: src/net/port_authority.cpp.s
 
 # target to generate assembly for a file
 src/net/port_authority.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/net/port_authority.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/net/port_authority.cpp.s
 .PHONY : src/net/port_authority.cpp.s
 
 src/recovery/beacon_manager.o: src/recovery/beacon_manager.cpp.o
@@ -616,7 +640,7 @@ src/recovery/beacon_manager.o: src/recovery/beacon_manager.cpp.o
 
 # target to build an object file
 src/recovery/beacon_manager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/recovery/beacon_manager.cpp.o
 .PHONY : src/recovery/beacon_manager.cpp.o
 
 src/recovery/beacon_manager.i: src/recovery/beacon_manager.cpp.i
@@ -624,7 +648,7 @@ src/recovery/beacon_manager.i: src/recovery/beacon_manager.cpp.i
 
 # target to preprocess a source file
 src/recovery/beacon_manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/recovery/beacon_manager.cpp.i
 .PHONY : src/recovery/beacon_manager.cpp.i
 
 src/recovery/beacon_manager.s: src/recovery/beacon_manager.cpp.s
@@ -632,7 +656,7 @@ src/recovery/beacon_manager.s: src/recovery/beacon_manager.cpp.s
 
 # target to generate assembly for a file
 src/recovery/beacon_manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/recovery/beacon_manager.cpp.s
 .PHONY : src/recovery/beacon_manager.cpp.s
 
 src/util/logging.o: src/util/logging.cpp.o
@@ -640,7 +664,7 @@ src/util/logging.o: src/util/logging.cpp.o
 
 # target to build an object file
 src/util/logging.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/util/logging.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/util/logging.cpp.o
 .PHONY : src/util/logging.cpp.o
 
 src/util/logging.i: src/util/logging.cpp.i
@@ -648,7 +672,7 @@ src/util/logging.i: src/util/logging.cpp.i
 
 # target to preprocess a source file
 src/util/logging.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/util/logging.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/util/logging.cpp.i
 .PHONY : src/util/logging.cpp.i
 
 src/util/logging.s: src/util/logging.cpp.s
@@ -656,7 +680,7 @@ src/util/logging.s: src/util/logging.cpp.s
 
 # target to generate assembly for a file
 src/util/logging.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/omniserver.dir/build.make CMakeFiles/omniserver.dir/src/util/logging.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-server.dir/build.make CMakeFiles/omnifolder-server.dir/src/util/logging.cpp.s
 .PHONY : src/util/logging.cpp.s
 
 # Help Target
@@ -667,12 +691,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... omniserver_autogen"
-	@echo "... omniserver_autogen_timestamp_deps"
-	@echo "... omniserver"
-	@echo "... omniserver_autogen/mocs_compilation.o"
-	@echo "... omniserver_autogen/mocs_compilation.i"
-	@echo "... omniserver_autogen/mocs_compilation.s"
+	@echo "... omnifolder-server_autogen"
+	@echo "... omnifolder-server_autogen_timestamp_deps"
+	@echo "... omnifolder-server"
+	@echo "... omnifolder-server_autogen/mocs_compilation.o"
+	@echo "... omnifolder-server_autogen/mocs_compilation.i"
+	@echo "... omnifolder-server_autogen/mocs_compilation.s"
+	@echo "... qrc_resources.o"
+	@echo "... qrc_resources.i"
+	@echo "... qrc_resources.s"
 	@echo "... src/core/app_core.o"
 	@echo "... src/core/app_core.i"
 	@echo "... src/core/app_core.s"

@@ -43,6 +43,7 @@ template <> constexpr inline auto BeaconManager::qt_create_metaobjectdata<qt_met
         "loginSuccess",
         "",
         "loginFailure",
+        "loginTimeout",
         "testLogin",
         "ghUsername",
         "ghToken"
@@ -53,9 +54,11 @@ template <> constexpr inline auto BeaconManager::qt_create_metaobjectdata<qt_met
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'loginFailure'
         QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'loginTimeout'
+        QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'testLogin'
-        QtMocHelpers::SlotData<void(const QString &, const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 5 }, { QMetaType::QString, 6 },
+        QtMocHelpers::SlotData<void(const QString &, const QString &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 6 }, { QMetaType::QString, 7 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -82,7 +85,8 @@ void BeaconManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         switch (_id) {
         case 0: _t->loginSuccess(); break;
         case 1: _t->loginFailure(); break;
-        case 2: _t->testLogin((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 2: _t->loginTimeout(); break;
+        case 3: _t->testLogin((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }
@@ -90,6 +94,8 @@ void BeaconManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         if (QtMocHelpers::indexOfMethod<void (BeaconManager::*)()>(_a, &BeaconManager::loginSuccess, 0))
             return;
         if (QtMocHelpers::indexOfMethod<void (BeaconManager::*)()>(_a, &BeaconManager::loginFailure, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (BeaconManager::*)()>(_a, &BeaconManager::loginTimeout, 2))
             return;
     }
 }
@@ -113,14 +119,14 @@ int BeaconManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }
@@ -135,5 +141,11 @@ void BeaconManager::loginSuccess()
 void BeaconManager::loginFailure()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+}
+
+// SIGNAL 2
+void BeaconManager::loginTimeout()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP

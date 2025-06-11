@@ -477,6 +477,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iter_swap.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iterator_traits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iterator_with_data.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/mergeable.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_sentinel.h \
@@ -574,19 +575,48 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/access.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/all.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/as_rvalue_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/chunk_by_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/common_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/concepts.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/container_compatible_range.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/counted.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/dangling.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/data.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/drop_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/drop_while_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/elements_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/empty.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/empty_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/enable_borrowed_range.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/enable_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/filter_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/from_range.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/iota_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/istream_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/join_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/lazy_split_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/movable_box.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/non_propagating_cache.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/owning_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/range_adaptor.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/rbegin.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/ref_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/rend.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/repeat_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/reverse_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/single_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/size.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/split_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/subrange.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/take_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/take_while_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/to.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/transform_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/view_interface.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/views.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/zip_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__std_mbstate_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/char_traits.h \
@@ -774,6 +804,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__variant/monostate.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__verbose_abort \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/algorithm \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/array \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/atomic \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/bit \
@@ -805,6 +836,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
@@ -826,6 +858,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ranges \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ratio \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/span \
@@ -848,6 +881,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/utility \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/valarray \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/variant \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/version \
@@ -945,9 +979,125 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_list.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/adl_serializer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/byte_container_with_subtype.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/abi_macros.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/conversions/from_json.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/conversions/to_chars.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/conversions/to_json.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/exceptions.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/hash.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/binary_reader.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/input_adapters.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/json_sax.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/lexer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/parser.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/position_t.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/json_custom_base_class.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/json_pointer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/json_ref.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/macro_scope.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/macro_unscope.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/call_std/end.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/cpp_future.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/detected.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/identity_tag.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/is_sax.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/std_fs.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/type_traits.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/void_t.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/output/binary_writer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/output/output_adapters.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/output/serializer.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/string_concat.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/string_escape.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/string_utils.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/detail/value_t.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/json-schema.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/json.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/json_fwd.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/ordered_map.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/core.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_aead_aegis128l.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_aead_aegis256.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_aead_aes256gcm.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_aead_chacha20poly1305.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_aead_xchacha20poly1305.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_auth.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_auth_hmacsha256.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_auth_hmacsha512.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_auth_hmacsha512256.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_box.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_box_curve25519xchacha20poly1305.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_box_curve25519xsalsa20poly1305.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_core_ed25519.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_core_hchacha20.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_core_hsalsa20.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_core_ristretto255.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_core_salsa20.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_core_salsa2012.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_core_salsa208.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_generichash.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_generichash_blake2b.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_hash.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_hash_sha256.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_hash_sha512.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kdf.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kdf_blake2b.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kdf_hkdf_sha256.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kdf_hkdf_sha512.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_kx.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_onetimeauth.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_onetimeauth_poly1305.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_pwhash.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_pwhash_argon2i.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_pwhash_argon2id.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_pwhash_scryptsalsa208sha256.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_scalarmult.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_scalarmult_curve25519.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_scalarmult_ed25519.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_scalarmult_ristretto255.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_secretbox.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_secretbox_xchacha20poly1305.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_secretbox_xsalsa20poly1305.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_secretstream_xchacha20poly1305.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_shorthash.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_shorthash_siphash24.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_sign.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_sign_ed25519.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream_chacha20.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream_salsa20.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream_salsa2012.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream_salsa208.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream_xchacha20.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_stream_xsalsa20.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_verify_16.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_verify_32.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/crypto_verify_64.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/export.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/randombytes.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/randombytes_internal_random.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/randombytes_sysrandom.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/runtime.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/utils.h \
+  /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/include/sodium/version.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/config_manager.h \
+  /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/crypto_manager.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/port_authority.h \
   /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QDir \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QFile \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QFlags \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QIODevice \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QJsonDocument \
@@ -956,8 +1106,11 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QMetaType \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QSharedDataPointer \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QStandardPaths \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QString \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QUrl \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QUuid \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/QVariant \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -967,6 +1120,7 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/q26numeric.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qabstracteventdispatcher.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qarraydata.h \
@@ -976,6 +1130,7 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qatomic.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qatomic_cxx11.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qbindingstorage.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qbytearray.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
@@ -999,10 +1154,13 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdatetime.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdeadlinetimer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdebug.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdir.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qdirlisting.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qelapsedtimer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qendian.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qeventloop.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qfile.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qfiledevice.h \
@@ -1058,6 +1216,7 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qsize.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qspan.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qstandardpaths.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qstdlibdetection.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qstring.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qstringalgorithms.h \
@@ -1085,6 +1244,7 @@
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h \
+  /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtimezone.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \

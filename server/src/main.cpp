@@ -12,11 +12,11 @@ int main(int argc, char* argv[]) {
 //        return 0;
 //    }
 //
-//    // Initialize crypto lib
-//    if (sodium_init() < 0) {
-//        std::cerr << "Error: Sodium library initialization failed.\n";
-//        return 0;
-//    }
+   // Initialize crypto lib
+   if (sodium_init() < 0) {
+       qDebug("Error: Sodium library initialization failed.");
+       return 0;
+   }
 //
 //    // Read in user args
 //    std::string command = argv[1];
@@ -32,7 +32,6 @@ int main(int argc, char* argv[]) {
 //    catch (const std::exception& e) {
 //        std::cout << e.what();
 //    }
-
 
     QApplication app(argc, argv);
 

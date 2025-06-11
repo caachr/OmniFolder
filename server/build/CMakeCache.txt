@@ -201,7 +201,7 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_INCLUDE_BEFORE:FILEPATH=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/.qtc/package-manager/auto-setup.cmake
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=omniserver
+CMAKE_PROJECT_NAME:STATIC=omnifolder-server
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -430,6 +430,24 @@ nlohmann_json_DIR:PATH=/Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/s
 
 //The directory containing a CMake configuration file for nlohmann_json_schema_validator.
 nlohmann_json_schema_validator_DIR:PATH=/Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/share/nlohmann_json_schema_validator
+
+//Value Computed by CMake
+omnifolder-server_BINARY_DIR:STATIC=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build
+
+//Value Computed by CMake
+omnifolder-server_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+omnifolder-server_SOURCE_DIR:STATIC=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server
+
+//Value Computed by CMake
+omnifolder_server_BINARY_DIR:STATIC=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build
+
+//Value Computed by CMake
+omnifolder_server_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+omnifolder_server_SOURCE_DIR:STATIC=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server
 
 //Value Computed by CMake
 omniserver_BINARY_DIR:STATIC=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build

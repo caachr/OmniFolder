@@ -378,6 +378,7 @@
 		"/Users/christian/Qt/6.9.1/macos/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
 		"/Users/christian/Qt/6.9.1/macos/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
 		"/opt/homebrew/Cellar/cmake/3.31.4/share/cmake/Modules/GNUInstallDirs.cmake",
+		"/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/resources.qrc",
 		"/opt/homebrew/Cellar/cmake/3.31.4/share/cmake/Modules/FindPython.cmake",
 		"/opt/homebrew/Cellar/cmake/3.31.4/share/cmake/Modules/FindPython/Support.cmake",
 		"/opt/homebrew/Cellar/cmake/3.31.4/share/cmake/Modules/FindPackageHandleStandardArgs.cmake",
@@ -594,7 +595,10 @@
 	],
 	"MOC_PREDEFS_FILE" : "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/omniserver_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/qrc_resources.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 12,
 	"PARSE_CACHE_FILE" : "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles/omniserver_autogen.dir/ParseCache.txt",
@@ -708,7 +712,10 @@
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
-	"UIC_SKIP" : [],
+	"UIC_SKIP" : 
+	[
+		"/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/qrc_resources.cpp"
+	],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0

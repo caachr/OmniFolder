@@ -69,13 +69,20 @@ include CMakeFiles/omniserver.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/omniserver.dir/flags.make
 
+qrc_resources.cpp: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/resources.qrc
+qrc_resources.cpp: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/resources/schemas/config_schema.json
+qrc_resources.cpp: resources.qrc.depends
+qrc_resources.cpp: /Users/christian/Qt/6.9.1/macos/libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
+	/Users/christian/Qt/6.9.1/macos/libexec/rcc --no-zstd --name resources --output /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/qrc_resources.cpp /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/resources.qrc
+
 CMakeFiles/omniserver.dir/codegen:
 .PHONY : CMakeFiles/omniserver.dir/codegen
 
 CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: omniserver_autogen/mocs_compilation.cpp
 CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o -MF CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/omniserver_autogen/mocs_compilation.cpp
 
 CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.i: cmake_force
@@ -89,7 +96,7 @@ CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/main.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/main.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/main.cpp
 CMakeFiles/omniserver.dir/src/main.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/omniserver.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/omniserver.dir/src/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/main.cpp.o -MF CMakeFiles/omniserver.dir/src/main.cpp.o.d -o CMakeFiles/omniserver.dir/src/main.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/main.cpp
 
 CMakeFiles/omniserver.dir/src/main.cpp.i: cmake_force
@@ -103,7 +110,7 @@ CMakeFiles/omniserver.dir/src/main.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/core/app_core.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/core/app_core.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/app_core.cpp
 CMakeFiles/omniserver.dir/src/core/app_core.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/omniserver.dir/src/core/app_core.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/omniserver.dir/src/core/app_core.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/core/app_core.cpp.o -MF CMakeFiles/omniserver.dir/src/core/app_core.cpp.o.d -o CMakeFiles/omniserver.dir/src/core/app_core.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/app_core.cpp
 
 CMakeFiles/omniserver.dir/src/core/app_core.cpp.i: cmake_force
@@ -117,7 +124,7 @@ CMakeFiles/omniserver.dir/src/core/app_core.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/state_machine.cpp
 CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o -MF CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o.d -o CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/state_machine.cpp
 
 CMakeFiles/omniserver.dir/src/core/state_machine.cpp.i: cmake_force
@@ -131,7 +138,7 @@ CMakeFiles/omniserver.dir/src/core/state_machine.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/core/server_core.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/core/server_core.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/server_core.cpp
 CMakeFiles/omniserver.dir/src/core/server_core.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/omniserver.dir/src/core/server_core.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/omniserver.dir/src/core/server_core.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/core/server_core.cpp.o -MF CMakeFiles/omniserver.dir/src/core/server_core.cpp.o.d -o CMakeFiles/omniserver.dir/src/core/server_core.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/server_core.cpp
 
 CMakeFiles/omniserver.dir/src/core/server_core.cpp.i: cmake_force
@@ -145,7 +152,7 @@ CMakeFiles/omniserver.dir/src/core/server_core.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/config_manager.cpp
 CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o -MF CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o.d -o CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/config_manager.cpp
 
 CMakeFiles/omniserver.dir/src/core/config_manager.cpp.i: cmake_force
@@ -159,7 +166,7 @@ CMakeFiles/omniserver.dir/src/core/config_manager.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/crypto_manager.cpp
 CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o -MF CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o.d -o CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/crypto_manager.cpp
 
 CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.i: cmake_force
@@ -173,7 +180,7 @@ CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/mailbox.cpp
 CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o -MF CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o.d -o CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/core/mailbox.cpp
 
 CMakeFiles/omniserver.dir/src/core/mailbox.cpp.i: cmake_force
@@ -187,7 +194,7 @@ CMakeFiles/omniserver.dir/src/core/mailbox.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/db/omni_network.cpp
 CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o -MF CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o.d -o CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/db/omni_network.cpp
 
 CMakeFiles/omniserver.dir/src/db/omni_network.cpp.i: cmake_force
@@ -201,7 +208,7 @@ CMakeFiles/omniserver.dir/src/db/omni_network.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/db/omni_folder.cpp
 CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o -MF CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o.d -o CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/db/omni_folder.cpp
 
 CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.i: cmake_force
@@ -215,7 +222,7 @@ CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/db/omni_drive.cpp
 CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o -MF CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o.d -o CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/db/omni_drive.cpp
 
 CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.i: cmake_force
@@ -229,7 +236,7 @@ CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/port_authority.cpp
 CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o -MF CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o.d -o CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/port_authority.cpp
 
 CMakeFiles/omniserver.dir/src/net/port_authority.cpp.i: cmake_force
@@ -243,7 +250,7 @@ CMakeFiles/omniserver.dir/src/net/port_authority.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/net/fedex.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/net/fedex.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/fedex.cpp
 CMakeFiles/omniserver.dir/src/net/fedex.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/omniserver.dir/src/net/fedex.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/omniserver.dir/src/net/fedex.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/net/fedex.cpp.o -MF CMakeFiles/omniserver.dir/src/net/fedex.cpp.o.d -o CMakeFiles/omniserver.dir/src/net/fedex.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/fedex.cpp
 
 CMakeFiles/omniserver.dir/src/net/fedex.cpp.i: cmake_force
@@ -257,7 +264,7 @@ CMakeFiles/omniserver.dir/src/net/fedex.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/message_builder.cpp
 CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o -MF CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o.d -o CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/message_builder.cpp
 
 CMakeFiles/omniserver.dir/src/net/message_builder.cpp.i: cmake_force
@@ -271,7 +278,7 @@ CMakeFiles/omniserver.dir/src/net/message_builder.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/net/message.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/net/message.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/message.cpp
 CMakeFiles/omniserver.dir/src/net/message.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/omniserver.dir/src/net/message.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/omniserver.dir/src/net/message.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/net/message.cpp.o -MF CMakeFiles/omniserver.dir/src/net/message.cpp.o.d -o CMakeFiles/omniserver.dir/src/net/message.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/net/message.cpp
 
 CMakeFiles/omniserver.dir/src/net/message.cpp.i: cmake_force
@@ -285,7 +292,7 @@ CMakeFiles/omniserver.dir/src/net/message.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.cpp
 CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o -MF CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o.d -o CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/recovery/beacon_manager.cpp
 
 CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.i: cmake_force
@@ -299,7 +306,7 @@ CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/main_window.cpp
 CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o -MF CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o.d -o CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/main_window.cpp
 
 CMakeFiles/omniserver.dir/src/gui/main_window.cpp.i: cmake_force
@@ -313,7 +320,7 @@ CMakeFiles/omniserver.dir/src/gui/main_window.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/setup_wizard.cpp
 CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o -MF CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o.d -o CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/setup_wizard.cpp
 
 CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.i: cmake_force
@@ -327,7 +334,7 @@ CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/recovery_wizard.cpp
 CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o -MF CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o.d -o CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/recovery_wizard.cpp
 
 CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.i: cmake_force
@@ -341,7 +348,7 @@ CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/util/logging.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/util/logging.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/util/logging.cpp
 CMakeFiles/omniserver.dir/src/util/logging.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/omniserver.dir/src/util/logging.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/omniserver.dir/src/util/logging.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/util/logging.cpp.o -MF CMakeFiles/omniserver.dir/src/util/logging.cpp.o.d -o CMakeFiles/omniserver.dir/src/util/logging.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/util/logging.cpp
 
 CMakeFiles/omniserver.dir/src/util/logging.cpp.i: cmake_force
@@ -355,7 +362,7 @@ CMakeFiles/omniserver.dir/src/util/logging.cpp.s: cmake_force
 CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o: CMakeFiles/omniserver.dir/flags.make
 CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/client_table_model.cpp
 CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o -MF CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o.d -o CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/client_table_model.cpp
 
 CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.i: cmake_force
@@ -365,6 +372,20 @@ CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.i: cmake_force
 CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/src/gui/client_table_model.cpp -o CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.s
+
+CMakeFiles/omniserver.dir/qrc_resources.cpp.o: CMakeFiles/omniserver.dir/flags.make
+CMakeFiles/omniserver.dir/qrc_resources.cpp.o: qrc_resources.cpp
+CMakeFiles/omniserver.dir/qrc_resources.cpp.o: CMakeFiles/omniserver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/omniserver.dir/qrc_resources.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omniserver.dir/qrc_resources.cpp.o -MF CMakeFiles/omniserver.dir/qrc_resources.cpp.o.d -o CMakeFiles/omniserver.dir/qrc_resources.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/qrc_resources.cpp
+
+CMakeFiles/omniserver.dir/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/omniserver.dir/qrc_resources.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/qrc_resources.cpp > CMakeFiles/omniserver.dir/qrc_resources.cpp.i
+
+CMakeFiles/omniserver.dir/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/omniserver.dir/qrc_resources.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/qrc_resources.cpp -o CMakeFiles/omniserver.dir/qrc_resources.cpp.s
 
 # Object files for target omniserver
 omniserver_OBJECTS = \
@@ -388,53 +409,55 @@ omniserver_OBJECTS = \
 "CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o" \
 "CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o" \
 "CMakeFiles/omniserver.dir/src/util/logging.cpp.o" \
-"CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o"
+"CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o" \
+"CMakeFiles/omniserver.dir/qrc_resources.cpp.o"
 
 # External object files for target omniserver
 omniserver_EXTERNAL_OBJECTS =
 
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/main.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/core/app_core.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/core/server_core.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/net/fedex.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/net/message.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/util/logging.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/build.make
-omniserver.app/Contents/MacOS/omniserver: /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
-omniserver.app/Contents/MacOS/omniserver: /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/QtNetwork
-omniserver.app/Contents/MacOS/omniserver: /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/debug/lib/libnlohmann_json_schema_validator.a
-omniserver.app/Contents/MacOS/omniserver: /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/debug/lib/libsodium.a
-omniserver.app/Contents/MacOS/omniserver: /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Versions/A/QtGui
-omniserver.app/Contents/MacOS/omniserver: /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/QtCore
-omniserver.app/Contents/MacOS/omniserver: CMakeFiles/omniserver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable omniserver.app/Contents/MacOS/omniserver"
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/main.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/core/app_core.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/core/state_machine.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/core/server_core.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/core/crypto_manager.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/core/mailbox.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/db/omni_network.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/db/omni_folder.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/db/omni_drive.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/net/port_authority.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/net/fedex.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/net/message_builder.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/net/message.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/gui/main_window.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/gui/setup_wizard.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/gui/recovery_wizard.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/util/logging.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/src/gui/client_table_model.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/qrc_resources.cpp.o
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/build.make
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: /Users/christian/Qt/6.9.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: /Users/christian/Qt/6.9.1/macos/lib/QtNetwork.framework/Versions/A/QtNetwork
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/debug/lib/libnlohmann_json_schema_validator.a
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/debug/lib/libsodium.a
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: /Users/christian/Qt/6.9.1/macos/lib/QtGui.framework/Versions/A/QtGui
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: /Users/christian/Qt/6.9.1/macos/lib/QtCore.framework/Versions/A/QtCore
+OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server: CMakeFiles/omniserver.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable \"OmniFolder Server.app/Contents/MacOS/OmniFolder Server\""
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/omniserver.dir/link.txt --verbose=$(VERBOSE)
-	/usr/bin/python3 /Users/christian/.vcpkg-clion/vcpkg/scripts/buildsystems/osx/applocal.py /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/omniserver.app/Contents/MacOS/omniserver /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/debug
+	/usr/bin/python3 /Users/christian/.vcpkg-clion/vcpkg/scripts/buildsystems/osx/applocal.py "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/OmniFolder Server.app/Contents/MacOS/OmniFolder Server" /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/debug
 
 # Rule to build all files generated by this target.
-CMakeFiles/omniserver.dir/build: omniserver.app/Contents/MacOS/omniserver
+CMakeFiles/omniserver.dir/build: OmniFolder\ Server.app/Contents/MacOS/OmniFolder\ Server
 .PHONY : CMakeFiles/omniserver.dir/build
 
 CMakeFiles/omniserver.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/omniserver.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/omniserver.dir/clean
 
-CMakeFiles/omniserver.dir/depend:
+CMakeFiles/omniserver.dir/depend: qrc_resources.cpp
 	cd /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/build/CMakeFiles/omniserver.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/omniserver.dir/depend
 

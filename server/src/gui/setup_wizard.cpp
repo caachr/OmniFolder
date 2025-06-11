@@ -19,9 +19,7 @@ SetupWizard::SetupWizard(QWidget *parent)
     setPage(Page_Port, new PortPage);
     setPage(Page_Confirm, new ConfirmPage);
     setPage(Page_Progress, new ProgressPage);
-    setPage(Page_Done, new DonePage);
 
-    // setPage(Page_Creds_R, new CredsPage_R);
     setPage(Page_Config_R, new ConfigPage_R);
     setPage(Page_Config_Confirm_R, new ConfigConfirmPage_R);
     setPage(Page_Port_R, new PortPage_R);
@@ -113,6 +111,7 @@ CredsPage::CredsPage(QWidget *parent)
     // Set elements and properties
 
     topLabel = new QLabel(tr("Please choose a strong username and password for your OmniFolder Network."
+                             "\n\nUsername and password cannot contain colon (:) characters."
                              "\n\nYou will be required to present these during login and to perform recovery actions."
                              "\n\nNote: We STRONGLY suggest writing these down somewhere safe, as login and recovery become impossible without them!"));
     topLabel->setWordWrap(true);
@@ -136,6 +135,15 @@ CredsPage::CredsPage(QWidget *parent)
     // Set password fields to hide text by default
     passwordLine->setEchoMode(QLineEdit::Password);
     passwordConfirmLine->setEchoMode(QLineEdit::Password);
+
+    // Create validators to prevent colon characters
+    QRegularExpression noColonRegex("[^:]*");
+    QRegularExpressionValidator *noColonValidator = new QRegularExpressionValidator(noColonRegex, this);
+
+    usernameLine->setValidator(noColonValidator);
+    passwordLine->setValidator(noColonValidator);
+    usernameConfirmLine->setValidator(noColonValidator);
+    passwordConfirmLine->setValidator(noColonValidator);
 
     // Create show/hide password buttons
     showPasswordButton = new QPushButton("Show");
@@ -212,10 +220,17 @@ bool CredsPage::isComplete() const
     QString confirmUsername = usernameConfirmLine->text();
     QString confirmPassword = passwordConfirmLine->text();
 
+    // Check for colon characters as additional validation
+    bool hasColons = username.contains(':') ||
+                     password.contains(':') ||
+                     confirmUsername.contains(':') ||
+                     confirmPassword.contains(':');
+
     return !username.isEmpty() &&
            !password.isEmpty() &&
            username == confirmUsername &&
-           password == confirmPassword;
+           password == confirmPassword &&
+           !hasColons;
 }
 
 void CredsPage::togglePasswordVisibility(bool show)
@@ -286,6 +301,11 @@ BeaconPage::BeaconPage(QWidget *parent)
 
     tokenLine = new QLineEdit();
     tokenLine->setPlaceholderText(tr("e.g., ghp_1A2b3C4d5E6f7G8h9I0j1K2l3M4n5O6p7Q8r9S"));
+    tokenLine->setEchoMode(QLineEdit::Password);
+
+    showTokenButton = new QPushButton(tr("Show"));
+    showTokenButton->setCheckable(true);
+    showTokenButton->setAutoDefault(false);
 
     testButton = new QPushButton(tr("Test Login"));
 
@@ -297,7 +317,6 @@ BeaconPage::BeaconPage(QWidget *parent)
 
     // Set connections and registrations
 
-    // updateStatus(Status::None);
     testButton->setDisabled(true);
 
     // Test button - trigger test when clicked
@@ -317,7 +336,7 @@ BeaconPage::BeaconPage(QWidget *parent)
         }
     });
 
-    // Password line - check if both fields have content when changed
+    // Token line - check if both fields have content when changed
     connect(tokenLine, &QLineEdit::textChanged, this, [this]() {
         if (usernameLine->text().isEmpty() || tokenLine->text().isEmpty()) {
             updateStatus(Status::None);
@@ -326,9 +345,13 @@ BeaconPage::BeaconPage(QWidget *parent)
         }
     });
 
+    // Show token button
+    connect(showTokenButton, &QPushButton::toggled, this, &BeaconPage::toggleTokenVisibility);
+
     connect(this, &BeaconPage::startLoginTest, beaconManager, &BeaconManager::testLogin);
     connect(beaconManager, &BeaconManager::loginSuccess, this, &BeaconPage::onLoginSuccess);
     connect(beaconManager, &BeaconManager::loginFailure, this, &BeaconPage::onLoginFailure);
+    connect(beaconManager, &BeaconManager::loginTimeout, this, &BeaconPage::onLoginTimeout);
 
     registerField("ghUsername", usernameLine);
     registerField("ghToken", tokenLine);
@@ -343,6 +366,7 @@ BeaconPage::BeaconPage(QWidget *parent)
     QHBoxLayout *tokenLayout = new QHBoxLayout;
     tokenLayout->addWidget(tokenLabel);
     tokenLayout->addWidget(tokenLine);
+    tokenLayout->addWidget(showTokenButton);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addWidget(topLabel);
@@ -373,6 +397,11 @@ void BeaconPage::onLoginFailure()
     updateStatus(Status::Failure);
 }
 
+void BeaconPage::onLoginTimeout()
+{
+    updateStatus(Status::Timeout);
+}
+
 void BeaconPage::updateStatus(Status newStatus)
 {
     currentStatus = newStatus;
@@ -394,6 +423,12 @@ void BeaconPage::updateStatus(Status newStatus)
         statusLabel->setStyleSheet("color: red");
         enableFields();
         break;
+    case Status::Timeout:
+        statusLabel->setText("Login request timed out. Please check your internet connection,"
+                             " ensure you entered the correct login information, then try again.");
+        statusLabel->setStyleSheet("color: #B8750A;");
+        enableFields();
+        break;
     case Status::Waiting:
         statusLabel->setText("Waiting to test...");
         statusLabel->setStyleSheet("color: gray");
@@ -409,6 +444,17 @@ void BeaconPage::updateStatus(Status newStatus)
 
     // Triggers wizard to re-check isComplete()
     emit completeChanged();
+}
+
+void BeaconPage::toggleTokenVisibility(bool show)
+{
+    if (show) {
+        tokenLine->setEchoMode(QLineEdit::Normal);
+        showTokenButton->setText("Hide");
+    } else {
+        tokenLine->setEchoMode(QLineEdit::Password);
+        showTokenButton->setText("Show");
+    }
 }
 
 void BeaconPage::enableFields()
@@ -445,12 +491,12 @@ PortPage::PortPage(QWidget *parent)
 
     topLabel = new QLabel(tr("In this step, we will enable your server to receive communications from clients."
                              "\n\nPlease choose a port on your computer to receive connections."
-                             "\nWe have automatically detected an available port and placed it into the field below,"
+                             "\nWe recommend the port 44150 if available,"
                              " but you are welcome to choose a different port."));
     topLabel->setWordWrap(true);
 
     portLabel = new QLabel(tr("Port:"));
-    portLine = new QLineEdit();
+    portLine = new QLineEdit("44150");
 
     testPortButton = new QPushButton("Test Port Availability");
 
@@ -460,21 +506,34 @@ PortPage::PortPage(QWidget *parent)
     testForwardButton = new QPushButton(tr("Test Forwarded Connection"));
 
     statusLabel = new QLabel(tr("Waiting for user input..."));
+    statusLabel->setWordWrap(true);
     statusLabel->setStyleSheet("color: gray");
+
+    manualLinksLabel = new QLabel("<a href='https://canyouseeme.org'>canyouseeme.org</a>"
+                                  "<br><a href='https://www.yougetsignal.com/tools/open-ports'>yougetsignal.com</a>"
+                                  "<br><a href='https://portchecker.io'>portchecker.io</a>");
+    manualLinksLabel->setTextFormat(Qt::RichText);
+    manualLinksLabel->setOpenExternalLinks(true);
+    manualLinksLabel->hide();
 
     helpButton = new QPushButton(tr("I Need Help"));
 
 
     // Set connections and registrations
 
-    testPortButton->setEnabled(false);
     testForwardButton->setEnabled(false);
 
     connect(portLine, &QLineEdit::textChanged, this, [this]() {
         if (portLine->text().isEmpty()) {
             updateStatus(Status::None);
         } else {
-            updateStatus(Status::AwaitingPort);
+            bool portParseOk;
+            int port = portLine->text().toInt(&portParseOk);
+            if (!portParseOk || port < 1 || port > 65535) {
+                updateStatus(Status::InvalidInput);
+            } else {
+                updateStatus(Status::AwaitingPort);
+            }
         }
     });
 
@@ -500,6 +559,7 @@ PortPage::PortPage(QWidget *parent)
 
     connect(portAuthority, &PortAuthority::forwardTestSuccess, this, &PortPage::onForwardSuccess);
     connect(portAuthority, &PortAuthority::forwardTestFailure, this, &PortPage::onForwardFailure);
+    connect(portAuthority, &PortAuthority::forwardTestUnavailable, this, &PortPage::onForwardUnavailable);
 
     connect(helpButton, &QPushButton::clicked, [](){
         QDesktopServices::openUrl(QUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
@@ -521,6 +581,7 @@ PortPage::PortPage(QWidget *parent)
     mainLayout->addWidget(instructionLabel);
     mainLayout->addWidget(testForwardButton);
     mainLayout->addWidget(statusLabel);
+    mainLayout->addWidget(manualLinksLabel);
     mainLayout->addStretch();
     mainLayout->addWidget(helpButton);
     setLayout(mainLayout);
@@ -536,6 +597,31 @@ bool PortPage::isComplete() const
     return currentStatus == Status::ForwardSuccess;
 }
 
+void PortPage::onPortSuccess()
+{
+    updateStatus(Status::PortSuccess);
+}
+
+void PortPage::onPortFailure()
+{
+    updateStatus(Status::PortFailure);
+}
+
+void PortPage::onForwardSuccess()
+{
+    updateStatus(Status::ForwardSuccess);
+}
+
+void PortPage::onForwardFailure()
+{
+    updateStatus(Status::ForwardFailure);
+}
+
+void PortPage::onForwardUnavailable()
+{
+    updateStatus(Status::AutomatedForwardUnavailable);
+}
+
 void PortPage::updateStatus(Status newStatus)
 {
     currentStatus = newStatus;
@@ -549,9 +635,16 @@ void PortPage::updateStatus(Status newStatus)
         testForwardButton->setEnabled(false);
         break;
     case Status::AwaitingPort:
-        statusLabel->setText("Waiting for available port selection...");
+        statusLabel->setText("Waiting to test port availability...");
         statusLabel->setStyleSheet("color: gray");
         enableFields();
+        testForwardButton->setEnabled(false);
+        break;
+    case Status::InvalidInput:
+        statusLabel->setText("Invalid input. Please input a port number between 1 and 65535.");
+        statusLabel->setStyleSheet("color: red");
+        portLine->setEnabled(true);
+        testPortButton->setEnabled(false);
         testForwardButton->setEnabled(false);
         break;
     case Status::TestingPort:
@@ -593,29 +686,15 @@ void PortPage::updateStatus(Status newStatus)
         statusLabel->setStyleSheet("color: red");
         enableFields();
         break;
+    case Status::AutomatedForwardUnavailable:
+        statusLabel->setText(tr("Automatic port forward testing unavailable. Please use one of the following online port checkers to verify your port is open:"));
+        statusLabel->setStyleSheet("color: #B8750A");
+        manualLinksLabel->show();
+        enableFields();
+        break;
     }
 
     emit completeChanged();
-}
-
-void PortPage::onPortSuccess()
-{
-    updateStatus(Status::PortSuccess);
-}
-
-void PortPage::onPortFailure()
-{
-    updateStatus(Status::PortFailure);
-}
-
-void PortPage::onForwardSuccess()
-{
-    updateStatus(Status::ForwardSuccess);
-}
-
-void PortPage::onForwardFailure()
-{
-    updateStatus(Status::ForwardFailure);
 }
 
 void PortPage::enableFields()
@@ -723,15 +802,36 @@ void ConfirmPage::togglePasswordVisibility(bool show)
 
 ProgressPage::ProgressPage(QWidget *parent)
     : QWizardPage(parent)
+    , configManager(new ConfigManager(this))
+    , portAuthority(new PortAuthority(this))
+    , beaconManager(new BeaconManager(this))
 {
+    // Title
+
     setTitle(tr("New OmniFolder Network - Setup in Progress..."));
 
-    topLabel = new QLabel(tr("Doing important things..."));
+
+    // Set elements and properties
+
+    topLabel = new QLabel(tr("Preparing for setup..."));
     topLabel->setWordWrap(true);
 
     progressBar = new QProgressBar(this);
     progressBar->setRange(0, 100);
     progressBar->setValue(0);
+
+
+    // Set connections
+
+    connect(configManager, &ConfigManager::beginningConfigSetup, this, &ProgressPage::onBeginningSetup);
+    connect(configManager, &ConfigManager::creatingAuthFile, this, &ProgressPage::onCreatingAuth);
+    connect(configManager, &ConfigManager::creatingConfig, this, &ProgressPage::onCreatingConfig);
+    connect(configManager, &ConfigManager::openingFile, this, &ProgressPage::onOpeningFile);
+    connect(configManager, &ConfigManager::writingConfig, this, &ProgressPage::onWritingConfig);
+    connect(configManager, &ConfigManager::configSetupComplete, this, &ProgressPage::onComplete);
+
+
+    // Set layouts
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addWidget(topLabel);
@@ -741,46 +841,132 @@ ProgressPage::ProgressPage(QWidget *parent)
 
 int ProgressPage::nextId() const
 {
-    return SetupWizard::Page_Done;
+    return -1;
+}
+
+bool ProgressPage::isComplete() const
+{
+    return currentStatus == Status::Complete;
+}
+
+void ProgressPage::onBeginningSetup()
+{
+    updateStatus(Status::BeginningSetup);
+}
+
+void ProgressPage::onCreatingAuth()
+{
+    updateStatus(Status::CreatingAuth);
+}
+
+void ProgressPage::onCreatingConfig()
+{
+    updateStatus(Status::CreatingConfig);
+}
+
+void ProgressPage::onOpeningFile()
+{
+    updateStatus(Status::OpeningFile);
+}
+
+void ProgressPage::onWritingConfig()
+{
+    updateStatus(Status::WritingConfig);
+}
+
+void ProgressPage::onComplete()
+{
+    updateStatus(Status::Complete);
+}
+
+void ProgressPage::updateStatus(Status newStatus)
+{
+    currentStatus = newStatus;
+
+    switch (newStatus) {
+    case Status::None:
+        topLabel->setText(tr("Preparing for setup..."));
+        progressBar->setValue(0);
+        break;
+    case Status::BeginningSetup:
+        topLabel->setText(tr("Beginning setup..."));
+        progressBar->setValue(16);
+        break;
+    case Status::CreatingAuth:
+        topLabel->setText(tr("Creating auth file..."));
+        progressBar->setValue(33);
+        break;
+    case Status::CreatingConfig:
+        topLabel->setText(tr("Creating configuration information..."));
+        progressBar->setValue(50);
+        break;
+    case Status::OpeningFile:
+        topLabel->setText(tr("Opening config.json for writing..."));
+        progressBar->setValue(66);
+        break;
+    case Status::WritingConfig:
+        topLabel->setText(tr("Writing configuration information to config.json..."));
+        progressBar->setValue(83);
+        break;
+    case Status::Complete:
+        setTitle(tr("New OmniFolder Network - Setup Complete"));
+        topLabel->setText(tr("Setup complete! Press 'Launch Server' to boot up the server and begin using your OmniFolder Network."));
+        progressBar->setValue(100);
+        break;
+    }
+
+    // Update finish button to visible/enabled when complete status reached
+    QAbstractButton *finishButton = wizard()->button(QWizard::NextButton);
+    if (currentStatus == Status::Complete) {
+        finishButton->setVisible(true);
+        finishButton->setEnabled(true);
+        wizard()->setButtonText(QWizard::FinishButton, tr("Launch Server"));
+        wizard()->button(QWizard::FinishButton)->show();
+    } else {
+        finishButton->setVisible(false);
+        finishButton->setEnabled(false);
+        wizard()->button(QWizard::FinishButton)->hide();
+    }
+
+    emit completeChanged();
 }
 
 void ProgressPage::initializePage()
 {
-    // Remove navigation buttons
-    QList<QWizard::WizardButton> button_layout;
-    button_layout << QWizard::Stretch << QWizard::NextButton;
-    wizard()->setButtonLayout(button_layout);
-}
+    // Remove navigation buttons, hide finished button initially
 
-
-// ______________________________________________________________DONE PAGE
-
-DonePage::DonePage(QWidget *parent)
-    : QWizardPage(parent)
-{
-    setTitle(tr("New OmniFolder Network - Setup Complete"));
-
-    topLabel = new QLabel(tr("Setup complete! Press 'Launch Server' to boot up the server and begin using your OmniFolder Network."));
-    topLabel->setWordWrap(true);
-
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    mainLayout->addWidget(topLabel);
-    setLayout(mainLayout);
-}
-
-int DonePage::nextId() const
-{
-    return -1;
-}
-
-void DonePage::initializePage()
-{
-    // Don't show back button
     QList<QWizard::WizardButton> button_layout;
     button_layout << QWizard::Stretch << QWizard::FinishButton;
     wizard()->setButtonLayout(button_layout);
-
+    wizard()->button(QWizard::FinishButton)->setVisible(false);
+    wizard()->button(QWizard::FinishButton)->setEnabled(false);
     wizard()->setButtonText(QWizard::FinishButton, tr("Launch Server"));
+    wizard()->button(QWizard::FinishButton)->hide();
+
+    // Start config setup
+
+    QTimer::singleShot(100, this, [this]() {
+        // Get public IP address
+        std::string detectedIp = portAuthority->getExternalIp();
+
+        // Get beacon URL & PAT
+        QString beaconPAT = wizard()->field("ghToken").toString();
+        std::string beaconUrl = beaconManager->createBeacon(beaconPAT);
+
+        // Get the ingredients from previous wizard pages
+        nlohmann::json ingredients;
+
+        ingredients["name"] = wizard()->field("networkName").toString().toStdString();
+        ingredients["username"] = wizard()->field("username").toString().toStdString();
+        ingredients["password"] = wizard()->field("password").toString().toStdString();
+        ingredients["ip"] = detectedIp;
+        ingredients["port"] = wizard()->field("port").toInt();
+        ingredients["beacon_url"] = beaconUrl;
+        ingredients["beacon_pat"] = beaconPAT.toStdString();
+
+        // Start setup
+        configManager->setupFirstConfigFile(ingredients);
+    });
 }
 
 
@@ -897,7 +1083,7 @@ ConfigPage_R::ConfigPage_R(QWidget *parent)
     });
 
     // Config validation signal/slot mechanism
-    connect(this, &ConfigPage_R::startValidation, configManager, &ConfigManager::validateConfig);
+    connect(this, &ConfigPage_R::startValidation, configManager, &ConfigManager::validateEncryptedConfig);
     connect(configManager, &ConfigManager::validationSuccess, this, &ConfigPage_R::onValidationSuccess);
     connect(configManager, &ConfigManager::validationFailure, this, &ConfigPage_R::onValidationFailure);
 
@@ -1074,6 +1260,15 @@ PortPage_R::PortPage_R(QWidget *parent)
     testForwardButton = new QPushButton(tr("Test Forwarded Connection"));
 
     statusLabel = new QLabel(tr("Waiting for user input..."));
+    statusLabel->setWordWrap(true);
+    statusLabel->setStyleSheet("color: gray");
+
+    manualLinksLabel = new QLabel("<a href='https://canyouseeme.org'>canyouseeme.org</a>"
+                                  "<br><a href='https://www.yougetsignal.com/tools/open-ports'>yougetsignal.com</a>"
+                                  "<br><a href='https://portchecker.io'>portchecker.io</a>");
+    manualLinksLabel->setTextFormat(Qt::RichText);
+    manualLinksLabel->setOpenExternalLinks(true);
+    manualLinksLabel->hide();
 
     helpButton = new QPushButton(tr("I need help"));
 
@@ -1087,7 +1282,13 @@ PortPage_R::PortPage_R(QWidget *parent)
         if (portLine->text().isEmpty()) {
             updateStatus(Status::None);
         } else {
-            updateStatus(Status::AwaitingPort);
+            bool portParseOk;
+            int port = portLine->text().toInt(&portParseOk);
+            if (!portParseOk || port < 1 || port > 65535) {
+                updateStatus(Status::InvalidInput);
+            } else {
+                updateStatus(Status::AwaitingPort);
+            }
         }
     });
 
@@ -1113,6 +1314,7 @@ PortPage_R::PortPage_R(QWidget *parent)
 
     connect(portAuthority, &PortAuthority::forwardTestSuccess, this, &PortPage_R::onForwardSuccess);
     connect(portAuthority, &PortAuthority::forwardTestFailure, this, &PortPage_R::onForwardFailure);
+    connect(portAuthority, &PortAuthority::forwardTestUnavailable, this, &PortPage_R::onForwardUnavailable);
 
     connect(helpButton, &QPushButton::clicked, [](){
         QDesktopServices::openUrl(QUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
@@ -1133,6 +1335,7 @@ PortPage_R::PortPage_R(QWidget *parent)
     mainLayout->addLayout(portLayout);
     mainLayout->addWidget(testForwardButton);
     mainLayout->addWidget(statusLabel);
+    mainLayout->addWidget(manualLinksLabel);
     mainLayout->addStretch();
     mainLayout->addWidget(helpButton);
     setLayout(mainLayout);
@@ -1164,6 +1367,13 @@ void PortPage_R::updateStatus(Status newStatus)
         statusLabel->setText("Waiting for available port selection...");
         statusLabel->setStyleSheet("color: gray");
         enableFields();
+        testForwardButton->setEnabled(false);
+        break;
+    case Status::InvalidInput:
+        statusLabel->setText("Invalid input. Please input a port number between 1 and 65535.");
+        statusLabel->setStyleSheet("color: red");
+        portLine->setEnabled(true);
+        testPortButton->setEnabled(false);
         testForwardButton->setEnabled(false);
         break;
     case Status::TestingPort:
@@ -1205,6 +1415,12 @@ void PortPage_R::updateStatus(Status newStatus)
         statusLabel->setStyleSheet("color: red");
         enableFields();
         break;
+    case Status::AutomatedForwardUnavailable:
+        statusLabel->setText(tr("Automatic port forward testing unavailable. Please use one of the following online port checkers to verify your port is open:"));
+        statusLabel->setStyleSheet("color: #B8750A");
+        manualLinksLabel->show();
+        enableFields();
+        break;
     }
 
     emit completeChanged();
@@ -1228,6 +1444,11 @@ void PortPage_R::onForwardSuccess()
 void PortPage_R::onForwardFailure()
 {
     updateStatus(Status::ForwardFailure);
+}
+
+void PortPage_R::onForwardUnavailable()
+{
+    updateStatus(Status::AutomatedForwardUnavailable);
 }
 
 void PortPage_R::enableFields()

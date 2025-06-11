@@ -18,10 +18,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/share/unofficial-sodium/unofficial-sodiumConfig.cmake"
   "/Users/christian/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake"
   "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/CMakeLists.txt"
-  ".qt/info_plist/omniserver/Info.plist"
+  ".qt/info_plist/omnifolder_server/Info.plist"
   ".qtc/package-manager/auto-setup.cmake"
   "CMakeFiles/3.31.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeSystem.cmake"
+  "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/resources.qrc"
   "/Users/christian/Qt/6.9.1/macos/lib/cmake/Qt6/FindWrapAtomic.cmake"
   "/Users/christian/Qt/6.9.1/macos/lib/cmake/Qt6/FindWrapOpenGL.cmake"
   "/Users/christian/Qt/6.9.1/macos/lib/cmake/Qt6/Qt6Config.cmake"
@@ -315,19 +316,20 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  ".qt/info_plist/omniserver/Info.plist"
-  "CMakeFiles/omniserver_autogen.dir/AutogenInfo.json"
+  "resources.qrc.depends"
+  ".qt/info_plist/omnifolder_server/Info.plist"
+  "CMakeFiles/omnifolder-server_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
   ".qt/QtDeployTargets.cmake"
-  "omniserver.app/Contents/MacOS"
-  "omniserver.app/Contents/Info.plist"
-  "omniserver.app/Contents/Info.plist"
+  "omnifolder-server.app/Contents/MacOS"
+  "omnifolder-server.app/Contents/Info.plist"
+  "omnifolder-server.app/Contents/Info.plist"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/omniserver.dir/DependInfo.cmake"
-  "CMakeFiles/omniserver_autogen_timestamp_deps.dir/DependInfo.cmake"
-  "CMakeFiles/omniserver_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/omnifolder-server.dir/DependInfo.cmake"
+  "CMakeFiles/omnifolder-server_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/omnifolder-server_autogen.dir/DependInfo.cmake"
   )

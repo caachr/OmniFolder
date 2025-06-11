@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "omniserver_autogen"
   "CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/omniserver.dir/omniserver_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/omniserver.dir/qrc_resources.cpp.o"
+  "CMakeFiles/omniserver.dir/qrc_resources.cpp.o.d"
   "CMakeFiles/omniserver.dir/src/core/app_core.cpp.o"
   "CMakeFiles/omniserver.dir/src/core/app_core.cpp.o.d"
   "CMakeFiles/omniserver.dir/src/core/config_manager.cpp.o"
@@ -44,8 +46,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/omniserver.dir/src/recovery/beacon_manager.cpp.o.d"
   "CMakeFiles/omniserver.dir/src/util/logging.cpp.o"
   "CMakeFiles/omniserver.dir/src/util/logging.cpp.o.d"
-  "omniserver.app/Contents/MacOS/omniserver"
-  "omniserver.pdb"
+  "OmniFolder Server.app/Contents/MacOS/OmniFolder Server"
+  "OmniFolder Server.pdb"
+  "qrc_resources.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

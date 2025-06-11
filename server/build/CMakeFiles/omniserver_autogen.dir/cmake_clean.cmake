@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/omniserver_autogen"
-  "omniserver_autogen/include/src/gui/ui_setup_wizard.h"
   "omniserver_autogen/mocs_compilation.cpp"
   "omniserver_autogen/timestamp"
 )

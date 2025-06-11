@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../../../src/net/port_authority.h"
+#include <QtNetwork/QSslError>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -44,6 +45,7 @@ template <> constexpr inline auto PortAuthority::qt_create_metaobjectdata<qt_met
         "portTestFailure",
         "forwardTestSuccess",
         "forwardTestFailure",
+        "forwardTestUnavailable",
         "testPort",
         "port",
         "testForward"
@@ -58,13 +60,15 @@ template <> constexpr inline auto PortAuthority::qt_create_metaobjectdata<qt_met
         QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'forwardTestFailure'
         QtMocHelpers::SignalData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'forwardTestUnavailable'
+        QtMocHelpers::SignalData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'testPort'
-        QtMocHelpers::SlotData<void(const qint32)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 7 },
+        QtMocHelpers::SlotData<void(const qint32)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 8 },
         }}),
         // Slot 'testForward'
-        QtMocHelpers::SlotData<void(const qint32)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 7 },
+        QtMocHelpers::SlotData<void(const qint32)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 8 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -93,8 +97,9 @@ void PortAuthority::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 1: _t->portTestFailure(); break;
         case 2: _t->forwardTestSuccess(); break;
         case 3: _t->forwardTestFailure(); break;
-        case 4: _t->testPort((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1]))); break;
-        case 5: _t->testForward((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1]))); break;
+        case 4: _t->forwardTestUnavailable(); break;
+        case 5: _t->testPort((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1]))); break;
+        case 6: _t->testForward((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1]))); break;
         default: ;
         }
     }
@@ -106,6 +111,8 @@ void PortAuthority::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         if (QtMocHelpers::indexOfMethod<void (PortAuthority::*)()>(_a, &PortAuthority::forwardTestSuccess, 2))
             return;
         if (QtMocHelpers::indexOfMethod<void (PortAuthority::*)()>(_a, &PortAuthority::forwardTestFailure, 3))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (PortAuthority::*)()>(_a, &PortAuthority::forwardTestUnavailable, 4))
             return;
     }
 }
@@ -129,14 +136,14 @@ int PortAuthority::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }
@@ -163,5 +170,11 @@ void PortAuthority::forwardTestSuccess()
 void PortAuthority::forwardTestFailure()
 {
     QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
+}
+
+// SIGNAL 4
+void PortAuthority::forwardTestUnavailable()
+{
+    QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
 }
 QT_WARNING_POP
