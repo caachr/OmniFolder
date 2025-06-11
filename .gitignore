@@ -1,2 +1,5 @@
 server/build/
 server/cmake-build-debug/
+
+.DS_Store
+server/.DS_Store
