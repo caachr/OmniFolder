@@ -1,5 +1,0 @@
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/cmake-build-debug/CMakeFiles/omniserver.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/cmake-build-debug/CMakeFiles/omniserver_autogen_timestamp_deps.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/server/cmake-build-debug/CMakeFiles/omniserver_autogen.dir
