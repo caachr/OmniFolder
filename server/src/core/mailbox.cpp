@@ -12,6 +12,7 @@ Mailbox::Mailbox(QObject *parent)
 
 Mailbox::QueuedMessageContext Mailbox::openNextMessage()
 {
+    qDebug("server opening next message");
     QueuedMessageContext queuedMessage = messageQueue.top();
     messageQueue.pop();
     return queuedMessage;
@@ -19,6 +20,7 @@ Mailbox::QueuedMessageContext Mailbox::openNextMessage()
 
 void Mailbox::onMessageReady(const Message& message, const QString& identifier, const bool authenticated)
 {
+    qDebug("mailbox received message from fedex");
     messageQueue.push({message, identifier, authenticated});
     emit youveGotMail();
 }

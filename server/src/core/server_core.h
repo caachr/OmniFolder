@@ -36,15 +36,8 @@ public:
     // Load server info from config file
     void loadFromConfig();
 
+    QString getUUID() const;
     QString getHost() const;
-
-    // /**
-    //  * @brief addClientSession - Add a client session to the activeSessions list.
-    //  * Called in PortAuthority's onClientAuthenticated after server sends clientAuthenticated signal.
-    //  * @param clientUUID - The client app UUID used to index the client session.
-    //  * @param clientSession - The client session.
-    //  */
-    // void addClientSession(QString clientUUID, std::unique_ptr<ClientSession> clientSession);
 
 signals:
     /**
@@ -54,7 +47,7 @@ signals:
      * @param clientInfo
      */
     void clientAuthenticated(const QString& tempSocketId, const ClientInfo& clientInfo);
-    void clientAuthFailed(const QString& tempSocketId);
+    void clientAuthFailed(const QString& tempSocketId, const ClientInfo& clientInfo);
 
     // Signals for client table GUI
     void clientConnected(const ClientInfo& clientInfo);
@@ -65,6 +58,10 @@ public slots:
 
     // Plugs into PortAuthority's newClientSession signal (emitted after client session has been made)
     void onNewClientSession(const QString& clientUUID, ClientSession* clientSession);
+
+    // Plugs into ClientSession's disconnected signal
+    // Inside: emits clientDisconnected signal for GUI table to remove client from display
+    void onClientSessionDisconnected(const QString& clientUUID);
 
 private:
     QString uuid;

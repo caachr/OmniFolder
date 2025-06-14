@@ -50,6 +50,11 @@ void ServerCore::loadFromConfig()
     port = config["network"]["server"]["port"];
 }
 
+QString ServerCore::getUUID() const
+{
+    return uuid;
+}
+
 QString ServerCore::getHost() const
 {
     return host;
@@ -57,44 +62,70 @@ QString ServerCore::getHost() const
 
 void ServerCore::onYouveGotMail()
 {
+    qDebug("server received mail notif from mailbox");
     auto queuedMessage = mailbox->openNextMessage();
     handleMessage(queuedMessage.message, queuedMessage.identifier, queuedMessage.authenticated);
 }
 
 void ServerCore::onNewClientSession(const QString& clientUUID, ClientSession* clientSession)
 {
+    // Set connections to server & new parent (this server)
+    clientSession->setParent(this);
+    connect(clientSession, &ClientSession::disconnected, this, &ServerCore::onClientSessionDisconnected);
+
     // Add client to active sessions list (logged in list)
     activeSessions[clientUUID] = clientSession;
 
+    // Signal client connected for GUI
+    emit clientConnected(clientSession->getClientInfo());
+
     // Craft & send reply to new client letting them know they've just been authenticated
     nlohmann::json ingredients;
+    ingredients["server_uuid"] = uuid.toStdString();
+    ingredients["server_host"] = host.toStdString();
+    ingredients["client_uuid"] = clientUUID.toStdString();
+    ingredients["client_host"] = clientSession->getClientHost().toStdString();
+
     Message* authAcceptReply = MessageBuilder::makeMessage(MessageType::AuthAccepted, ingredients);
     fedEx->shipMessage(authAcceptReply, clientSession->getSocket());
 }
 
+void ServerCore::onClientSessionDisconnected(const QString& clientUUID)
+{
+    emit clientDisconnected(clientUUID);
+}
+
 void ServerCore::handleMessage(const Message& message, const QString& identifier, const bool authenticated)
 {
+    qDebug("server handling message");
+
     // Get message contents
     nlohmann::json header = message.getHeader();
     MessageType type = message.getType();
     nlohmann::json payload = message.getPayload();
 
 
+    qDebug() << "server received message with header:" << header.dump() << "Type" << static_cast<int>(type) << "payload:" << payload.dump();
+    qDebug() << "Authenticated: " << authenticated;
+
+    QString clientUUID = QString::fromStdString(header["sender"]["uuid"].get<std::string>());
+    QString clientHost = QString::fromStdString(header["sender"]["host"].get<std::string>());
+    ClientInfo clientInfo = {clientUUID, clientHost};
+
     // Handle unauthenticated clients separately
     if (authenticated == false) {
 
-        QString tempSocketId = identifier;
+        qDebug("authenticated false");
+        QString tempSocketId = identifier; // Identifier: temp socket id in PortAuthority
 
         if (type == MessageType::AuthRequest) {
+            qDebug("message type auth request");
             if (credentialsValid(payload["username"].get<std::string>(), payload["password"].get<std::string>())) {
-                QString clientUUID = QString::fromStdString(header["sender"]["uuid"].get<std::string>());
-                QString clientHost = QString::fromStdString(header["sender"]["host"].get<std::string>());
-
-                ClientInfo clientInfo = {clientUUID, clientHost};
-
                 emit clientAuthenticated(tempSocketId, clientInfo);
+                qDebug("emit clientauthenticated");
             } else {
-                emit clientAuthFailed(tempSocketId);
+                emit clientAuthFailed(tempSocketId, clientInfo);
+                qDebug("emit clientauthfailed");
             }
         }
         return;

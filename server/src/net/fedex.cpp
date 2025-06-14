@@ -52,7 +52,7 @@ void FedEx::shipMessage(Message* message, QSslSocket* socket)
     if (bytesWritten == -1) {
         throw std::runtime_error("FedEx shipMessage: failed to write message to socket.");
     } else {
-        qDebug() << "FedEx: shipped " << bytesWritten << " to " << socket->peerAddress();
+        qDebug() << "FedEx: shipped " << bytesWritten << "bytes to " << socket->peerAddress();
     }
 }
 
@@ -92,15 +92,16 @@ bool FedEx::processNextMessage(SourceBuffer& sourceBuffer, const QString& identi
     // Reset for next message
     sourceBuffer.expectedMessageSize = 0;
 
-    try {
-        // Parse protobuf and convert to Message
-        Message message = parseProtoToMessage(protoData);
-        emit messageReady(message, identifier, authenticated);
-    } catch (const std::exception& e) {
-        qWarning() << "FedEx: Failed to parse message from" << identifier << ":" << e.what();
-        // Continue processing other messages
+
+    // Parse protobuf and convert to Message
+    Message message = parseProtoToMessage(protoData);
+    emit messageReady(message, identifier, authenticated);
+
+    if (message.getPayload().empty()) {
+        qWarning() << "FedEx: empty payload after parsing proto to message";
     }
 
+    qDebug("Fedex successfully parsed proto to message and emit messageReady.");
     return true; // Successfully processed a message
 }
 
@@ -126,8 +127,22 @@ Message FedEx::parseProtoToMessage(const QByteArray& protoData)
 
     type = static_cast<MessageType>(protoMessage.type());
 
-    payload = nlohmann::json::parse(protoMessage.payload().json_data());
+    // Debug what we're actually receiving
+    std::string payloadStr = protoMessage.payload().json_data();
+    qDebug() << "FedEx: Raw protobuf data size:" << protoData.size();
+    qDebug() << "FedEx: Protobuf message type:" << protoMessage.type();
+    qDebug() << "FedEx: Payload string length:" << payloadStr.length();
+    qDebug() << "FedEx: Payload content:" << QString::fromStdString(payloadStr);
 
+    qDebug("FedEx parseProtoToMessage: parsing proto paylod to json...");
+    try {
+        payload = nlohmann::json::parse(protoMessage.payload().json_data());
+
+    } catch (std::exception& e) {
+        qDebug("FedEx parseProtoToMessage: error parsing proto paylod to json...");
+        qWarning() << e.what();
+    }
+    qDebug("FedEx parseProtoToMessage: parsing proto payload to json complete.");
     return Message(header, type, payload);
 }
 
@@ -153,7 +168,7 @@ omniserver::MessageProto FedEx::messageToProto(const Message& message)
     protoMessage.set_type(static_cast<int32_t>(type));
 
     omniserver::PayloadProto* payloadProto = protoMessage.mutable_payload();
-    payloadProto->set_json_data(payload.get<std::string>());
+    payloadProto->set_json_data(payload.dump());
 
 
     // Check if conversion was successful
@@ -161,6 +176,7 @@ omniserver::MessageProto FedEx::messageToProto(const Message& message)
         throw std::runtime_error("FedEx messageToProto: message conversion to protobuf failed.");
     }
 
+    qDebug("FedEx: successfully converted message to proto");
 
     // Everything good, return
     return protoMessage;

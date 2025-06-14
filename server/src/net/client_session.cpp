@@ -37,12 +37,17 @@ void ClientSession::onSocketDataReceived()
 void ClientSession::onSocketDisconnected()
 {
     qDebug() << "Client disconnected:" << clientUUID;
-    emit disconnected();
+    emit disconnected(clientUUID);
 }
 
 QSslSocket* ClientSession::getSocket() const
 {
     return socket;
+}
+
+ClientInfo ClientSession::getClientInfo() const
+{
+    return ClientInfo({clientUUID, clientHost});
 }
 
 QString ClientSession::getClientUUID() const noexcept

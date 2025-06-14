@@ -384,13 +384,16 @@ void PortAuthority::onClientAuthenticated(const QString& tempSocketId, const Cli
     // Disconnect PortAuthority's signals before transferring ownership
     socket->disconnect(this);
 
+    qDebug("PortAuthority onClientAuthenticated: creating client session.");
+
     // Create client session & hand off to server
     ClientSession* clientSession = new ClientSession(socket, clientInfo, this);
     clientSession->setFedEx(fedEx);
     emit newClientSession(clientInfo.clientUUID, clientSession);
+    qDebug("client session created successfully.");
 }
 
-void PortAuthority::onClientAuthFailed(const QString& tempSocketId)
+void PortAuthority::onClientAuthFailed(const QString& tempSocketId, const ClientInfo& clientInfo)
 {
     qDebug("on client auth failed");
     // Clean up socket that failed auth
@@ -400,7 +403,13 @@ void PortAuthority::onClientAuthFailed(const QString& tempSocketId)
     }
 
     // Send rejection message before cleanup
+    qDebug("making & sending rejection message");
     nlohmann::json ingredients;
+    ingredients["server_uuid"] = serverCore->getUUID().toStdString();
+    ingredients["server_host"] = serverCore->getHost().toStdString();
+    ingredients["client_uuid"] = clientInfo.clientUUID.toStdString();
+    ingredients["client_host"] = clientInfo.clientHost.toStdString();
+
     Message* rejectReply = MessageBuilder::makeMessage(MessageType::AuthRejected, ingredients);
     fedEx->shipMessage(rejectReply, socket);
 
@@ -408,6 +417,7 @@ void PortAuthority::onClientAuthFailed(const QString& tempSocketId)
     QTimer::singleShot(500, this, [this, tempSocketId]() {
         QSslSocket* socket = socketsPendingAuth.take(tempSocketId);
         if (socket) {
+            qDebug("closing temp socket");
             socket->close();
             socket->deleteLater();
         }

@@ -21,12 +21,13 @@ public:
     void setFedEx(FedEx* fedExArg);
 
     QSslSocket* getSocket() const;
+    ClientInfo getClientInfo() const;
     QString getClientUUID() const noexcept;
     QString getClientHost() const noexcept;
 
 signals:
     // void dataReceived(const QByteArray& rawData, const QString& = QString());   // Empty 2nd param (not a temp socket)
-    void disconnected();
+    void disconnected(const QString& clientUUID);
 
 private slots:
     void onSocketDataReceived();  // Will call fedex to process the raw data

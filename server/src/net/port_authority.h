@@ -61,7 +61,7 @@ public slots:
     // Receive signals from server core if client was/wasn't authenticated;
     // On authenticated, construct client session with approved socket; on failed, remove socket from pending list
     void onClientAuthenticated(const QString& tempSocketId, const ClientInfo& clientInfo);
-    void onClientAuthFailed(const QString& tempSocketId);
+    void onClientAuthFailed(const QString& tempSocketId, const ClientInfo& clientInfo);
 
 private:
     QNetworkAccessManager *networkManager;
