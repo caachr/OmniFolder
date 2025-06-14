@@ -3,3 +3,9 @@
 //
 
 #include "omni_drive.h"
+
+OmniDrive::OmniDrive(QObject *parent)
+    : QObject(parent)
+{
+
+}

@@ -5,8 +5,11 @@
 #ifndef OMNISERVER_CRYPTO_MANAGER_H
 #define OMNISERVER_CRYPTO_MANAGER_H
 
+#include <QString>
+
 #include <vector>
 #include <span>
+#include <fstream>
 
 #include <sodium.h>
 
@@ -19,6 +22,14 @@ public:
      * @return The resulting hash.
      */
     std::string hashCreds(const std::string &username, const std::string &password);
+
+    /**
+     * @brief credentialsMatchStoredAuth - Determine if the given username & password match the stored auth hash in auth.txt.
+     * @param username - Username to check
+     * @param password - Password to check
+     * @return True if the username & password match the hash, false if not.
+     */
+    bool credentialsMatchStoredAuth(const std::string& username, const std::string& password);
 
     /**
      * @brief deriveConfigKey - Derive the config key from a username, password, and salt.

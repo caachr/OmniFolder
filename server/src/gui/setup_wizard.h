@@ -268,6 +268,7 @@ public:
     void onCreatingConfig();
     void onOpeningFile();
     void onWritingConfig();
+    void onWritingBirthCert();
     void onComplete();
 
 private:
@@ -280,7 +281,7 @@ private:
 
     // Progress status
     enum class Status { None,
-                        BeginningSetup, CreatingAuth, CreatingConfig, OpeningFile, WritingConfig, Complete };
+                        BeginningSetup, CreatingAuth, CreatingConfig, OpeningFile, WritingConfig, WritingBirthCert, Complete };
     Status currentStatus = Status::None;
 
     void updateStatus(Status newStatus);

@@ -5,8 +5,22 @@
 #ifndef OMNISERVER_OMNI_FOLDER_H
 #define OMNISERVER_OMNI_FOLDER_H
 
+#include <QObject>
 
+#include "omni_drive.h"
 
+class OmniFolder : public QObject {
+    Q_OBJECT
+
+public:
+    explicit OmniFolder(QObject *parent = nullptr);
+
+private:
+    QString id;
+    QString name;
+    QString lockHolderId;
+    QVector<std::unique_ptr<OmniDrive>> drives;
+};
 
 
 #endif //OMNISERVER_OMNI_FOLDER_H

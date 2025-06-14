@@ -3,3 +3,14 @@
 //
 
 #include "omni_network.h"
+
+OmniNetwork::OmniNetwork(QObject *parent)
+    : QObject(parent)
+{
+
+}
+
+void OmniNetwork::loadFromConfig()
+{
+
+}

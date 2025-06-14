@@ -26,12 +26,21 @@ class ConfigManager : public QObject {
 public:
     explicit ConfigManager(QObject *parent = nullptr);
 
+    /**
+     * @brief validateLocalConfig - Validate the plaintext local config file stored in the server's app data directory.
+     * @return True if the local config file is valid (valid json, conforms to schema), false if not.
+     */
+    bool validateLocalConfig() const;
+
+    nlohmann::json getConfigFromFile() const;
+
 signals:
     void beginningConfigSetup();
     void creatingAuthFile();
     void creatingConfig();
     void openingFile();
     void writingConfig();
+    void writingBirthCert();
     void configSetupComplete();
 
     void validationSuccess();
@@ -56,7 +65,7 @@ private:
      * @param jsonObj - The nlohmann::json object to evaluate.
      * @return True if the given json object conforms to the config schema, false if it does not.
      */
-    bool conformsToSchema(nlohmann::json jsonObj);
+    bool conformsToSchema(nlohmann::json jsonObj) const;
 };
 
 

@@ -3,3 +3,9 @@
 //
 
 #include "omni_folder.h"
+
+OmniFolder::OmniFolder(QObject *parent)
+    : QObject(parent)
+{
+
+}

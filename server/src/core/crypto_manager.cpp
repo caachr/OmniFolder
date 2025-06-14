@@ -4,6 +4,9 @@
 
 #include "crypto_manager.h"
 
+#include <QStandardPaths>
+#include <QDir>
+
 std::string CryptoManager::hashCreds(const std::string &username, const std::string &password)
 {
     // Concatenate username & password into one secret
@@ -28,6 +31,32 @@ std::string CryptoManager::hashCreds(const std::string &username, const std::str
 
     // Return final encoded text: internal stuff + cost params + salt + hash
     return std::string(encoded);
+}
+
+bool CryptoManager::credentialsMatchStoredAuth(const std::string& username, const std::string& password)
+{
+    // Get auth file
+    QString appDataDir = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QString authFilePath = QDir(appDataDir).filePath("auth.txt");
+    std::ifstream authFile(authFilePath.toStdString());
+    std::string authHash;
+
+    // File should exist & be openable at this point
+    if (!authFile.is_open()) {
+        throw std::runtime_error("Cryptomgr creds checking: failed to open auth file");
+    }
+
+    // Read the entire file contents into authHash
+    std::getline(authFile, authHash);
+    authFile.close();
+
+    // File should have shit in it at this point
+    if (authHash.empty()) {
+        throw std::runtime_error("Cryptomgr creds checking: auth file empty");
+    }
+
+    std::string combinedArgs = username + ":" + password;
+    return (crypto_pwhash_str_verify(authHash.c_str(), combinedArgs.c_str(), combinedArgs.size()) == 0);
 }
 
 void CryptoManager::deriveConfigKey(std::string username, std::string password, const unsigned char *salt, unsigned char output[32])

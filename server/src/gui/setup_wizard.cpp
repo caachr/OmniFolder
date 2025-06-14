@@ -828,6 +828,7 @@ ProgressPage::ProgressPage(QWidget *parent)
     connect(configManager, &ConfigManager::creatingConfig, this, &ProgressPage::onCreatingConfig);
     connect(configManager, &ConfigManager::openingFile, this, &ProgressPage::onOpeningFile);
     connect(configManager, &ConfigManager::writingConfig, this, &ProgressPage::onWritingConfig);
+    connect(configManager, &ConfigManager::writingBirthCert, this, &ProgressPage::onWritingBirthCert);
     connect(configManager, &ConfigManager::configSetupComplete, this, &ProgressPage::onComplete);
 
 
@@ -874,6 +875,11 @@ void ProgressPage::onWritingConfig()
     updateStatus(Status::WritingConfig);
 }
 
+void ProgressPage::onWritingBirthCert()
+{
+    updateStatus(Status::WritingBirthCert);
+}
+
 void ProgressPage::onComplete()
 {
     updateStatus(Status::Complete);
@@ -890,15 +896,15 @@ void ProgressPage::updateStatus(Status newStatus)
         break;
     case Status::BeginningSetup:
         topLabel->setText(tr("Beginning setup..."));
-        progressBar->setValue(16);
+        progressBar->setValue(14);
         break;
     case Status::CreatingAuth:
         topLabel->setText(tr("Creating auth file..."));
-        progressBar->setValue(33);
+        progressBar->setValue(28);
         break;
     case Status::CreatingConfig:
         topLabel->setText(tr("Creating configuration information..."));
-        progressBar->setValue(50);
+        progressBar->setValue(42);
         break;
     case Status::OpeningFile:
         topLabel->setText(tr("Opening config.json for writing..."));
@@ -906,7 +912,11 @@ void ProgressPage::updateStatus(Status newStatus)
         break;
     case Status::WritingConfig:
         topLabel->setText(tr("Writing configuration information to config.json..."));
-        progressBar->setValue(83);
+        progressBar->setValue(80);
+        break;
+    case Status::WritingBirthCert:
+        topLabel->setText(tr("Writing birth certificate..."));
+        progressBar->setValue(94);
         break;
     case Status::Complete:
         setTitle(tr("New OmniFolder Network - Setup Complete"));
