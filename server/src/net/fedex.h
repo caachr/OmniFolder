@@ -28,7 +28,7 @@ public:
      * associated with an unauthenticated socket (one not associated with a client session).
      * Internally: identifier used to index buffer.
      */
-    void processRawData(const QByteArray& rawData, const QString& identifier);
+    void processRawData(const QByteArray& rawData, const QString& identifier, const bool authenticated);
 
     void shipMessage(Message* message, QSslSocket* socket);
 
@@ -40,7 +40,7 @@ signals:
      * @param tempSocketId - Optional param: temporary socket uuid
      * associated with an unauthenticated socket (one not associated with a client session).
      */
-    void messageReady(const Message& message, const QString& tempSocketId = QString());
+    void messageReady(const Message& message, const QString& identifier, const bool authenticated);
 
 private:
     struct SourceBuffer {
@@ -49,7 +49,7 @@ private:
     };
     QHash<QString, SourceBuffer> sourceBuffers; // Key by source identifier (clientUUID or tempSocketId)
 
-    bool processNextMessage(SourceBuffer& sourceBuffer, const QString& identifier);
+    bool processNextMessage(SourceBuffer& sourceBuffer, const QString& identifier, const bool authenticated);
 
     // Parse completed frame to proto, then convert to Message & return that Message
     Message parseProtoToMessage(const QByteArray& protoData);

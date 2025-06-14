@@ -87,7 +87,7 @@ private:
      * @param message - The Message to handle.
      * @param tempSocketId - Optional param: Temporary socket uuid for unauthenticated sockets.
      */
-    void handleMessage(const Message& message, const QString& tempSocketId = QString());
+    void handleMessage(const Message& message, const QString& identifier, const bool authenticated);
 
     bool credentialsValid(const std::string& username, const std::string& password);
 };

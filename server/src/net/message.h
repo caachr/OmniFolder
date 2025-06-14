@@ -10,6 +10,7 @@
 enum class MessageType {
     // Client message types (only these will be in the queue)
     AuthRequest,
+    AddFolderRequest,
 
     // Server reply types (none of these will be in the queue)
     AuthAccepted,

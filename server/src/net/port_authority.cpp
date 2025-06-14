@@ -31,7 +31,7 @@ PortAuthority::PortAuthority(QObject *parent)
     serverSocket = new QSslServer(this);
 
     // Set new connection signal/slot
-    connect(serverSocket, &QSslServer::newConnection, this, &PortAuthority::onNewConnection);
+    connect(serverSocket, &QSslServer::pendingConnectionAvailable, this, &PortAuthority::onNewConnection);
 }
 
 void PortAuthority::configureSsl(const QString& certPath, const QString& keyPath, const QString& password)
@@ -70,6 +70,15 @@ void PortAuthority::configureSsl(const QString& certPath, const QString& keyPath
     sslPrivateKey = privateKey;
     sslPassword = password;
 
+    // Configure the QSslServer directly
+    QSslConfiguration sslConfig = QSslConfiguration::defaultConfiguration();
+    sslConfig.setLocalCertificate(certificate);
+    sslConfig.setPrivateKey(privateKey);
+    sslConfig.setProtocol(QSsl::TlsV1_2OrLater); // Be explicit about protocol
+
+    // Apply to server
+    serverSocket->setSslConfiguration(sslConfig);
+
     qDebug() << "SSL server configured with certificate:" << certPath << "and key:" << keyPath;
 }
 
@@ -79,6 +88,11 @@ void PortAuthority::startListening(const qint32 port)
         throw std::runtime_error("PortAuthority startListening: failed to start listening on any address");
     }
     qDebug() << "Server listening on all interfaces, port" << port;
+
+    qDebug() << "Server is listening:" << serverSocket->isListening();
+    qDebug() << "Server address:" << serverSocket->serverAddress();
+    qDebug() << "Server port:" << serverSocket->serverPort();
+    qDebug() << "Max pending connections:" << serverSocket->maxPendingConnections();
 }
 
 void PortAuthority::stopListening()
@@ -245,18 +259,27 @@ void PortAuthority::testForward(const qint32 port)
 
 void PortAuthority::onNewConnection()
 {
+    qDebug("on new connection");
+
     while (serverSocket->hasPendingConnections()) {
+        qDebug("enter while loop");
+        // QSslServer should give us QSslSocket directly
         QSslSocket* clientSocket = qobject_cast<QSslSocket*>(serverSocket->nextPendingConnection());
 
         if (!clientSocket) {
-            qWarning() << "PortAuth onnewconnection: failed to cast pending tcp connection to a QSslSocket;"
-                          "moving on to next pending connection";
+            qWarning() << "Failed to get QSslSocket from nextPendingConnection()";
             continue;
         }
 
-        // Configure SSL for this specific socket
+        // Configure SSL for this socket
         clientSocket->setLocalCertificate(sslCertificate);
         clientSocket->setPrivateKey(sslPrivateKey);
+        qDebug("ssl configured for new client");
+
+        // Debug SSL configuration
+        qDebug() << "Socket certificate null?" << clientSocket->localCertificate().isNull();
+        qDebug() << "Socket key null?" << clientSocket->privateKey().isNull();
+        qDebug() << "Socket peer address:" << clientSocket->peerAddress().toString();
 
         // Generate temp ID for tracking, store in pending auth list
         QString tempSocketId = QUuid::createUuid().toString();
@@ -265,19 +288,41 @@ void PortAuthority::onNewConnection()
         // Set up SSL error handling
         connect(clientSocket, QOverload<const QList<QSslError>&>::of(&QSslSocket::sslErrors),
                 this, [this, tempSocketId](const QList<QSslError>& errors) {
-            onSslErrors(tempSocketId, errors);
+                    qDebug() << "🔴 SSL errors for" << tempSocketId << ":";
+                    for (const auto& error : errors) {
+                        qDebug() << "    " << error.errorString();
+                    }
+                    onSslErrors(tempSocketId, errors);
+                });
+
+        // SSL success handler
+        connect(clientSocket, &QSslSocket::encrypted, [tempSocketId]() {
+            qDebug() << "✅ SSL handshake completed successfully for" << tempSocketId;
         });
+
+        // Error handlers
+        connect(clientSocket, &QSslSocket::peerVerifyError, [tempSocketId](const QSslError &error) {
+            qDebug() << "🔶 Peer verify error for" << tempSocketId << ":" << error.errorString();
+        });
+
+        connect(clientSocket, QOverload<QAbstractSocket::SocketError>::of(&QSslSocket::errorOccurred),
+                [tempSocketId](QAbstractSocket::SocketError error) {
+                    qDebug() << "🔴 Socket error for" << tempSocketId << ":" << error;
+                });
 
         // Connect read data / disconnect signals for this socket
         connect(clientSocket, &QSslSocket::readyRead, this, [this, tempSocketId]() {
             onRawDataReceived(tempSocketId);
         });
         connect(clientSocket, &QSslSocket::disconnected, this, [this, tempSocketId]() {
+            qDebug() << "🔌 Client disconnected:" << tempSocketId;
             onSocketDisconnected(tempSocketId);
         });
 
         // Start SSL handshake
+        qDebug() << "🔧 Starting server encryption for" << tempSocketId;
         clientSocket->startServerEncryption();
+        qDebug() << "🔧 startServerEncryption() called successfully";
 
         qDebug() << "New SSL connection from " << clientSocket->peerAddress() << " assigned tempId: " << tempSocketId;
     }
@@ -285,6 +330,7 @@ void PortAuthority::onNewConnection()
 
 void PortAuthority::onRawDataReceived(const QString& tempSocketId)
 {
+    qDebug("raw data received from an unauth socket");
     QSslSocket* socket = socketsPendingAuth[tempSocketId];
     if (!socket) {
         throw std::runtime_error("PortAuth onrawdatarec: attempted to get nonexisting socket from pending auth list.");
@@ -294,7 +340,7 @@ void PortAuthority::onRawDataReceived(const QString& tempSocketId)
     if (!fedEx) {
         throw std::runtime_error("PortAuth onrawdatarec: fedEx not initialized, must be initialized at this point to read raw socket data");
     }
-    fedEx->processRawData(rawData, tempSocketId);
+    fedEx->processRawData(rawData, tempSocketId, false);
 }
 
 void PortAuthority::onSocketDisconnected(const QString& tempSocketId)
@@ -320,14 +366,15 @@ void PortAuthority::onSslErrors(const QString& tempSocketId, const QList<QSslErr
     }
 
     // For development, you might want to ignore some errors:
-    // socket->ignoreSslErrors();
+    socket->ignoreSslErrors();
 
     // For production, handle errors appropriately
-    onSocketDisconnected(tempSocketId);
+    // onSocketDisconnected(tempSocketId);
 }
 
 void PortAuthority::onClientAuthenticated(const QString& tempSocketId, const ClientInfo& clientInfo)
 {
+    qDebug("on client authenticaed");
     // Retrieve socket
     QSslSocket* socket = socketsPendingAuth.take(tempSocketId);
     if (!socket) {
@@ -345,6 +392,7 @@ void PortAuthority::onClientAuthenticated(const QString& tempSocketId, const Cli
 
 void PortAuthority::onClientAuthFailed(const QString& tempSocketId)
 {
+    qDebug("on client auth failed");
     // Clean up socket that failed auth
     QSslSocket* socket = socketsPendingAuth.value(tempSocketId);
     if (!socket) {

@@ -17,8 +17,8 @@ Mailbox::QueuedMessageContext Mailbox::openNextMessage()
     return queuedMessage;
 }
 
-void Mailbox::onMessageReady(const Message& message, const QString& tempSocketId)
+void Mailbox::onMessageReady(const Message& message, const QString& identifier, const bool authenticated)
 {
-    messageQueue.push({message, tempSocketId});
+    messageQueue.push({message, identifier, authenticated});
     emit youveGotMail();
 }

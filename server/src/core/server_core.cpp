@@ -58,7 +58,7 @@ QString ServerCore::getHost() const
 void ServerCore::onYouveGotMail()
 {
     auto queuedMessage = mailbox->openNextMessage();
-    handleMessage(queuedMessage.message, queuedMessage.tempSocketId);
+    handleMessage(queuedMessage.message, queuedMessage.identifier, queuedMessage.authenticated);
 }
 
 void ServerCore::onNewClientSession(const QString& clientUUID, ClientSession* clientSession)
@@ -72,16 +72,21 @@ void ServerCore::onNewClientSession(const QString& clientUUID, ClientSession* cl
     fedEx->shipMessage(authAcceptReply, clientSession->getSocket());
 }
 
-void ServerCore::handleMessage(const Message& message, const QString& tempSocketId)
+void ServerCore::handleMessage(const Message& message, const QString& identifier, const bool authenticated)
 {
+    // Get message contents
     nlohmann::json header = message.getHeader();
     MessageType type = message.getType();
     nlohmann::json payload = message.getPayload();
 
+
     // Handle unauthenticated clients separately
-    if (!tempSocketId.isEmpty()) {
+    if (authenticated == false) {
+
+        QString tempSocketId = identifier;
+
         if (type == MessageType::AuthRequest) {
-            if (credentialsValid(payload["username"].dump(), payload["password"].dump())) {
+            if (credentialsValid(payload["username"].get<std::string>(), payload["password"].get<std::string>())) {
                 QString clientUUID = QString::fromStdString(header["sender"]["uuid"].get<std::string>());
                 QString clientHost = QString::fromStdString(header["sender"]["host"].get<std::string>());
 
@@ -95,8 +100,16 @@ void ServerCore::handleMessage(const Message& message, const QString& tempSocket
         return;
     }
 
-    // Handle messages from verified clients
 
+    // Handle messages from authenticated clients
+    if (authenticated == true) {
+        switch (type) {
+        case MessageType::AddFolderRequest:
+            break;
+        default:
+            break;
+        }
+    }
 }
 
 bool ServerCore::credentialsValid(const std::string& username, const std::string& password)

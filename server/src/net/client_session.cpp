@@ -31,7 +31,7 @@ void ClientSession::setFedEx(FedEx* fedExArg)
 void ClientSession::onSocketDataReceived()
 {
     QByteArray rawData = socket->readAll();
-    fedEx->processRawData(rawData, QString());
+    fedEx->processRawData(rawData, clientUUID, true);
 }
 
 void ClientSession::onSocketDisconnected()

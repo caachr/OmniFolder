@@ -10,9 +10,11 @@ FedEx::FedEx(QObject *parent)
 
 }
 
-void FedEx::processRawData(const QByteArray& rawData, const QString& identifier)
+void FedEx::processRawData(const QByteArray& rawData, const QString& identifier, const bool authenticated)
 {
     // Process data - collect complete frame, sanitize, validate, parse to Message
+
+    // STILL TODO: sanitize & validate somewhere in this chain!
 
     auto& buffer = sourceBuffers[identifier]; // Creates if doesn't exist
 
@@ -20,7 +22,7 @@ void FedEx::processRawData(const QByteArray& rawData, const QString& identifier)
     buffer.recBuffer.append(rawData);
 
     // Process all complete messages from this buffer
-    while (processNextMessage(buffer, identifier)) {
+    while (processNextMessage(buffer, identifier, authenticated)) {
         // Keep processing until no complete messages remain
     }
 }
@@ -54,7 +56,7 @@ void FedEx::shipMessage(Message* message, QSslSocket* socket)
     }
 }
 
-bool FedEx::processNextMessage(SourceBuffer& sourceBuffer, const QString& identifier)
+bool FedEx::processNextMessage(SourceBuffer& sourceBuffer, const QString& identifier, const bool authenticated)
 {
     // If we don't know the message size yet, try to read the varint32 length
     if (sourceBuffer.expectedMessageSize == 0) {
@@ -93,7 +95,7 @@ bool FedEx::processNextMessage(SourceBuffer& sourceBuffer, const QString& identi
     try {
         // Parse protobuf and convert to Message
         Message message = parseProtoToMessage(protoData);
-        emit messageReady(message, identifier);
+        emit messageReady(message, identifier, authenticated);
     } catch (const std::exception& e) {
         qWarning() << "FedEx: Failed to parse message from" << identifier << ":" << e.what();
         // Continue processing other messages
@@ -145,8 +147,8 @@ omniserver::MessageProto FedEx::messageToProto(const Message& message)
     headerProto->set_sender_host(header["sender"]["host"].get<std::string>());
 
     headerProto->set_receiver_class(header["receiver"]["class"].get<std::string>());
-    headerProto->set_receiver_class(header["receiver"]["uuid"].get<std::string>());
-    headerProto->set_receiver_class(header["receiver"]["host"].get<std::string>());
+    headerProto->set_receiver_uuid(header["receiver"]["uuid"].get<std::string>());
+    headerProto->set_receiver_host(header["receiver"]["host"].get<std::string>());
 
     protoMessage.set_type(static_cast<int32_t>(type));
 

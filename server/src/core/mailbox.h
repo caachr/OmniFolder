@@ -17,7 +17,8 @@ public:
 
     struct QueuedMessageContext {
         Message message;
-        QString tempSocketId;
+        QString identifier;
+        bool authenticated;
 
         bool operator<(const QueuedMessageContext& other) const {
             // Priority queue is max heap, but we want ordering based on lower value message types (lower val = higher prio)
@@ -36,7 +37,7 @@ public slots:
      * @param message - The Message that has just been sanitized & validated & constructed by FedEx
      * @param tempSocketId - Optional param: The temporary socket uuid for a socket pending authorization.
      */
-    void onMessageReady(const Message& message, const QString& tempSocketId = QString());
+    void onMessageReady(const Message& message, const QString& tempSocketId, const bool authenticated);
 
 private:
     std::priority_queue<QueuedMessageContext> messageQueue;
