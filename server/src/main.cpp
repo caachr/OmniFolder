@@ -19,6 +19,8 @@ int main(int argc, char* argv[]) {
 
     // Initialize app
     QApplication app(argc, argv);
+    // app.setApplicationName("OmniFolder Server");
+
     AppCore core;
     core.boot();
 

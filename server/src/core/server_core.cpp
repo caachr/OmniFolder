@@ -38,16 +38,18 @@ void ServerCore::loadFromConfig()
     // Load active sessions
     activeSessions.clear();
     for (auto& [key, value] : config["network"]["server"]["active_sessions"].items()) {
-        QString clientUUID = QString::fromStdString(value["client_uuid"].dump());
-        QString clientHost = QString::fromStdString(value["client_host"].dump());
+        QString clientUUID = QString::fromStdString(value["client_uuid"].get<std::string>());
+        QString clientHost = QString::fromStdString(value["client_host"].get<std::string>());
 
         activeSessions[clientUUID] = new ClientSession(clientUUID, clientHost, this);
     }
 
-    // Load uuid, host, port
-    uuid = QString::fromStdString(config["network"]["server"]["uuid"]);
-    host = QString::fromStdString(config["network"]["server"]["host"]);
+    // Load uuid, host, port, beacon info
+    uuid = QString::fromStdString(config["network"]["server"]["uuid"].get<std::string>());
+    host = QString::fromStdString(config["network"]["server"]["host"].get<std::string>());
     port = config["network"]["server"]["port"];
+    beaconURL = QString::fromStdString(config["network"]["beacon"]["url"].get<std::string>());
+    beaconPAT = QString::fromStdString(config["network"]["beacon"]["pat"].get<std::string>());
 }
 
 QString ServerCore::getUUID() const
@@ -127,6 +129,9 @@ void ServerCore::handleMessage(const Message& message, const QString& identifier
                 emit clientAuthFailed(tempSocketId, clientInfo);
                 qDebug("emit clientauthfailed");
             }
+        } else {
+            emit clientAuthFailed(tempSocketId, clientInfo);
+            qDebug("unauthenticated client tried to send message that was not AuthRequest; emit clientauthfailed");
         }
         return;
     }
@@ -136,6 +141,7 @@ void ServerCore::handleMessage(const Message& message, const QString& identifier
     if (authenticated == true) {
         switch (type) {
         case MessageType::AddFolderRequest:
+
             break;
         default:
             break;

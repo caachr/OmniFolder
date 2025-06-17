@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package omniserver;
+
+message HeaderProto {
+    string sender_class = 1;
+    string sender_uuid = 2;
+    string sender_host = 3;
+    string receiver_class = 4;
+    string receiver_uuid = 5;
+    string receiver_host = 6;
+}
+
+message PayloadProto {
+    string json_data = 1;  // Store JSON as string instead
+}
+
+message MessageProto {
+    HeaderProto header = 1;
+    int32 type = 2;
+    PayloadProto payload = 3;
+}

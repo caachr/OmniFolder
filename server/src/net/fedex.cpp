@@ -58,6 +58,16 @@ void FedEx::shipMessage(Message* message, QSslSocket* socket)
 
 bool FedEx::processNextMessage(SourceBuffer& sourceBuffer, const QString& identifier, const bool authenticated)
 {
+    // Define message size limits
+    static const uint32_t MAX_MESSAGE_SIZE = 10 * 1024 * 1024; // 10MB max message size
+    static const uint32_t MAX_BUFFER_SIZE = 50 * 1024 * 1024;  // 50MB max buffer size (prevents memory exhaustion)
+
+    // Check if buffer is getting too large (potential DoS protection)
+    if (sourceBuffer.recBuffer.size() > MAX_BUFFER_SIZE) {
+        qCritical() << "FedEx: Buffer size exceeded maximum limit for identifier:" << identifier;
+        throw std::runtime_error("FedEx processNextMessage: buffer size limit exceeded");
+    }
+
     // If we don't know the message size yet, try to read the varint32 length
     if (sourceBuffer.expectedMessageSize == 0) {
         if (sourceBuffer.recBuffer.size() < 1) {
@@ -73,7 +83,19 @@ bool FedEx::processNextMessage(SourceBuffer& sourceBuffer, const QString& identi
             return false; // Incomplete varint
         }
 
+        // Validate message size
+        if (messageSize > MAX_MESSAGE_SIZE) {
+            qCritical() << "FedEx: Message size" << messageSize << "exceeds maximum limit of" << MAX_MESSAGE_SIZE << "for identifier:" << identifier;
+            throw std::runtime_error("FedEx processNextMessage: message size limit exceeded");
+        }
+
+        if (messageSize == 0) {
+            qWarning() << "FedEx: Received zero-length message from identifier:" << identifier;
+            throw std::runtime_error("FedEx processNextMessage: zero-length message not allowed");
+        }
+
         sourceBuffer.expectedMessageSize = messageSize;
+        qDebug() << "FedEx: Expecting message of size" << messageSize << "bytes from" << identifier;
 
         // Remove the varint bytes from buffer
         int varintBytes = coded_input.CurrentPosition();
@@ -91,7 +113,6 @@ bool FedEx::processNextMessage(SourceBuffer& sourceBuffer, const QString& identi
 
     // Reset for next message
     sourceBuffer.expectedMessageSize = 0;
-
 
     // Parse protobuf and convert to Message
     Message message = parseProtoToMessage(protoData);

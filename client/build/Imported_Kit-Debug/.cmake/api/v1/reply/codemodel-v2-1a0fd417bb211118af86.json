@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "omnifolder-client",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "omnifolder-client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omnifolder-client-Debug-4910a156ff2a0e28d424.json",
+					"name" : "omnifolder-client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omnifolder-client_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omnifolder-client_autogen-Debug-749e17868b7a40f89cac.json",
+					"name" : "omnifolder-client_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "omnifolder-client_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-omnifolder-client_autogen_timestamp_deps-Debug-2e24ba9aef99af7fa09a.json",
+					"name" : "omnifolder-client_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug",
+		"source" : "/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

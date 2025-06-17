@@ -168,6 +168,7 @@ void AppCore::onStateTransition(AppState updatedState)
 
         // GUI init
         mainWindow = new MainWindow;
+        mainWindow->setNetwork(omniNetwork.get());
         connect(mainWindow, &QWidget::destroyed, this, &AppCore::onQuitRequested);
 
         // Wire server signals to GUI client table model

@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+57cf677fa7119d5fd184d19f3d79f20d CMakeFiles/omnifolder-client_autogen
+57cf677fa7119d5fd184d19f3d79f20d CMakeFiles/omnifolder-client_autogen_timestamp_deps
+401ac1801df1c290a8976c6d861e5bf4 message_schema.pb.h
+96c82cc300580e8741a8a9bc829458b9 omnifolder-client_autogen/timestamp

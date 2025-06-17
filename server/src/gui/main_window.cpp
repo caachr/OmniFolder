@@ -35,6 +35,40 @@ ClientTableModel* MainWindow::getClientTableModel() const
     return clientTableModel;
 }
 
+void MainWindow::setNetwork(const OmniNetwork* network)
+{
+    // Clear existing model data
+    foldersModel->removeRows(0, foldersModel->rowCount());
+
+    // Create top-level network item
+    auto* networkItem = new QStandardItem(network->getName());
+    networkItem->setData("Network", Qt::UserRole+1);
+    auto* networkTypeItem = new QStandardItem("Network");
+    foldersModel->appendRow({networkItem, networkTypeItem});
+
+    // Add folders to the network
+    for (const auto& folder : network->getFolders()) {
+        auto* folderItem = new QStandardItem(folder->getName());
+        folderItem->setData(folder->getId(), Qt::UserRole);
+        auto* folderTypeItem = new QStandardItem("Folder");
+        networkItem->appendRow({folderItem, folderTypeItem});
+
+        // Add drives for each folder
+        for (const auto& drive : folder->getDrives()) {
+            auto* driveItem = new QStandardItem(drive->getName());
+            driveItem->setData(drive->getId(), Qt::UserRole);
+
+            QString driveTypeText = (drive->getType() == "F") ? "Full" : "Partial";
+            auto* driveTypeItem = new QStandardItem(driveTypeText);
+
+            folderItem->appendRow({driveItem, driveTypeItem});
+        }
+    }
+
+    // Expand all items to show the full hierarchy
+    foldersView->expandAll();
+}
+
 void MainWindow::onNavIndexChanged(int row)
 {
     pages->setCurrentIndex(row);
@@ -72,8 +106,15 @@ QWidget* MainWindow::createFoldersPage()
 {
     auto *widget = new QWidget;
     auto *layout = new QVBoxLayout(widget);
-    layout->addWidget(new QLabel("Folders view", widget));
-    layout->addStretch();
+
+    foldersView = new QTreeView(widget);
+    foldersModel = new QStandardItemModel;
+    foldersModel->setHorizontalHeaderLabels({"Name", "Type"});
+    foldersView->setModel(foldersModel);
+    foldersView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    foldersView->header()->setStretchLastSection(true);
+
+    layout->addWidget(foldersView);
     return widget;
 }
 

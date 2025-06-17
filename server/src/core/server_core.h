@@ -68,6 +68,9 @@ private:
     QString host;
     qint32 port;
 
+    QString beaconURL;
+    QString beaconPAT;
+
     CryptoManager cryptoManager;
 
     Mailbox* mailbox;              // Pointer to single mailbox instance from app core
