@@ -3,7 +3,6 @@
 //
 
 #include "omni_network.h"
-#include "core/config_manager.h"
 
 OmniNetwork::OmniNetwork(QObject *parent)
     : QObject(parent)
@@ -11,17 +10,14 @@ OmniNetwork::OmniNetwork(QObject *parent)
 
 }
 
-void OmniNetwork::loadFromConfig()
+void OmniNetwork::loadFromConfigJson(const nlohmann::json& configInfo)
 {
-    ConfigManager configManager;
-    nlohmann::json config = configManager.getConfigFromFile();
-
     // Load uuid & name
-    uuid = QString::fromStdString(config["network"]["uuid"].get<std::string>());
-    name = QString::fromStdString(config["network"]["name"].get<std::string>());
+    uuid = QString::fromStdString(configInfo["network"]["uuid"].get<std::string>());
+    name = QString::fromStdString(configInfo["network"]["name"].get<std::string>());
 
     // Load folders
-    nlohmann::json foldersJson = config["folders"];
+    nlohmann::json foldersJson = configInfo["folders"];
     for (const auto& folderJson : foldersJson) {
         folders.emplace_back(std::make_unique<OmniFolder>(folderJson, this));
     }

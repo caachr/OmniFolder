@@ -124,6 +124,7 @@ void AppCore::onStateTransition(AppState updatedState)
 
     switch (updatedState) {
     case AppState::Startup:
+        throw std::runtime_error("Should be impossible to transition to startup state from another, but it happened for some reason");
         break;
 
     case AppState::SetupWizard:

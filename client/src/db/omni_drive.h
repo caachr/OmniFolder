@@ -14,7 +14,7 @@ class OmniDrive : public QObject {
 
 public:
     explicit OmniDrive(QObject *parent = nullptr);
-    OmniDrive(nlohmann::json configInfo, QObject* parent = nullptr);
+    OmniDrive(const nlohmann::json& configInfo, QObject* parent = nullptr);
 
     QString getName() const;
     QString getId() const;

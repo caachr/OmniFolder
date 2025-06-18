@@ -20,6 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/omnifolder-client.dir/src/db/omni_folder.cpp.o.d"
   "CMakeFiles/omnifolder-client.dir/src/db/omni_network.cpp.o"
   "CMakeFiles/omnifolder-client.dir/src/db/omni_network.cpp.o.d"
+  "CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o"
+  "CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o.d"
   "CMakeFiles/omnifolder-client.dir/src/gui/main_window.cpp.o"
   "CMakeFiles/omnifolder-client.dir/src/gui/main_window.cpp.o.d"
   "CMakeFiles/omnifolder-client.dir/src/gui/recovery_wizard.cpp.o"

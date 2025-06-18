@@ -310,10 +310,24 @@ CMakeFiles/omnifolder-client.dir/src/util/logging.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/omnifolder-client.dir/src/util/logging.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/src/util/logging.cpp -o CMakeFiles/omnifolder-client.dir/src/util/logging.cpp.s
 
+CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o: CMakeFiles/omnifolder-client.dir/flags.make
+CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o: /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/src/gui/login_screen.cpp
+CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o: CMakeFiles/omnifolder-client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o -MF CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o.d -o CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/src/gui/login_screen.cpp
+
+CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/src/gui/login_screen.cpp > CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.i
+
+CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/src/gui/login_screen.cpp -o CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.s
+
 CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o: CMakeFiles/omnifolder-client.dir/flags.make
 CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o: message_schema.pb.cc
 CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o: CMakeFiles/omnifolder-client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o -MF CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o.d -o CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o -c /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/message_schema.pb.cc
 
 CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.i: cmake_force
@@ -343,6 +357,7 @@ omnifolder__client_OBJECTS = \
 "CMakeFiles/omnifolder-client.dir/src/gui/main_window.cpp.o" \
 "CMakeFiles/omnifolder-client.dir/src/gui/recovery_wizard.cpp.o" \
 "CMakeFiles/omnifolder-client.dir/src/util/logging.cpp.o" \
+"CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o" \
 "CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o"
 
 # External object files for target omnifolder-client
@@ -365,6 +380,7 @@ omnifolder-client.app/Contents/MacOS/omnifolder-client: CMakeFiles/omnifolder-cl
 omnifolder-client.app/Contents/MacOS/omnifolder-client: CMakeFiles/omnifolder-client.dir/src/gui/main_window.cpp.o
 omnifolder-client.app/Contents/MacOS/omnifolder-client: CMakeFiles/omnifolder-client.dir/src/gui/recovery_wizard.cpp.o
 omnifolder-client.app/Contents/MacOS/omnifolder-client: CMakeFiles/omnifolder-client.dir/src/util/logging.cpp.o
+omnifolder-client.app/Contents/MacOS/omnifolder-client: CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o
 omnifolder-client.app/Contents/MacOS/omnifolder-client: CMakeFiles/omnifolder-client.dir/message_schema.pb.cc.o
 omnifolder-client.app/Contents/MacOS/omnifolder-client: CMakeFiles/omnifolder-client.dir/build.make
 omnifolder-client.app/Contents/MacOS/omnifolder-client: /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets
@@ -456,7 +472,7 @@ omnifolder-client.app/Contents/MacOS/omnifolder-client: /opt/homebrew/lib/libabs
 omnifolder-client.app/Contents/MacOS/omnifolder-client: /opt/homebrew/lib/libabsl_raw_logging_internal.2407.0.0.dylib
 omnifolder-client.app/Contents/MacOS/omnifolder-client: /opt/homebrew/lib/libabsl_log_severity.2407.0.0.dylib
 omnifolder-client.app/Contents/MacOS/omnifolder-client: CMakeFiles/omnifolder-client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable omnifolder-client.app/Contents/MacOS/omnifolder-client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable omnifolder-client.app/Contents/MacOS/omnifolder-client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/omnifolder-client.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/python3 /Users/christian/.vcpkg-clion/vcpkg/scripts/buildsystems/osx/applocal.py /Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/omnifolder-client.app/Contents/MacOS/omnifolder-client /Users/christian/.vcpkg-clion/vcpkg/installed/arm64-osx/debug
 

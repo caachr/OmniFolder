@@ -10,7 +10,7 @@ OmniDrive::OmniDrive(QObject *parent)
 
 }
 
-OmniDrive::OmniDrive(nlohmann::json configInfo, QObject* parent)
+OmniDrive::OmniDrive(const nlohmann::json& configInfo, QObject* parent)
     : QObject(parent)
 {
     id = QString::fromStdString(configInfo["id"].get<std::string>());

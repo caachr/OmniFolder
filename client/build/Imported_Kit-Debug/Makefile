@@ -371,6 +371,30 @@ src/db/omni_network.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-client.dir/build.make CMakeFiles/omnifolder-client.dir/src/db/omni_network.cpp.s
 .PHONY : src/db/omni_network.cpp.s
 
+src/gui/login_screen.o: src/gui/login_screen.cpp.o
+.PHONY : src/gui/login_screen.o
+
+# target to build an object file
+src/gui/login_screen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-client.dir/build.make CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.o
+.PHONY : src/gui/login_screen.cpp.o
+
+src/gui/login_screen.i: src/gui/login_screen.cpp.i
+.PHONY : src/gui/login_screen.i
+
+# target to preprocess a source file
+src/gui/login_screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-client.dir/build.make CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.i
+.PHONY : src/gui/login_screen.cpp.i
+
+src/gui/login_screen.s: src/gui/login_screen.cpp.s
+.PHONY : src/gui/login_screen.s
+
+# target to generate assembly for a file
+src/gui/login_screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omnifolder-client.dir/build.make CMakeFiles/omnifolder-client.dir/src/gui/login_screen.cpp.s
+.PHONY : src/gui/login_screen.cpp.s
+
 src/gui/main_window.o: src/gui/main_window.cpp.o
 .PHONY : src/gui/main_window.o
 
@@ -625,6 +649,9 @@ help:
 	@echo "... src/db/omni_network.o"
 	@echo "... src/db/omni_network.i"
 	@echo "... src/db/omni_network.s"
+	@echo "... src/gui/login_screen.o"
+	@echo "... src/gui/login_screen.i"
+	@echo "... src/gui/login_screen.s"
 	@echo "... src/gui/main_window.o"
 	@echo "... src/gui/main_window.i"
 	@echo "... src/gui/main_window.s"

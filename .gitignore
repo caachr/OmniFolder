@@ -1,5 +1,11 @@
 server/build/
 server/cmake-build-debug/
 
+client/build/
+client/cmake-build-debug/
+
 .DS_Store
 server/.DS_Store
+server/src/.DS_Store
+client/.DS_Store
+client/src/.DS_Store

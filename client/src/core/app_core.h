@@ -10,7 +10,7 @@
 #include "mailbox.h"
 #include "db/omni_network.h"
 #include "gui/main_window.h"
-#include "gui/recovery_wizard.h"
+#include "gui/login_screen.h"
 
 class AppCore : public QObject {
     Q_OBJECT
@@ -24,7 +24,7 @@ public:
 private slots:
     void onStateTransition(AppState updatedState);
 
-    void onRecoveryWizardFinished();
+    void onLoginScreenPassed();
     void onQuitRequested();
 
 private:
@@ -36,8 +36,8 @@ private:
     std::unique_ptr<Mailbox> mailbox = nullptr;
     std::unique_ptr<OmniNetwork> omniNetwork = nullptr;
 
-    MainWindow *mainWindow = nullptr;
-    RecoveryWizard *recoveryWizard = nullptr;
+    std::unique_ptr<LoginScreen> loginScreen = nullptr;
+    std::unique_ptr<MainWindow> mainWindow = nullptr;
 };
 
 #endif //OMNICLIENT_APP_CORE_H

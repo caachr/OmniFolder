@@ -2,8 +2,8 @@
 // Created by Christian Caamano on 6/6/25.
 //
 
-#ifndef OMNISERVER_OMNI_NETWORK_H
-#define OMNISERVER_OMNI_NETWORK_H
+#ifndef OMNICLIENT_OMNI_NETWORK_H
+#define OMNICLIENT_OMNI_NETWORK_H
 
 #include <QObject>
 
@@ -16,10 +16,9 @@ public:
     explicit OmniNetwork(QObject *parent = nullptr);
 
     /**
-     * @brief loadFromConfig - Load complete network info & structure from config file.
-     * @pre Config file exists and has been validated by app core.
+     * @brief loadFromConfigJson - Load complete network info & structure from config json object.
      */
-    void loadFromConfig();
+    void loadFromConfigJson(const nlohmann::json& configInfo);
 
     QString getName() const;
     std::vector<OmniFolder*> getFolders() const;
@@ -31,4 +30,4 @@ private:
 };
 
 
-#endif //OMNISERVER_OMNI_NETWORK_H
+#endif //OMNICLIENT_OMNI_NETWORK_H

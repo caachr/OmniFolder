@@ -140,7 +140,7 @@ void ServerCore::handleMessage(const Message& message, const QString& identifier
     // Handle messages from authenticated clients
     if (authenticated == true) {
         switch (type) {
-        case MessageType::AddFolderRequest:
+        case MessageType::CreateFolderRequest:
 
             break;
         default:

@@ -58,6 +58,8 @@ qt_add_executable(omnifolder-client
         MANUAL_FINALIZATION          # we'll link + finalize ourselves
         MACOSX_BUNDLE
         ${SRC}
+        src/gui/login_screen.h
+        src/gui/login_screen.cpp
 )
 
 # ─── Protobuf Generation ────────────────────────────────────────────────────────

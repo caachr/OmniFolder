@@ -10,7 +10,7 @@ OmniFolder::OmniFolder(QObject *parent)
 
 }
 
-OmniFolder::OmniFolder(nlohmann::json configInfo, QObject* parent)
+OmniFolder::OmniFolder(const nlohmann::json& configInfo, QObject* parent)
     : QObject(parent)
 {
     id = QString::fromStdString(configInfo["id"].get<std::string>());
