@@ -2,7 +2,7 @@
 
 A self-hosted, distributed backup suite built from scratch in C++ – designed as a fully-owned alternative to cloud backup services, with no third-party dependency for storage, transport, or recovery.
 
-**Status:** Work in progress. Core client-server architecture, encryption, and disaster-recovery design are implemented. Backend data operations and GUI applications are still works in progress.
+**STATUS:** Work in progress. Core client-server architecture, encryption, and disaster-recovery design are implemented. Backend data operations and GUI applications are still works in progress.
 
 ## Overview
 
