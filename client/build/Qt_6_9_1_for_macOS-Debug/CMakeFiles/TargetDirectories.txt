@@ -1,2 +1,0 @@
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Qt_6_9_1_for_macOS-Debug/CMakeFiles/edit_cache.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Qt_6_9_1_for_macOS-Debug/CMakeFiles/rebuild_cache.dir

@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>resources/schemas/config_schema.json</file>
-    </qresource>
-</RCC>

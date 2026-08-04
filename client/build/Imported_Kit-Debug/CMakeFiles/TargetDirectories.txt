@@ -1,5 +1,0 @@
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles/omnifolder-client.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles/edit_cache.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles/rebuild_cache.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles/omnifolder-client_autogen_timestamp_deps.dir
-/Users/christian/Desktop/ACTIVE_Local-Backup/docs/apps/OmniFolder/client/build/Imported_Kit-Debug/CMakeFiles/omnifolder-client_autogen.dir
